@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "Z:/ise/EDA322Lab1/eda322_lab1.xst" -ofn "Z:/ise/EDA322Lab1/eda322_lab1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 eda322_lab1.ngc eda322_lab1.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc eda322_lab1.ucf -p xc6slx16-csg324-3 eda322_lab1.ngc eda322_lab1.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o eda322_lab1_map.ncd eda322_lab1.ngd eda322_lab1.pcf 
+par -w -intstyle ise -ol high -mt off eda322_lab1_map.ncd eda322_lab1.ncd eda322_lab1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml eda322_lab1.twx eda322_lab1.ncd -o eda322_lab1.twr eda322_lab1.pcf -ucf eda322_lab1.ucf 
+xpwr -intstyle ise -ol std eda322_lab1.ncd eda322_lab1.pcf -o eda322_lab1.pwr 

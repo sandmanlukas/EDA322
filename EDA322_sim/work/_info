@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.5b/examples
+T_opt
+!s110 1484655647
+VN7<RTbobz3i1ChI;Eed`12
+04 11 10 work eda322_lab1 behavioral 1
+=1-989096c7fff1-587e0c1f-10f-114c
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.5b;63
+R0
+Eeda322_lab1
+Z1 w1484655537
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dZ:/EDA322
+Z5 8Z:/EDA322/eda322_lab1.vhd
+Z6 FZ:/EDA322/eda322_lab1.vhd
+l0
+L32
+VgjIG3SiN5lAa7f5j?>J^Z2
+!s100 Rie?dmzGb:TC[DZ_L>]^`1
+Z7 OL;C;10.5b;63
+32
+Z8 !s110 1484657541
+!i10b 1
+Z9 !s108 1484657541.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/EDA322/eda322_lab1.vhd|
+Z11 !s107 Z:/EDA322/eda322_lab1.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+Z14 DEx4 work 11 eda322_lab1 0 22 gjIG3SiN5lAa7f5j?>J^Z2
+l57
+L45
+Z15 VDUb_Q4U7^C5^O0G`3Ej;j1
+Z16 !s100 2M<64kPi?PFY4mffHNf310
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
