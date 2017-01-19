@@ -1,0 +1,4 @@
+
+00
+
+:= is just initial value
