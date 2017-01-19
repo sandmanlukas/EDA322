@@ -1,0 +1,89 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Oskar/Dropbox/Kurser/EDA322/Lokal
+Emux2to1
+Z0 w1484823270
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Oskar/Dropbox/Kurser/EDA322/Lab2prep/mux
+Z4 8C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux2to1.vhd
+Z5 FC:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux2to1.vhd
+l0
+L5
+V@l5NB0RVNncGRbUmGL;gN3
+!s100 R3A^fY8gHQ]8E^:VSVE1j1
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1484823344
+!i10b 1
+Z8 !s108 1484823344.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux2to1.vhd|
+Z10 !s107 C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux2to1.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Adataflow
+R1
+R2
+Z13 DEx4 work 7 mux2to1 0 22 @l5NB0RVNncGRbUmGL;gN3
+l14
+L13
+VzDXLYIFofB602>nPLT_VO2
+!s100 8E>l15HIGUMJKMo_[8b_O2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux4to1
+Z14 w1484828367
+R1
+R2
+R3
+Z15 8C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux4to1.vhd
+Z16 FC:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux4to1.vhd
+l0
+L5
+VVLf[_o[4Ec?JbVT_G_Y8o2
+!s100 i<TJ4QjGzBk4`BZ1SBNzR3
+R6
+32
+Z17 !s110 1484828460
+!i10b 1
+Z18 !s108 1484828459.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux4to1.vhd|
+Z20 !s107 C:\Users\Oskar\Dropbox\Kurser\EDA322\Lab2prep\mux\mux4to1.vhd|
+!i113 1
+R11
+R12
+Astructural
+R13
+R1
+R2
+Z21 DEx4 work 7 mux4to1 0 22 VLf[_o[4Ec?JbVT_G_Y8o2
+l32
+L15
+VXZ0JIUA^ORmdfDX8;]YC@1
+!s100 QVb2aaQX^ibMM_C:YSdlK3
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
