@@ -1,0 +1,19 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY fulladder IS
+	PORT(
+		a  : IN STD_LOGIC;
+		b  : IN STD_LOGIC;
+		ci : IN STD_LOGIC;
+		s  : OUT STD_LOGIC;
+		co : OUT STD_LOGIC);
+END fulladder;
+
+ARCHITECTURE dataflow OF fulladder IS
+SIGNAL axorb_int : STD_LOGIC;
+BEGIN
+	axorb_int <= a XOR b;
+	s <=  axorb_int XOR ci;
+	co <= (a AND b) OR (ci AND axorb_int);
+END dataflow;

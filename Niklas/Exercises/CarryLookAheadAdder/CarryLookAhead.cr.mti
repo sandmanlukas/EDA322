@@ -1,0 +1,33 @@
+C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity carrylookaheadadder
+-- Compiling architecture structural of carrylookaheadadder
+
+} {} {}} C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gpfunc2
+-- Compiling architecture dataflow of gpfunc2
+
+} {} {}} C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder
+-- Compiling architecture dataflow of fulladder
+
+} {} {}} C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gpfunc
+-- Compiling architecture dataflow of gpfunc
+
+} {} {}}

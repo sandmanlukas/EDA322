@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Ecarrylookaheadadder
+Z0 w1485105265
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises
+Z4 8C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd
+Z5 FC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd
+l0
+L5
+VPl5:VH6ZAD0Z^FT@6f^Kz3
+!s100 a32:mV_Te8lCj9mI_]ge[1
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1485105274
+!i10b 1
+Z8 !s108 1485105274.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd|
+Z10 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/CarryLookAheadAdder.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Astructural
+R1
+R2
+Z13 DEx4 work 19 carrylookaheadadder 0 22 Pl5:VH6ZAD0Z^FT@6f^Kz3
+l66
+L15
+Vo=N_;IF?hWmGim34?9oMF2
+!s100 aHYiN]MZU:D_SIDKSK19;2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efulladder
+Z14 w1485103002
+R1
+R2
+R3
+Z15 8C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd
+Z16 FC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd
+l0
+L4
+VQ6iokl2cJ[WmbhPUlO^0?0
+!s100 6NhYP_?3X]dlYF4kj1H0U1
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd|
+Z18 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/FullAdder.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 9 fulladder 0 22 Q6iokl2cJ[WmbhPUlO^0?0
+l13
+L12
+V]F8i:WDEdK@C2M8`Yj7Sa1
+!s100 WbI@Oh^DIckIk73QS@]<c1
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Egpfunc
+Z19 w1485098977
+R1
+R2
+R3
+Z20 8C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd
+Z21 FC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd
+l0
+L5
+VVhUe99ck6k92E5YF5YQni2
+!s100 :jQ@fEYF>4QiK_M:J=8gn3
+R6
+32
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd|
+Z23 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 6 gpfunc 0 22 VhUe99ck6k92E5YF5YQni2
+l15
+L14
+VVU_J3BV[QfF2keRA@kzKR3
+!s100 bmzPMeFf<`7ombb]Na6ek3
+R6
+32
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Egpfunc2
+Z24 w1485099225
+R1
+R2
+R3
+Z25 8C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd
+Z26 FC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd
+l0
+L5
+V;4?=Io0ogfY81ll?jLY4N1
+!s100 FhEl:Sb[<QYEB`lS5^?oh0
+R6
+32
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd|
+Z28 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/gpfunc2.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 7 gpfunc2 0 22 ;4?=Io0ogfY81ll?jLY4N1
+l19
+L18
+VC6XAYQ7?6]0?`6cZCQXBN0
+!s100 ONaRb]jJ]PVg2ALW@MgN92
+R6
+32
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
