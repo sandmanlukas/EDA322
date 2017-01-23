@@ -6,12 +6,7 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity fa
 -- Compiling architecture dataflow of fa
 
-} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
-** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do(2): near "force": syntax error
-
-} {4.0 5.0} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd}
+} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -19,12 +14,23 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity cmp
 -- Compiling architecture dataflow of cmp
 
-} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do}
+} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
-** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do(2): near "force": syntax error
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp_test.do(2): near "force": syntax error
 
-} {4.0 5.0} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd}
+} {4.0 5.0} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ALU_TB
+-- Compiling architecture BEHAVIORAL of ALU_TB
+
+} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -33,4 +39,9 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling architecture structural of rca
 -- Loading entity fa
 
-} {} {}}
+} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_test.do(2): near "force": syntax error
+
+} {4.0 5.0} {}}
