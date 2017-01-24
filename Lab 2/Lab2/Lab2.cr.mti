@@ -48,6 +48,16 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity pg_creator
 -- Compiling architecture dataflow of pg_creator
 
+} {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu_wCLA
+-- Compiling architecture dataflow of alu_wCLA
+-- Loading entity cla
+-- Loading entity cmp
+
 } {} {}} {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
