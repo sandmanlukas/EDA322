@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  24 JAN 2017 11:30
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  24 JAN 2017 11:37
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,7 +384,15 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+<<<<<<< HEAD
 (./report.aux)
+=======
+(./report.aux
+
+LaTeX Warning: Label `fig:etikett' multiply defined.
+
+)
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -395,8 +407,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
+<<<<<<< HEAD
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+=======
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
 \scratchdimen=\dimen105
@@ -485,11 +501,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 33--36
+<<<<<<< HEAD
+=======
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--44
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 
  []
 
@@ -499,6 +518,24 @@ File: fulladder.png Graphic file (type png)
 Package pdftex.def Info: fulladder.png used on input line 46.
 (pdftex.def)             Requested size: 360.0pt x 229.10089pt.
 
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+=======
+<fulladderfromhalfadder.jpg, id=18, 1084.05pt x 465.74pt>
+File: fulladderfromhalfadder.jpg Graphic file (type jpg)
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
+
+<use fulladderfromhalfadder.jpg>
+Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 54.
+(pdftex.def)             Requested size: 360.0pt x 154.66827pt.
+
+<fulladder.png, id=16, 552.0625pt x 351.3125pt>
+File: fulladder.png Graphic file (type png)
+ <use fulladder.png>
+Package pdftex.def Info: fulladder.png used on input line 46.
+(pdftex.def)             Requested size: 360.0pt x 229.10089pt.
+
+<<<<<<< HEAD
 Overfull \hbox (4.50117pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/m/n/10.95 * IN-SERT PIC-TURE OF FULL ADDER FROM TWO HALF ADDERS* 
  []
@@ -512,19 +549,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
 [2]
 Underfull \hbox (badness 10000) in paragraph at lines 79--82
+=======
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1
+
+ <./fulladder.png>] <rca.jpg, id=23, 804.75656pt x 234.8775pt>
+File: rca.jpg Graphic file (type jpg)
+ <use rca.jpg>
+Package pdftex.def Info: rca.jpg used on input line 62.
+(pdftex.def)             Requested size: 360.0pt x 105.07028pt.
+
+[2 <./fulladderfromhalfadder.jpg> <./rca.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
+
+ []
+
+
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 84--87
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
+<<<<<<< HEAD
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
@@ -553,6 +619,31 @@ Here is how much of TeX's memory you used:
  10509 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,43p,871b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+[5] (./report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1954 strings out of 493013
+ 25605 string characters out of 6135682
+ 87264 words of memory out of 5000000
+ 5478 multiletter control sequences out of 15000+600000
+ 10509 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,10n,43p,871b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -562,10 +653,19 @@ ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb>
+<<<<<<< HEAD
 Output written on report.pdf (7 pages, 135830 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on report.pdf (7 pages, 186894 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 

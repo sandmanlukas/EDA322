@@ -48,15 +48,26 @@ When we built our ALU we started with constructing the most basic component, the
   \label{fig:etikett}
 \end{figure}
 
+<<<<<<< HEAD
 * PICTURE OF A FULL ADDER *
 
+=======
+>>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
 You can also build a full adder using two half adders and some extra logic. This can be done by constructing the circuit below.
 
-* INSERT PICTURE OF FULL ADDER FROM TWO HALF ADDERS*
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{fulladderfromhalfadder.jpg}
+  \caption{A full-adder made from two half adders.}
+  \label{fig:etikett}
+\end{figure}
 
 We created an eight bit ripple carry adder (RCA) by connecting eight full adders together according to the diagram below. The RCA was used in our original design but later we replaced it with a carry lookahead adder (CLA) which we designed according to the optional task. 
 
-* INSERT PICTURE OF RCA *
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{rca.jpg}
+  \caption{A ripple carry adder.}
+  \label{fig:etikett}
+\end{figure}
 
 The ALU includes a comparator unit which is used to check whether the operands are equal or not. There are two ways to implement this comparator, by using structural or dataflow VHDL. We decided to do the dataflow implementation because we thought it was easier. In order to check whether the operands are not equal in a dataflow manner we XOR'ed the operands bitwise and checked if the result was zero. This became the NEQ (not equal) out signal. The EQ (equal) out signal was simply an inversion of this. If we were to do this in structural VHDL we would create a component which cheked if two certain bits were not equal. We would then have to create eight such components and or the results with each other. If the result would be zero they wouldn't be equal. This result would've been the NEQ out signal and an inversion of this would be the EQ signal. 
 
