@@ -36,10 +36,11 @@ This part will introduce the reader to the report.
 
 At the beginning, describe what the purpose of this lab report is. Then describe briefly what each section discusses and finally summarize the most important conclusions. 
 
+\newpage
 \section{Method}
 \subsection{Arithmetic and Logic Unit (ALU)}
 
-When we built our ALU we began by constructing the most basic component, the full-adder. We started with deriving the boolean expressions for the full-adder. We did this by minimizing the boolean expression for the sum and the carry out signals using a Karnaugh diagram. We came to the conclusion that a full-adder should be built like described in the picture below.
+When we built our ALU we began by constructing the most basic component, the full-adder. We started by minimizing the boolean expression for the sum and the carry out signals using a Karnaugh diagram. We came to the conclusion that a full-adder should be built like described in the picture below.
 
 \begin{figure}[h!]
   \centering
@@ -48,7 +49,7 @@ When we built our ALU we began by constructing the most basic component, the ful
   \label{fig:etikett}
 \end{figure}
 
-You can also build a full-adder using two half-adders and some extra logic. This can be done by constructing the circuit below. We came to this conclusion by connecting the resulting signal of the first half-adder to the second one along with the carry in signal. After this we just added the extra logic that was needed, which was an OR gate.
+You can also build a full-adder using two half-adders and some extra logic. We came to this conclusion by connecting the resulting signal of the first half-adder to the second one along with the carry in signal. After this we just added the extra logic that was needed, which was an OR gate.
 
 \begin{figure}[h!]
   \centering
@@ -57,28 +58,27 @@ You can also build a full-adder using two half-adders and some extra logic. This
   \label{fig:etikett}
 \end{figure}
 
-We created an eight bit ripple carry adder (RCA) by connecting eight full-adders together according to the diagram below. The idea is to simply connect the carry out signal of the first full-adder to the carry in signal of the second one, and so on. The RCA was used in our original design of the ALU but later we replaced it with a carry lookahead adder (CLA) which we constructed according to the instructions in the optional task of lab 2. 
+We created an 8-bit ripple carry adder (RCA) by connecting eight full-adders together according to the diagram below. The idea is to simply connect the carry out signal of the first full-adder to the carry in signal of the second one, and so on. The RCA was used in our original design of the ALU but later we replaced it with a carry lookahead adder (CLA).
 
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{rca.jpg}
+  \centering
+  \includegraphics[width=0.9\linewidth]{rca.jpg}
   \caption{A ripple carry adder.}
   \label{fig:etikett}
 \end{figure}
 
-The ALU includes a comparator unit which is used to check whether the operands are equal or not. There are two ways to implement this comparator, by using the structural or dataflow style of VHDL. We decided to do the dataflow implementation because we thought it would be easier and that it would result in a more clean code. In order to check whether the operands are not equal we performed a bitwise XOR on the operands and checked if the resulting bitstream was zero. This was used as the resulting NEQ signal. The EQ signal was simply an inversion of the NEQ signal. 
+The ALU includes a comparator unit which is used to check whether the operands are equal or not. You can implement it by using the structural or dataflow style of VHDL. We decided to do the dataflow implementation because we thought it would be easier and that it would result in a more clean code. In order to check whether the operands are not equal we performed a bitwise XOR on the operands and OR:ed the results. This was used as the resulting NEQ signal. The EQ signal was simply an inversion of the NEQ signal. 
 
-If we were to do this in structural VHDL we would have to create a component which cheked if two certain bits were not equal. We would then have to create eight such components and perform an OR operation on the results. If that result would be zero they would not be equal. This result would've been used as the NEQ signal and an inversion of it would be used as the the EQ signal. 
+If we were to do this in structural VHDL we would have to create a component which cheked if two certain bits were not equal. We would then have to create eight such components. The input as a whole is equal if all 8 bits are equal, otherwise not.
 
-Our ALU supports subtraction between the operands. The operation A minus B is performed by converting B to its 2-compliment and then adding it with A. To get the 2-compliment representation for B we invert all the bits of B and set the carry in signal to one. In order for this to be possible we need to add eight XOR gates (one for each bit in B). The input to these XOR gates are the respective bits of B and the SUB signal. The SUB signal is one when the operation signal is set to subtraction. The SUB signal is also connected to the carry in signal, I.E the carry in is set to one whenever we subtract according to above. 
+The operation A minus B is performed by converting B to its 2-complement and then adding it with A. By passing B through 8 XOR gates, each having SUB as its second input, we can form B:s 1-complement when subtracting. We connect SUB to carry-in to form the 2-complement.
 
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{subtractionlogic.jpg}
+  \centering
+  \includegraphics[width=0.90\linewidth]{subtractionlogic.jpg}
   \caption{Logic for performing subtraction with an adder.}
   \label{fig:etikett}
 \end{figure}
-
-\noindent
-\textbf{Findings and observations}
 
 One thing that we learned was that in VHDL the entity names in a project have to be unique for all references to work properly. 
 
