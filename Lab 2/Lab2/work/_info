@@ -49,26 +49,26 @@ R10
 R11
 R12
 Ealu_tb
-Z14 w1485160606
+Z14 w1485249829
 Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z17 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z18 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd
-Z19 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd
+Z18 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd
+Z19 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd
 l0
 L8
 VaE^YASfJ^^I9=UNXOOc?J3
 !s100 S<kGfU:Cj?bX[YELJ8cl90
 R6
 32
-Z20 !s110 1485160611
+Z20 !s110 1485249834
 !i10b 1
-Z21 !s108 1485160611.000000
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd|
-Z23 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_testbench.vhd|
+Z21 !s108 1485249834.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd|
+Z23 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_cla_testbench.vhd|
 !i113 1
 R11
 R12
@@ -81,8 +81,8 @@ R2
 DEx4 work 6 alu_tb 0 22 aE^YASfJ^^I9=UNXOOc?J3
 l102
 L11
-VAoO2o92CFn>C]IHXgVD`T2
-!s100 nbBz8d7QEjZ4NB6g3TNPG1
+V[z1z2ooMUXmJ;^036<_WS3
+!s100 dU5D8d:W7OY^0RW9`fX0m1
 R6
 32
 R20
@@ -93,148 +93,351 @@ R23
 !i113 1
 R11
 R12
-Ealu_wrca
-Z24 w1485160682
+Ealu_tb_cla
+Z24 w1485249874
+R15
+R16
+R17
 R1
 R2
 R3
-Z25 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wRCA.vhd
-Z26 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wRCA.vhd
+R18
+R19
+l0
+L8
+VBNn^B[8lgkK9KA_0Tj7310
+!s100 E:f2MZhigT23aUoc7L@><1
+R6
+32
+Z25 !s110 1485249883
+!i10b 1
+Z26 !s108 1485249883.000000
+R22
+R23
+!i113 1
+R11
+R12
+Abehavioral
+R15
+R16
+R17
+R1
+R2
+DEx4 work 10 alu_tb_cla 0 22 BNn^B[8lgkK9KA_0Tj7310
+l102
+L11
+Vz02UUkF@TSCO@]ZS?Gz4U1
+!s100 G`NZcWhHj<OHhN:PIOVX`1
+R6
+32
+R25
+!i10b 1
+R26
+R22
+R23
+!i113 1
+R11
+R12
+Ealu_wcla
+Z27 w1485250303
+R1
+R2
+R3
+Z28 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd
+Z29 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd
+l0
+L5
+V[[hSigX]i8z20O<=Q^[Un1
+!s100 04OVnDWQZ1LZFf6NnT3j_0
+R6
+32
+Z30 !s110 1485250308
+!i10b 1
+Z31 !s108 1485250308.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd|
+Z33 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wCLA.vhd|
+!i113 1
+R11
+R12
+Adataflow
+Z34 DEx4 work 3 cmp 0 22 l]3dCzMZA?L0SU3XDH7k]0
+Z35 DEx4 work 3 cla 0 22 =aCEXX>kMdVFgn_Dz`NMn0
+R1
+R2
+DEx4 work 8 alu_wcla 0 22 [[hSigX]i8z20O<=Q^[Un1
+l36
+L21
+VJGInNH6Bbho2h>@9PUOeh3
+!s100 VCT8HM5A^_[faKF@a<@dX0
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R11
+R12
+Ealu_wrca
+Z36 w1485249711
+R1
+R2
+R3
+R28
+R29
 l0
 L5
 VZP<1`Y:kg2jO_RnHn<@7n1
 !s100 5ojOXAOde@7O1kf2i5mXM1
 R6
 32
-Z27 !s110 1485160691
+!s110 1485249716
 !i10b 1
-Z28 !s108 1485160691.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wRCA.vhd|
-Z30 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/alu_wRCA.vhd|
+Z37 !s108 1485249716.000000
+R32
+R33
 !i113 1
 R11
 R12
 Adataflow
-Z31 DEx4 work 3 cmp 0 22 l]3dCzMZA?L0SU3XDH7k]0
-R13
+R34
+R35
 R1
 R2
-Z32 DEx4 work 8 alu_wrca 0 22 ZP<1`Y:kg2jO_RnHn<@7n1
+DEx4 work 8 alu_wrca 0 22 ZP<1`Y:kg2jO_RnHn<@7n1
 l36
 L21
-V;?ao8dXBiH@L6Q5:CU=g<1
-!s100 F0h7^SZW8Y:2=3N0OJ5go1
+V3Xod9aVmOiXcLM631NOe43
+!s100 3<k98P=TZ`Q?dKL9?dY3N0
 R6
 32
-R27
+!s110 1485249717
 !i10b 1
-R28
-R29
-R30
+R37
+R32
+R33
+!i113 1
+R11
+R12
+Ecla
+Z38 w1485249644
+R1
+R2
+R3
+Z39 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/CLA.vhd
+Z40 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/CLA.vhd
+l0
+L5
+V=aCEXX>kMdVFgn_Dz`NMn0
+!s100 6f`FMR0gN??bX5C`TbS4;0
+R6
+32
+Z41 !s110 1485249648
+!i10b 1
+Z42 !s108 1485249648.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/CLA.vhd|
+Z44 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/CLA.vhd|
+!i113 1
+R11
+R12
+Astructural
+R1
+R2
+R35
+l61
+L17
+V2<CMNFQolPETU=hI0?0ec1
+!s100 K3DT8MjgQ_??Z]2DD9>M52
+R6
+32
+R41
+!i10b 1
+R42
+R43
+R44
 !i113 1
 R11
 R12
 Ecmp
-Z33 w1484898491
+Z45 w1484898491
 R1
 R2
 R3
-Z34 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd
-Z35 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd
+Z46 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd
+Z47 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd
 l0
 L5
 Vl]3dCzMZA?L0SU3XDH7k]0
 !s100 Oc5fc4b02in_U212dl1?C1
 R6
 32
-Z36 !s110 1484901336
+Z48 !s110 1484901336
 !i10b 1
-Z37 !s108 1484901336.000000
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd|
-Z39 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd|
+Z49 !s108 1484901336.000000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd|
+Z51 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/cmp.vhd|
 !i113 1
 R11
 R12
 Adataflow
 R1
 R2
-R31
+R34
 l17
 L14
 V;iMjPa4VhZ]Qa4AHDmfEz3
 !s100 NA<C1_ke^]3[o8`1b?YKH2
 R6
 32
-R36
+R48
 !i10b 1
-R37
-R38
-R39
+R49
+R50
+R51
 !i113 1
 R11
 R12
 Efa
-Z40 w1484832464
+Z52 w1484832464
 R1
 R2
 R3
-Z41 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd
-Z42 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd
+Z53 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd
+Z54 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd
 l0
 L4
 Vc:Sf@NSIhKAAgX113kIl>3
 !s100 4C0HLkml1hTMR5?G>5zHC3
 R6
 32
-Z43 !s110 1484901335
+Z55 !s110 1485243819
 !i10b 1
-Z44 !s108 1484901335.000000
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd|
-Z46 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd|
+Z56 !s108 1485243818.000000
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd|
+Z58 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/FA.vhd|
 !i113 1
 R11
 R12
 Adataflow
 R1
 R2
-Z47 DEx4 work 2 fa 0 22 c:Sf@NSIhKAAgX113kIl>3
+Z59 DEx4 work 2 fa 0 22 c:Sf@NSIhKAAgX113kIl>3
 l15
 L14
 V;FRgNSJbm0?h6HkD[38_H2
 !s100 T^7lK933@e=QB_c>GeN[P1
 R6
 32
-R43
+R55
 !i10b 1
-R44
-R45
-R46
+R56
+R57
+R58
+!i113 1
+R11
+R12
+Epg_combiner
+Z60 w1485245435
+R1
+R2
+R3
+Z61 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_combiner.vhd
+Z62 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_combiner.vhd
+l0
+L5
+V;m6>ZEmCT9Bh[f]7]GgDE3
+!s100 dTcG0Ea^9CRf=B2?Uin>=3
+R6
+32
+Z63 !s110 1485245490
+!i10b 1
+Z64 !s108 1485245489.000000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_combiner.vhd|
+Z66 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_combiner.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 11 pg_combiner 0 22 ;m6>ZEmCT9Bh[f]7]GgDE3
+l19
+L16
+VUUOo6V<dd7XBh10X3DA1[0
+!s100 T4Mg]e:F<begf1XB^hIJi3
+R6
+32
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R11
+R12
+Epg_creator
+Z67 w1485244219
+R1
+R2
+R3
+Z68 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_creator.vhd
+Z69 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_creator.vhd
+l0
+L5
+V>Hcd[hHX3<>=J??[ZW7cT2
+!s100 8ALF>HbRBQCGZ>N6H930A3
+R6
+32
+Z70 !s110 1485244226
+!i10b 1
+Z71 !s108 1485244226.000000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_creator.vhd|
+Z73 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/pg_creator.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 10 pg_creator 0 22 >Hcd[hHX3<>=J??[ZW7cT2
+l17
+L16
+VoDz70[cgj:BE<Mnhjh3JH0
+!s100 TEg^maVX4PhmIZX3>fXjE0
+R6
+32
+R70
+!i10b 1
+R71
+R72
+R73
 !i113 1
 R11
 R12
 Erca
-Z48 w1484833476
+Z74 w1484833476
 R1
 R2
 R3
-Z49 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd
-Z50 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd
+Z75 8C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd
+Z76 FC:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd
 l0
 L5
 VnU@g2h1>SHZ5YT2IL2Yd<2
 !s100 dS^lT1R]hk;`VWE[JOYe;1
 R6
 32
-Z51 !s110 1484912648
+Z77 !s110 1484912648
 !i10b 1
-Z52 !s108 1484912648.000000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd|
-Z54 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd|
+Z78 !s108 1484912648.000000
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd|
+Z80 !s107 C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Lab 2/Lab2/RCA.vhd|
 !i113 1
 R11
 R12
 Astructural
-R47
+R59
 R1
 R2
 R13
@@ -244,11 +447,11 @@ Vb49;X;Ni1D0]GQK5oTQOH0
 !s100 fDlKZlbZ2MhSJz6?I8MQb0
 R6
 32
-R51
+R77
 !i10b 1
-R52
-R53
-R54
+R78
+R79
+R80
 !i113 1
 R11
 R12
