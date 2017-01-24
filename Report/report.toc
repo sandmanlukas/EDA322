@@ -2,6 +2,7 @@
 \contentsline {section}{\numberline {2}Method}{1}
 \contentsline {subsection}{\numberline {2.1}Arithmetic and Logic Unit (ALU)}{1}
 \contentsline {subsection}{\numberline {2.2}Top-level Design}{3}
+<<<<<<< Updated upstream
 \contentsline {subsection}{\numberline {2.3}Controller}{3}
 <<<<<<< HEAD
 \contentsline {subsection}{\numberline {2.4}Processor's Testbench}{3}
@@ -13,3 +14,11 @@
 \contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis \emph {(Optional)}}{4}
 \contentsline {section}{\numberline {3}Analysis}{4}
 \contentsline {section}{\numberline {A}Appendix}{5}
+=======
+\contentsline {subsection}{\numberline {2.3}Controller}{4}
+\contentsline {subsection}{\numberline {2.4}Processor's Testbench}{4}
+\contentsline {subsection}{\numberline {2.5}ChAcc on Nexys 3 board \emph {(Optional)}}{4}
+\contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis \emph {(Optional)}}{5}
+\contentsline {section}{\numberline {3}Analysis}{5}
+\contentsline {section}{\numberline {A}Appendix}{6}
+>>>>>>> Stashed changes

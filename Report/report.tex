@@ -40,39 +40,36 @@ At the beginning, describe what the purpose of this lab report is. Then describe
 \subsection{Arithmetic and Logic Unit (ALU)}
 (max: 2 pages)
 \\\\
-When we built our ALU we started with constructing the most basic component, the full-adder. We started with deriving the boolean expressions for a full adder. We did this by minimizing the boolean expression for the sum and the carry out signal using a Karnaugh diagram. We came to the conclusion that a full adder should be built like described in the picture below. 
-
+When we built our ALU we began by constructing the most basic component, the full-adder. We started with deriving the boolean expressions for the full-adder. We did this by minimizing the boolean expression for the sum and the carry out signals using a Karnaugh diagram. We came to the conclusion that a full-adder should be built like described in the picture below.
+\\
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{fulladder.png}
   \caption{A full-adder.}
   \label{fig:etikett}
 \end{figure}
-
-<<<<<<< HEAD
-* PICTURE OF A FULL ADDER *
-
-=======
->>>>>>> f87fb8af5b082557dff83fde94aa41cfae1c4fff
-You can also build a full adder using two half adders and some extra logic. This can be done by constructing the circuit below.
-
+\\
+You can also build a full-adder using two half-adders and some extra logic. This can be done by constructing the circuit below. We came to this conclusion by connecting the resulting signal of the first half-adder to the second one along with the carry in signal. After this we just added the extra logic that was needed, which was an OR gate.
+\\
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{fulladderfromhalfadder.jpg}
-  \caption{A full-adder made from two half adders.}
+  \caption{A full-adder made from two half-adders.}
   \label{fig:etikett}
 \end{figure}
-
-We created an eight bit ripple carry adder (RCA) by connecting eight full adders together according to the diagram below. The RCA was used in our original design but later we replaced it with a carry lookahead adder (CLA) which we designed according to the optional task. 
-
+\\\
+We created an eight bit ripple carry adder (RCA) by connecting eight full-adders together according to the diagram below. The idea is to simply connect the carry out signal of the first full-adder to the carry in signal of the second one, and so on. The RCA was used in our original design of the ALU but later we replaced it with a carry lookahead adder (CLA) which we constructed according to the instructions in the optional task of lab 2. 
+\\
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{rca.jpg}
   \caption{A ripple carry adder.}
   \label{fig:etikett}
 \end{figure}
-
-The ALU includes a comparator unit which is used to check whether the operands are equal or not. There are two ways to implement this comparator, by using structural or dataflow VHDL. We decided to do the dataflow implementation because we thought it was easier. In order to check whether the operands are not equal in a dataflow manner we XOR'ed the operands bitwise and checked if the result was zero. This became the NEQ (not equal) out signal. The EQ (equal) out signal was simply an inversion of this. If we were to do this in structural VHDL we would create a component which cheked if two certain bits were not equal. We would then have to create eight such components and or the results with each other. If the result would be zero they wouldn't be equal. This result would've been the NEQ out signal and an inversion of this would be the EQ signal. 
-
-Our ALU supports subtraction between the operands. The operation A minus B is performed by converting B to it's 2-compliment and then adding it with A. In order to get the 2-compliment representation for B we invert all the bits of B and set the carry in signal to one. In order for this to be possible we added eight XOR gates (one for each bit in B). The input to these XOR gates are the respective bits of B and the SUB signal. The SUB signal is one when the operation signal is set to subtraction. The SUB signal is also connected to the carry in signal, I.E the carry in is set to one whenever we subtract according to above.
-
+\\
+The ALU includes a comparator unit which is used to check whether the operands are equal or not. There are two ways to implement this comparator, by using the structural or dataflow style of VHDL. We decided to do the dataflow implementation because we thought it would be easier and that it would result in a more clean code. In order to check whether the operands are not equal we performed a bitwise XOR on the operands and checked if the resulting bitstream was zero. This was used as the resulting NEQ signal. The EQ signal was simply an inversion of the NEQ signal. 
+\\\\
+If we were to do this in structural VHDL we would have to create a component which cheked if two certain bits were not equal. We would then have to create eight such components and perform an OR operation on the results. If that result would be zero they would not be equal. This result would've been used as the NEQ signal and an inversion of it would be used as the the EQ signal. 
+\\\\
+Our ALU supports subtraction between the operands. The operation A minus B is performed by converting B to its 2-compliment and then adding it with A. In order to get the 2-compliment representation for B we invert all the bits of B and set the carry in signal to one. In order for this to be possible we need to add eight XOR gates (one for each bit in B). The input to these XOR gates are the respective bits of B and the SUB signal. The SUB signal is one when the operation signal is set to subtraction. The SUB signal is also connected to the carry in signal, I.E the carry in is set to one whenever we subtract according to above. In this way we can easily perform the operation A - B by setting the operation signal to subtraction and enter A and B as usual.
+\\\\
 * PICTURE OF LOGIC *
 
 \noindent
@@ -82,6 +79,14 @@ One thing that we learned was that in VHDL the entity names in a project have to
 
 We also learnt why the critical path for an n-bit RCA is $2n+1$ gates. For every full adder the carry-out depth depends on the inputs ($3$ gates deep) and the carry-in ($2 + $previous depth). The depth is the maximum of these. For the first the depth becomes $3$, for the second $5$ and so on. In other words, for the first adder the inputs are the fartherest away, but for the following it is the carry-in instead. \\
 
+
+\\
+One thing that we learned was that in VHDL the entity names in a project have to be unique for all references to work properly. 
+
+Another thing we learnt was that the critical path for an n-bit RCA is $2n+1$ gates. The last carry-out is the longest. For every full-adder the carry out needs the carry-in (passes 2 gates) and the inputs (passes 3 gates). The first adder can pass on its carry-out after 3 gates. But the second adder can pass on its carry-out after just 2 more steps since the result from the inputs have already arrived to the last AND gate.
+\\
+\\
+TO BE REMOVED
 Describe what you did in lab 2 and what you have learnt. In addition, discuss your findings and observations during this lab. Summarize your answers to the questions in the lab PM and present the block diagrams that you have drawn. Furthermore, describe how your ALU performs subtraction using an adder. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
 \subsection{Top-level Design}
