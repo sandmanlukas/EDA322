@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 %\setlength{\headheight}{11pt}
 
 \lhead
@@ -39,18 +40,14 @@ At the beginning, describe what the purpose of this lab report is. Then describe
 \subsection{Arithmetic and Logic Unit (ALU)}
 (max: 2 pages)
 \\\\
+When we built our ALU we started with constructing the most basic component, the full-adder. We started with deriving the boolean expressions for a full adder. We did this by minimizing the boolean expression for the sum and the carry out signal using a Karnaugh diagram. We came to the conclusion that a full adder should be built like described in the picture below. 
 
-When we built our ALU we started with constructing the most basic component, the full adder. We started with deriving the boolean expressions for a full adder. We did this by minimizing the boolean expression for the sum and the carry out signal using a Karnaugh diagram. We came to the conclusion that a full adder should be built like described in the picture below. 
-
-<<<<<<< HEAD
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{bild.png}
-  \caption{Undertext.}
+  \includegraphics[width=\linewidth]{fulladder.png}
+  \caption{A full-adder.}
   \label{fig:etikett}
 \end{figure}
 
-=======
->>>>>>> 0fc0aba5753ee60bef787338336a32e96cd744f3
 * PICTURE OF A FULL ADDER *
 
 You can also build a full adder using two half adders and some extra logic. This can be done by constructing the circuit below.
@@ -67,9 +64,12 @@ Our ALU supports subtraction between the operands. The operation A minus B is pe
 
 * PICTURE OF LOGIC *
 
+\noindent
+\textbf{Findings and observations}
+
 One thing that we learned was that in VHDL the entity names in a project have to be unique for all references to work properly. 
 
-Another thing we learnt was that the critical path for an n-bit RCA is $2n+1$ gates. The last carry-out is the longest. For every full adder the carry out needs the carry-in (passes 2 gates) and the inputs (passes 3 gates). The first adder can pass on its carry-out after 3 gates. But the second adder can pass on its carry-out after just 2 more steps since the result from the inputs have already arrived to the last AND gate.
+We also learnt why the critical path for an n-bit RCA is $2n+1$ gates. For every full adder the carry-out depth depends on the inputs ($3$ gates deep) and the carry-in ($2 + $previous depth). The depth is the maximum of these. For the first the depth becomes $3$, for the second $5$ and so on. In other words, for the first adder the inputs are the fartherest away, but for the following it is the carry-in instead. \\
 
 Describe what you did in lab 2 and what you have learnt. In addition, discuss your findings and observations during this lab. Summarize your answers to the questions in the lab PM and present the block diagrams that you have drawn. Furthermore, describe how your ALU performs subtraction using an adder. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
