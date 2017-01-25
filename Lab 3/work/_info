@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/MrWicki/Documents/Skola/eda322/Lab 2/Lab2
 Emem_array
-Z0 w1485342133
+Z0 w1485342390
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ V;OK^M_AI]<l@hE>mbGG:_0
 !s100 R[DoBm4b1HgPe3GoTKaJT3
 Z7 OP;C;10.4a;61
 32
-Z8 !s110 1485342145
+Z8 !s110 1485342643
 !i10b 1
-Z9 !s108 1485342145.000000
+Z9 !s108 1485342642.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 3/mem_array.vhd|
 Z11 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 3/mem_array.vhd|
 !i113 1
@@ -37,8 +37,8 @@ R3
 Z14 DEx4 work 9 mem_array 0 22 ;OK^M_AI]<l@hE>mbGG:_0
 l42
 L22
-VIV39X^5GzAZUof;gYgWJ82
-!s100 z]b8[:Y8NnKD7RbbHONZB3
+VIgG7AiO81:?VBLkhL_i?D1
+!s100 `Ci?==UdMZ_g^Om90@5;@0
 R7
 32
 R8
