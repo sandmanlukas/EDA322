@@ -40,16 +40,16 @@ ARCHITECTURE behavioral OF mem_array IS
 	SIGNAL memory : MEMORY_ARRAY := (init_memory_wfile(init_file));
 
 BEGIN
-
+	--When we write to the memory some time needs to pass (couple of ns's) before the data is possible to read.
+	--If we try to update the output signal in the same iteration as data is written we get the data previously stored
+	--at the address. Do we need to update output directly or can it wait until negative flank?
 	PROCESS(clk,addr,we)
 		BEGIN
-			IF(we='0') THEN								--As long as we = 0 we read, asynchronous
-				output <= memory(to_integer(unsigned(addr)));
-			ELSE
-				IF(clk'event AND clk='1') THEN					--If triggered by clock on positive flank
-					memory(to_integer(unsigned(addr))) <= datain;		--we write
-				END IF;
+			IF(clk'event AND clk='1' AND we='1') THEN			--If triggered by clock on positive flank and we = 1
+				memory(to_integer(unsigned(addr))) <= datain;		--we write
+				--output <= datain; doesn't help!
 			END IF;
+			output <= memory(to_integer(unsigned(addr)));
 		END PROCESS;
 
 END behavioral;

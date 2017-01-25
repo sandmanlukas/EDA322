@@ -7,7 +7,7 @@ ENTITY mem_array IS
 	GENERIC (
 		data_width: INTEGER := 8;
 		addr_width: INTEGER := 8;
-		init_file:  STRING := "inst_mem.mif"
+		init_file:  STRING := "data_mem.mif"
 	);
 	
 	PORT(
@@ -43,13 +43,11 @@ BEGIN
 
 	PROCESS(clk,addr,we)
 		BEGIN
-			IF(we='0') THEN								--As long as we = 0 we read, asynchronous
-				output <= memory(to_integer(unsigned(addr)));
-			ELSE
-				IF(clk'event AND clk='1') THEN					--If triggered by clock on positive flank
-					memory(to_integer(unsigned(addr))) <= datain;		--we write
-				END IF;
+			IF(clk'event AND clk='1' AND we='1') THEN			--If triggered by clock on positive flank and we = 1
+				memory(to_integer(unsigned(addr))) <= datain;		--we write
+				output <= datain;
 			END IF;
+			output <= memory(to_integer(unsigned(addr)));
 		END PROCESS;
 
 END behavioral;
