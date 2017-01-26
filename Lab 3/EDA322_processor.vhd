@@ -98,6 +98,34 @@ ARCHITECTURE structural OF EDA322_processor IS
 		);
 	END COMPONENT;
 
+	COMPONENT alu_wRCA
+		PORT(
+			ALU_inA   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			ALU_inB   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			Operation : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			ALU_out   : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+			Carry     : OUT STD_LOGIC;
+			NotEq     : OUT STD_LOGIC;
+			Eq        : OUT STD_LOGIC;
+			isOutZero : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+	COMPONENT procBus
+		PORT(
+			INSTRUCTION : in STD_LOGIC_VECTOR (7 downto 0);
+	 		DATA        : in STD_LOGIC_VECTOR (7 downto 0);
+	 		ACC         : in STD_LOGIC_VECTOR (7 downto 0);
+	 		EXTDATA     : in STD_LOGIC_VECTOR (7 downto 0);
+	 		OUTPUT      : out STD_LOGIC_VECTOR (7 downto 0);
+	 		ERR         : out STD_LOGIC;
+	 		instrSEL    : in STD_LOGIC;
+	 		dataSEL     : in STD_LOGIC;
+	 		accSEL      : in STD_LOGIC;
+	 		extdataSEL  : in STD_LOGIC
+		    );
+	END COMPONENT;
+
 --All of the signals for the controller
 SIGNAL pcSel 	: STD_LOGIC;
 SIGNAL pcLd  	: STD_LOGIC;
@@ -140,6 +168,7 @@ SIGNAL FlagInp 	  : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL ALUResult  : STD_LOGIC_VECTOR(7 DOWNTO 0); --We added this ourselves
 SIGNAL ACCIn      : STD_LOGIC_VECTOR(7 DOWNTO 0); --We added this ourselves
 SIGNAL OutFromACC : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL FlagRes	  : STD_LOGIC_VECTOR(3 DOWNTO 0); --We added this ourselves
 
 
 BEGIN
@@ -202,6 +231,9 @@ BEGIN
 			pc
 		);
 
+	
+pc2seg <= pc;
+
 	instruction_memory : mem_array
 		GENERIC MAP
 		(
@@ -234,6 +266,9 @@ BEGIN
 			Instruction
 		);
 
+
+instr2seg <= Instruction;
+
 --Decode/Decode* section
 opcode <= Instruction(11 DOWNTO 8);	         --Here we split Instruction into two parts
 addrFromInstruction <= Instruction(7 DOWNTO 0);
@@ -248,6 +283,9 @@ dataIn <= BusOut;
 			Addr
 		);
 	
+	
+addr2seg <= Addr;
+
 	data_memory : mem_array
 		GENERIC MAP
 		(
@@ -265,11 +303,117 @@ dataIn <= BusOut;
 			MemDataOut
 		);
 
+	de_ex_register : reggister
+		PORT MAP
+		(
+			MemDataOut,
+			clk,
+			aresetn,
+			dataLd,
+			MemDataOutReged
+		);
+
 
 	
 
 
 
+
+dMemOut2seg <= MemDataOutReged;
+
 --Execution/Memory section
+	alu : alu_wRCA
+		PORT MAP
+		(
+			OutFromAcc,
+			BusOut,
+			aluMd,
+			ALUResult,
+			FlagInp(3),
+			FlagInp(2),
+			FlagInp(1),
+			FlagInp(0)
+		);
+	
+	
+
+	
+aluOut2Seg <= ALUResult;
+
+	acc_mux : mux2to1_8wide
+		PORT MAP
+		(
+			ALUResult,
+			BusOut,
+			accSel,
+			ACCIn
+		);
+
+	acc_register : reggister
+		PORT MAP
+		(
+			ACCIn,
+			clk,
+			aresetn,
+			accLd,
+			OutFromACC
+		);
+
+
+			
+
+
+acc2seg <= OutFromACC;
+
+	freg : reggister
+		GENERIC MAP
+		(
+			data_width => 4
+		)		
+
+		PORT MAP
+		(
+			FlagInp,
+			clk,
+			aresetn,
+			flagLd,
+			flagRes
+		);
+
+eq <= FlagRes(1);
+neq <= FlagRes(2);
+flag2seg <= FlagRes;
+
+	display_rgister : reggister
+		PORT MAP
+		(
+			OutFromACC,
+			clk,
+			aresetn,
+			dispLd,
+			disp2seg
+		);
+
+--Bus section
+	buss : procbus
+		PORT MAP
+		(
+			addrFromInstruction,
+			MemDataOutReged,
+			OutFromAcc,
+			externalIn,
+			busOut,
+			errSig2seg,
+			im2bus,
+			dmRd,
+			acc2bus,
+			ext2bus
+		);
+
+busOut2Seg <= BusOut;
 
 END structural;
+
+
+
+
