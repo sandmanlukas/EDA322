@@ -1,0 +1,47 @@
+restart -f -nowave    	
+view signals wave 
+add wave INSTRUCTION DATA ACC EXTDATA OUTPUT instrSel dataSel accSel extdataSel
+
+force INSTRUCTION b"00001111"
+force DATA b"10101010"
+force ACC b"00110011"
+force EXTDATA b"11110000"
+
+force instrSel 0
+force dataSel 0
+force accSel 0
+force extdataSel 0
+
+run 100
+
+force instrSel 1
+run 100
+
+force instrSel 0
+force dataSel 1
+run 100
+
+force dataSel 0
+force accSel 1
+run 100
+
+force accSel 0
+force extdataSel 1
+run 100
+
+force accSel 1
+run 100
+
+force accSel 0
+run 100
+
+force accSel 1
+force instrSel 1
+force dataSel 1
+run 100
+
+
+
+
+
+
