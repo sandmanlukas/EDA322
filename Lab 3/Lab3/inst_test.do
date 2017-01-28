@@ -4,7 +4,7 @@ view signals wave
 add wave output addr clk we datain
 
 force we 0
-force clk 0 0,1 50ns -repeat 100ns
+force clk 1 1,0 50ns -repeat 100ns
 force addr b"00000101"
 
 run 100ns
