@@ -5,9 +5,9 @@ USE std.textio.all;
 
 ENTITY mem_array IS
 	GENERIC (
-		data_width: INTEGER := 8;
+		data_width: INTEGER := 12;
 		addr_width: INTEGER := 8;
-		init_file:  STRING := "data_mem.mif"
+		init_file:  STRING := "inst_mem.mif"
 	);
 	
 	PORT(
@@ -40,14 +40,17 @@ ARCHITECTURE behavioral OF mem_array IS
 	SIGNAL memory : MEMORY_ARRAY := (init_memory_wfile(init_file));
 
 BEGIN
-
+	--When we write to the memory some time needs to pass (couple of ns's) before the data is possible to read.
+	--If we try to update the output signal in the same iteration as data is written we get the data previously stored
+	--at the address. Do we need to update output directly or can it wait until negative flank?
 	PROCESS(clk,addr,we)
 		BEGIN
 			IF(clk'event AND clk='1' AND we='1') THEN			--If triggered by clock on positive flank and we = 1
 				memory(to_integer(unsigned(addr))) <= datain;		--we write
 				output <= datain;
-			END IF;
+			ELSE
 			output <= memory(to_integer(unsigned(addr)));
+			END IF;
 		END PROCESS;
 
 END behavioral;

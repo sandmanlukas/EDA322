@@ -5,9 +5,9 @@ USE std.textio.all;
 
 ENTITY mem_array IS
 	GENERIC (
-		data_width: INTEGER := 8;
+		data_width: INTEGER := 12;
 		addr_width: INTEGER := 8;
-		init_file:  STRING := "data_mem.mif"
+		init_file:  STRING := "inst_mem.mif"
 	);
 	
 	PORT(
@@ -47,9 +47,10 @@ BEGIN
 		BEGIN
 			IF(clk'event AND clk='1' AND we='1') THEN			--If triggered by clock on positive flank and we = 1
 				memory(to_integer(unsigned(addr))) <= datain;		--we write
-				--output <= datain; doesn't help!
-			END IF;
+				output <= datain; doesn't help!
+			ELSE
 			output <= memory(to_integer(unsigned(addr)));
+			END IF;
 		END PROCESS;
 
 END behavioral;
