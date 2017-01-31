@@ -44,6 +44,7 @@ sel <= instrSEL & dataSEL & accSEl& extdataSEL;
 			  "01" WHEN "0010",
 			  "10" WHEN "0100",
 			  "11" WHEN "1000",
+			  "00" WHEN "0000", -- What should we output when noselect?
 			  "00" WHEN OTHERS; -- What should we output when too many?
 	
 	WITH sel SELECT

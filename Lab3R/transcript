@@ -1,0 +1,199 @@
+# Compile of alu_wRCA.vhd failed with 10 errors.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd failed with 4 errors.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# Compile of mux2to1_bit.vhdl was successful.
+# 14 compiles, 2 failed with 14 errors.
+# Compile of alu_wRCA.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd was successful.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# Compile of mux2to1_bit.vhdl was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of mem_array.vhd was successful.
+vsim -gui work.mem_array
+# vsim -gui work.mem_array 
+# Start time: 13:13:15 on Jan 31,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem_array(behavioral)#1
+# ** Warning: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd
+# ** Fatal: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd Line: 33
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:13:17 on Jan 31,2017, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 1
+vsim -gui work.mem_array
+# vsim -gui work.mem_array 
+# Start time: 13:13:39 on Jan 31,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem_array(behavioral)#1
+# ** Warning: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd
+# ** Fatal: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd Line: 33
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:13:39 on Jan 31,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim -gui work.mem_array(behavioral)
+# vsim -gui work.mem_array(behavioral) 
+# Start time: 13:14:19 on Jan 31,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem_array(behavioral)#1
+# ** Warning: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd
+# ** Fatal: (vsim-7) Failed to open VHDL file "data_mem.mif" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array File: Z:/EDA322/Lab3R/mem_array.vhd Line: 33
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:14:19 on Jan 31,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of mem_array.vhd was successful.
+vsim -gui work.mem_array
+# vsim -gui work.mem_array 
+# Start time: 13:15:24 on Jan 31,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem_array(behavioral)#1
+do memory.do
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# .main_pane.objects.interior.cs.body.tree .main_pane.wave.interior.cs.body.pw.wf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array
+quit -sim
+# End time: 13:16:53 on Jan 31,2017, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 1
+vsim -gui work.procbus
+# vsim -gui work.procbus 
+# Start time: 13:19:11 on Jan 31,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.procbus(dataflow)#1
+add wave -position insertpoint  \
+sim:/procbus/INSTRUCTION \
+sim:/procbus/DATA \
+sim:/procbus/ACC \
+sim:/procbus/EXTDATA \
+sim:/procbus/OUTPUT \
+sim:/procbus/ERR \
+sim:/procbus/instrSEL \
+sim:/procbus/dataSEL \
+sim:/procbus/accSEL \
+sim:/procbus/extdataSEL
+do bus_test.do
+quit -sim
+# End time: 13:32:49 on Jan 31,2017, Elapsed time: 0:13:38
+# Errors: 0, Warnings: 0
+vsim -gui work.mem_array
+# vsim -gui work.mem_array 
+# Start time: 13:33:08 on Jan 31,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem_array(behavioral)#1
+do memory.do
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# .main_pane.objects.interior.cs.body.tree .main_pane.wave.interior.cs.body.pw.wf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mem_array
+quit -sim
+# End time: 13:40:52 on Jan 31,2017, Elapsed time: 0:07:44
+# Errors: 0, Warnings: 1
+vsim -gui work.procbus
+# vsim -gui work.procbus 
+# Start time: 13:41:05 on Jan 31,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.procbus(dataflow)#1
+add wave -position insertpoint  \
+sim:/procbus/INSTRUCTION \
+sim:/procbus/DATA \
+sim:/procbus/ACC \
+sim:/procbus/EXTDATA \
+sim:/procbus/OUTPUT \
+sim:/procbus/ERR \
+sim:/procbus/instrSEL \
+sim:/procbus/dataSEL \
+sim:/procbus/accSEL \
+sim:/procbus/extdataSEL
+do bus_test.do
+quit -sim
+# End time: 13:45:25 on Jan 31,2017, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 0
+# Compile of alu_wRCA.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd was successful.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# Compile of mux2to1_bit.vhdl was successful.
+# Compile of bus_test.do failed with 1 errors.
+# 15 compiles, 1 failed with 1 error.
+vsim -gui work.eda322_processor
+# vsim -gui work.eda322_processor 
+# Start time: 13:47:00 on Jan 31,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.eda322_processor(structural)#1
+# Loading work.rca(structural)#1
+# Loading work.mem_array(behavioral)#1
+# Loading work.cmp(dataflow)#1
+# End time: 13:54:31 on Jan 31,2017, Elapsed time: 0:07:31
+# Errors: 0, Warnings: 0

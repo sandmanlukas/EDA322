@@ -1,0 +1,419 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE std.textio.all;
+
+entity EDA322_processor is
+	Port(
+		externalIn 		: in STD_LOGIC_VECTOR (7 downto 0); -- ?extIn? in Figure 1
+		CLK 			: in STD_LOGIC;
+		master_load_enable	: in STD_LOGIC;
+		ARESETN 		: in STD_LOGIC;
+		pc2seg 			: out STD_LOGIC_VECTOR (7 downto 0); -- PC
+		instr2seg 		: out STD_LOGIC_VECTOR (11 downto 0); -- Instruction register
+		Addr2seg 		: out STD_LOGIC_VECTOR (7 downto 0); -- Address register
+		dMemOut2seg 		: out STD_LOGIC_VECTOR (7 downto 0); -- Data memory output
+		aluOut2seg 		: out STD_LOGIC_VECTOR (7 downto 0); -- ALU output
+		acc2seg 		: out STD_LOGIC_VECTOR (7 downto 0); -- Accumulator
+		flag2seg 		: out STD_LOGIC_VECTOR (3 downto 0); -- Flags
+		busOut2seg 		: out STD_LOGIC_VECTOR (7 downto 0); -- Value on the bus
+		disp2seg		: out STD_LOGIC_VECTOR(7 downto 0); --Display register
+		errSig2seg 		: out STD_LOGIC; -- Bus Error signal
+		ovf 			: out STD_LOGIC; -- Overflow
+		zero 			: out STD_LOGIC); -- Zero
+end EDA322_processor;
+
+ARCHITECTURE structural OF EDA322_processor IS
+
+--Components
+	COMPONENT procController
+	    Port ( 	master_load_enable: in STD_LOGIC;
+					opcode : in  STD_LOGIC_VECTOR (3 downto 0);
+					neq : in STD_LOGIC;
+					eq : in STD_LOGIC; 
+					CLK : in STD_LOGIC;
+					ARESETN : in STD_LOGIC;
+					pcSel : out  STD_LOGIC;
+					pcLd : out  STD_LOGIC;
+					instrLd : out  STD_LOGIC;
+					addrMd : out  STD_LOGIC;
+					dmWr : out  STD_LOGIC;
+					dataLd : out  STD_LOGIC;
+					flagLd : out  STD_LOGIC;
+					accSel : out  STD_LOGIC;
+					accLd : out  STD_LOGIC;
+					im2bus : out  STD_LOGIC;
+					dmRd : out  STD_LOGIC;
+					acc2bus : out  STD_LOGIC;
+					ext2bus : out  STD_LOGIC;
+					dispLd: out STD_LOGIC;
+					aluMd : out STD_LOGIC_VECTOR(1 downto 0));
+	END COMPONENT;
+
+	COMPONENT mux2to1_8wide
+	
+		PORT(
+			x : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			y : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			s : IN STD_LOGIC;
+			o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		    );
+
+	END COMPONENT;
+
+	COMPONENT pcinc
+		PORT(
+			pc_in  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			pc_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	COMPONENT reggister
+		GENERIC (
+			data_width : INTEGER := 8
+		);
+
+		PORT(
+			data_in     : IN STD_LOGIC_VECTOR(data_width-1 DOWNTO 0);
+			clk         : IN STD_LOGIC;
+			aresetn	    : IN STD_LOGIC;
+			load_enable : IN STD_LOGIC;
+			res 	    : OUT STD_LOGIC_VECTOR(data_width-1 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	COMPONENT mem_array
+		GENERIC (
+			data_width: INTEGER := 8;
+			addr_width: INTEGER := 8;
+			init_file:  STRING := "data_mem.mif"
+		);
+		
+		PORT(
+			addr   : IN STD_LOGIC_VECTOR (addr_width-1 DOWNTO 0);
+			datain : IN STD_LOGIC_VECTOR (data_width-1 DOWNTO 0);
+			clk    : IN STD_LOGIC;					
+			we     : IN STD_LOGIC;
+			output : OUT STD_LOGIC_VECTOR (data_width-1 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	COMPONENT alu_wRCA
+		PORT(
+			ALU_inA   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			ALU_inB   : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			Operation : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			ALU_out   : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+			Carry     : OUT STD_LOGIC;
+			NotEq     : OUT STD_LOGIC;
+			Eq        : OUT STD_LOGIC;
+			isOutZero : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+	COMPONENT procBus
+		PORT(
+			INSTRUCTION : in STD_LOGIC_VECTOR (7 downto 0);
+	 		DATA        : in STD_LOGIC_VECTOR (7 downto 0);
+	 		ACC         : in STD_LOGIC_VECTOR (7 downto 0);
+	 		EXTDATA     : in STD_LOGIC_VECTOR (7 downto 0);
+	 		OUTPUT      : out STD_LOGIC_VECTOR (7 downto 0);
+	 		ERR         : out STD_LOGIC;
+	 		instrSEL    : in STD_LOGIC;
+	 		dataSEL     : in STD_LOGIC;
+	 		accSEL      : in STD_LOGIC;
+	 		extdataSEL  : in STD_LOGIC
+		    );
+	END COMPONENT;
+
+--All of the signals for the controller
+SIGNAL pcSel 	: STD_LOGIC;
+SIGNAL pcLd  	: STD_LOGIC;
+SIGNAL instrLd 	: STD_LOGIC;
+SIGNAL im2bus 	: STD_LOGIC;
+SIGNAL opcode	: STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL addrMd 	: STD_LOGIC;
+SIGNAL dmWr 	: STD_LOGIC;
+SIGNAL dmRd 	: STD_LOGIC;
+SIGNAL dataLd 	: STD_LOGIC;
+SIGNAL aluMd 	: STD_LOGIC_VECTOR(1 DOWNTO 0); -- Is only one bit in the picture!!
+SIGNAL accSel	: STD_LOGIC;
+SIGNAL accLd 	: STD_LOGIC;
+SIGNAL dispLd 	: STD_LOGIC;
+SIGNAL acc2bus 	: STD_LOGIC;
+SIGNAL flagLd 	: STD_LOGIC;
+SIGNAL NEQ 	: STD_LOGIC;
+SIGNAL EQ 	: STD_LOGIC;
+SIGNAL ext2bus 	: STD_LOGIC;
+
+--Common signals for the processor
+SIGNAL BusOut 	: STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+--All the signals for the fetch section
+SIGNAL PCIncrOut   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL nxtpc 	   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pc	   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL InstrMemOut : STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL Instruction : STD_LOGIC_VECTOR(11 DOWNTO 0);
+
+--All the signals for the DE/DE* section
+SIGNAL addrFromInstruction : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL Addr 		   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL dataIn 		   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL MemDataOutReged 	   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL MemDataOut 	   : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+--All the signals for the EX/ME section
+SIGNAL FlagInp 	  : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL ALUResult  : STD_LOGIC_VECTOR(7 DOWNTO 0); --We added this ourselves
+SIGNAL ACCIn      : STD_LOGIC_VECTOR(7 DOWNTO 0); --We added this ourselves
+SIGNAL OutFromACC : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL FlagRes	  : STD_LOGIC_VECTOR(3 DOWNTO 0); --We added this ourselves
+
+
+BEGIN
+
+--Controller section
+	controller : procController
+		PORT MAP(
+			master_load_enable,
+			opcode,
+			NEQ,
+			EQ,
+			CLK,
+			ARESETN,
+			pcSel,
+			pcLd,
+			instrLd,
+			addrMd,
+			dmWr,
+			dataLd,
+			flagLd,
+			accSel,
+			accLd,
+			im2bus,
+			dmRd,
+			acc2bus,
+			ext2bus,
+			dispLd,
+			aluMd
+		);
+
+--Fetch section
+	pcmux : mux2to1_8wide
+		PORT MAP
+		(
+			PCIncrOut,
+			BusOut,
+			pcSel,
+			nxtpc
+		);
+
+	pcincer : pcinc
+		PORT MAP
+		(
+			pc,
+			PCIncrOut
+		);
+
+	fe_register : reggister
+		GENERIC MAP
+		(
+			data_width => 8
+		)
+		
+		PORT MAP
+		(
+			nxtpc,
+			clk,
+			aresetn,
+			pcLd,
+			pc
+		);
+
+	
+pc2seg <= pc;
+
+	instruction_memory : mem_array
+		GENERIC MAP
+		(
+			data_width => 12,
+			addr_width => 8,
+			init_file => "inst_mem.mif"
+		)
+
+		PORT MAP
+		(
+			pc,
+			B"000000000000",
+			clk,
+			'0',
+			InstrMemOut
+		);
+
+	fe_de_register : reggister
+		GENERIC MAP
+		(
+			data_width => 12
+		)
+
+		PORT MAP
+		(
+			InstrMemOut,
+			clk,
+			aresetn,
+			instrLd,
+			Instruction
+		);
+
+
+instr2seg <= Instruction;
+
+--Decode/Decode* section
+opcode <= Instruction(11 DOWNTO 8);	         --Here we split Instruction into two parts
+addrFromInstruction <= Instruction(7 DOWNTO 0);
+dataIn <= BusOut;
+
+	data_memory_mux : mux2to1_8wide
+		PORT MAP
+		(
+			addrFromInstruction,
+			MemDataOutReged,
+			addrMd,
+			Addr
+		);
+	
+	
+addr2seg <= Addr;
+
+	data_memory : mem_array
+		GENERIC MAP
+		(
+			data_width => 8,
+			addr_width => 8,
+			init_file => "data_mem.mif"
+		)
+		
+		PORT MAP 
+		(
+			addr,
+			dataIn,
+			clk,
+			dmWr,
+			MemDataOut
+		);
+
+	de_ex_register : reggister
+		PORT MAP
+		(
+			MemDataOut,
+			clk,
+			aresetn,
+			dataLd,
+			MemDataOutReged
+		);
+
+
+	
+
+
+
+
+dMemOut2seg <= MemDataOutReged;
+
+--Execution/Memory section
+	alu : alu_wRCA
+		PORT MAP
+		(
+			OutFromAcc,
+			BusOut,
+			aluMd,
+			ALUResult,
+			FlagInp(3),
+			FlagInp(2),
+			FlagInp(1),
+			FlagInp(0)
+		);
+	
+	
+
+	
+aluOut2Seg <= ALUResult;
+
+	acc_mux : mux2to1_8wide
+		PORT MAP
+		(
+			ALUResult,
+			BusOut,
+			accSel,
+			ACCIn
+		);
+
+	acc_register : reggister
+		PORT MAP
+		(
+			ACCIn,
+			clk,
+			aresetn,
+			accLd,
+			OutFromACC
+		);
+
+
+			
+
+
+acc2seg <= OutFromACC;
+
+	freg : reggister
+		GENERIC MAP
+		(
+			data_width => 4
+		)		
+
+		PORT MAP
+		(
+			FlagInp,
+			clk,
+			aresetn,
+			flagLd,
+			flagRes
+		);
+
+eq <= FlagRes(1);
+neq <= FlagRes(2);
+flag2seg <= FlagRes;
+
+	display_rgister : reggister
+		PORT MAP
+		(
+			OutFromACC,
+			clk,
+			aresetn,
+			dispLd,
+			disp2seg
+		);
+
+--Bus section
+	buss : procbus
+		PORT MAP
+		(
+			addrFromInstruction,
+			MemDataOutReged,
+			OutFromAcc,
+			externalIn,
+			busOut,
+			errSig2seg,
+			im2bus,
+			dmRd,
+			acc2bus,
+			ext2bus
+		);
+
+busOut2Seg <= BusOut;
+
+END structural;
+
+
+
+

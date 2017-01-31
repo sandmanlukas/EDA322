@@ -52,7 +52,7 @@ BEGIN
 --			output <= memory(to_integer(unsigned(addr)));
 			END IF;
 		END PROCESS;
-	output <= memory(to_integer(unsigned(addr)));
+output <= memory(to_integer(unsigned(addr)));
 
 END behavioral;
 	
