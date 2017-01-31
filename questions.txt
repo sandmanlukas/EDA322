@@ -2,3 +2,5 @@
 - Busout when 0 or 2+?
 - Err if 0?
 - Memory read async
+
+- Lab 4, behavioral controller
