@@ -94,6 +94,16 @@ The bus was implemented with a mux. The 4 indata signals each had 8 bits. Bit 0 
 
 We used a multiplexer for the bus since if 2 or more control signals are set, the bus will not take an undefined value, as opossed to a tri-state version. TODO: Why we use the values we do for the bus when 0 or 2+ seleteced. Ask assitants.
 
+\textbf{Datapath}\\
+The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them together according to the figure. Some components, such as the registers, has different datawidths in different places. But since they were generic it was easy to have multiple versions.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\linewidth]{datapath.png}
+  \caption{The datapath of the processor.}
+  \label{fig:datapath}
+\end{figure} 
+
 \subsection{Controller}
 (max: 2 pages)
 \\\\
