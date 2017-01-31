@@ -86,9 +86,11 @@ We also learnt why the critical path for an n-bit RCA is $2n+1$ gates. For every
 
 \newpage
 \subsection{Top-level Design}
-(max: 2 pages)
-\\\\
-Describe what you did in lab 3. In addition, describe how you implemented the bus using the mux and any extra logic or the tri-state buffers. Describe briefly how you implemented the storage elements that are used by the ChAcc processor. Show one snapshot of the simulation waveform where you write something to a memory location and then read from it. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
+\textbf{Registers}\\
+We made a generic implementation of a register by letting a variable hold an integer representing the number of bits the register is able to hold. The vectors for in- and output to the register are adjusted after this variable. We implemented our register using behavioral VHDL,i.e using a process statement, since that seemed to result in the simplest and cleanest code. Another reason for using a process statement is that we know that assigning signals values in a process statement result in flip-flops when the code is synthesized.
+
+\textbf{Memory}\\
+We also made our implementation of the memory generic. We have two integer variables, one describing the number of address bits ($addr\_width$) and one describing the number of bits each memory location can hold ($data\_width$). The number of bits in the input signals for address and data are adjusted after these variables. The memory itself is an array of a type which we specified. The number of entries in this type of array is $2^{addr\_width}$ and the size of each entry is $data\_width$. The read operation is asynchronous and the write operation is synchronous. 
 
 \textbf{Bus}\\
 The bus was implemented with a mux. The 4 indata signals each had 8 bits. Bit 0 from each goes to a 4 to 1 mux, bit 1 from each to another mux and so on, i.e. the signals were muxed bitwise. The muxes are inferred by the tools since we used a \textit{WITH SELECT} statement. The mux select signal was created from a one-hot representation of the 4 control signals. Based on which bit was set, the corresponding mux select signal was created. If 0 or more than 1 bit are set, the bus error signal is set.
@@ -96,11 +98,7 @@ The bus was implemented with a mux. The 4 indata signals each had 8 bits. Bit 0 
 We used a multiplexer for the bus since if 2 or more control signals are set, the bus will not take an undefined value, as opossed to a tri-state version. TODO: Why we use the values we do for the bus when 0 or 2+ seleteced. Ask assitants.
 
 \textbf{Datapath}\\
-The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them together according to the figure. Some components, such as the registers, has different datawidths in different places. But since they were generic it was easy to have multiple versions.
-
-We made a generic implementation of a register by letting a variable hold an integer representing the number of bits the register is able to hold. The vectors for in- and output for the register are adapted after this variable. We implemented our register using behavioral VHDL,i.e using a process statement, since that seemed to result in the simplest and cleanest code. Another reason for using a process statement is that we know that assigning signals values in a process statement result in flip-flops when the code is synthesized.
-
-We also made our implementation of the memory generic. We have two integer variables, one describing the number of address bits (addr\_width) and one describing the number of bits each memory location can hold (data\_width). The number of bits in the input signals for address and data are adjusted after these variables. When instantiating the array representing the memory we use these variables as well. The number of entries in the array are $2^{addr\_width}$ and the size of each entry is data\_width.
+The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them according to the figure. Some components, such as the registers, have different datawidths in different places. But since they were generic it was easy to have multiple versions.
 
 \begin{figure}[h!]
   \centering
