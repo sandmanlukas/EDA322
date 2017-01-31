@@ -98,6 +98,10 @@ We used a multiplexer for the bus since if 2 or more control signals are set, th
 \textbf{Datapath}\\
 The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them together according to the figure. Some components, such as the registers, has different datawidths in different places. But since they were generic it was easy to have multiple versions.
 
+We made a generic implementation of a register by letting a variable hold an integer representing the number of bits the register is able to hold. The vectors for in- and output for the register are adapted after this variable. We implemented our register using behavioral VHDL,i.e using a process statement, since that seemed to result in the simplest and cleanest code. Another reason for using a process statement is that we know that assigning signals values in a process statement result in flip-flops when the code is synthesized.
+
+We also made our implementation of the memory generic. We have two integer variables, one describing the number of address bits (addr_width) and one describing the number of bits each memory location can hold (data_width). The number of bits in the input signals for address and data are adjusted after these variables. When instantiating the array representing the memory we use these variables as well. The number of entries in the array are $2^{addr_width}$ and the size of each entry is data_width.
+
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\linewidth]{datapath.png}
