@@ -1,4 +1,0 @@
-
-- Changed order of flanks for clock in inst_test and other changes to cover more test cases
-- Did it so that the output always reflects what's on the current address, even directly after a write
-  - In a process, signals don't get their value until the end. that might have caused the bug
