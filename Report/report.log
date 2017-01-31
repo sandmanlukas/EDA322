@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  24 JAN 2017 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  31 JAN 2017 09:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,115 +485,112 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-<fulladder.png, id=14, 552.0625pt x 351.3125pt>
+[1
+
+] <fulladder.png, id=17, 552.0625pt x 351.3125pt>
 File: fulladder.png Graphic file (type png)
  <use fulladder.png>
-Package pdftex.def Info: fulladder.png used on input line 46.
-(pdftex.def)             Requested size: 360.0pt x 229.10089pt.
+Package pdftex.def Info: fulladder.png used on input line 47.
+(pdftex.def)             Requested size: 180.0pt x 114.54507pt.
 
-<fulladderfromhalfadder.jpg, id=16, 1084.05pt x 465.74pt>
+<fulladderfromhalfadder.jpg, id=19, 813.0375pt x 349.305pt>
 File: fulladderfromhalfadder.jpg Graphic file (type jpg)
 
 <use fulladderfromhalfadder.jpg>
-Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 54.
-(pdftex.def)             Requested size: 360.0pt x 154.66827pt.
- <rca.jpg, id=17, 804.75656pt x 234.8775pt>
+Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 56.
+(pdftex.def)             Requested size: 180.0pt x 77.33235pt.
+ <rca.jpg, id=20, 804.75656pt x 234.8775pt>
 File: rca.jpg Graphic file (type jpg)
 
 <use rca.jpg>
-Package pdftex.def Info: rca.jpg used on input line 62.
-(pdftex.def)             Requested size: 360.0pt x 105.07028pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--74
-
- []
+Package pdftex.def Info: rca.jpg used on input line 65.
+(pdftex.def)             Requested size: 323.9978pt x 94.56218pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--74
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
+[2 <./fulladder.png> <./fulladderfromhalfadder.jpg>]
+<subtractionlogic.jpg, id=25, 1470.24281pt x 378.66469pt>
+File: subtractionlogic.jpg Graphic file (type jpg)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--74
-
- []
-
-[1
-
- <./fulladder.png>] [2 <./fulladderfromhalfadder.jpg> <./rca.jpg>]
+<use subtractionlogic.jpg>
+Package pdftex.def Info: subtractionlogic.jpg used on input line 78.
+(pdftex.def)             Requested size: 323.9978pt x 83.44514pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 80.
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+(Font)              <10.95> on input line 85.
+ [3 <./rca.jpg> <./subtractionlogic.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+LaTeX Warning: Reference `fig:datapath' on page 4 undefined on input line 99.
+
+[4] <datapath.png, id=35, 703.12688pt x 436.63126pt>
+File: datapath.png Graphic file (type png)
+ <use datapath.png>
+Package pdftex.def Info: datapath.png used on input line 107.
+(pdftex.def)             Requested size: 360.0pt x 223.55177pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+[5 <./datapath.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 123--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--110
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 112--115
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+Underfull \hbox (badness 10000) in paragraph at lines 133--136
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
 
  []
 
-[6] (./report.aux)
+[8] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 1954 strings out of 493013
- 25605 string characters out of 6135682
- 90217 words of memory out of 5000000
- 5478 multiletter control sequences out of 15000+600000
+ 1965 strings out of 493013
+ 25817 string characters out of 6135682
+ 88217 words of memory out of 5000000
+ 5487 multiletter control sequences out of 15000+600000
  10509 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,777b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,43p,605b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (8 pages, 184526 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti12.pfb>
+Output written on report.pdf (10 pages, 465113 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
