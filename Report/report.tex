@@ -89,6 +89,11 @@ We also learnt why the critical path for an n-bit RCA is $2n+1$ gates. For every
 \\\\
 Describe what you did in lab 3. In addition, describe how you implemented the bus using the mux and any extra logic or the tri-state buffers. Describe briefly how you implemented the storage elements that are used by the ChAcc processor. Show one snapshot of the simulation waveform where you write something to a memory location and then read from it. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
+\textbf{Bus}\\
+The bus was implemented with a mux. The 4 indata signals each had 8 bits. Bit 0 from each goes to a 4 to 1 mux, bit 1 from each to another mux and so on, i.e. the signals were muxed bitwise. The muxes are inferred by the tools since we used a \textit{WITH SELECT} statement. 
+
+All muxes share the same select signal, created from the 4 control in-signals, deciding which input should be put on the bus. We used a multiplexer for the bus since if 2 or more control signals are set, the bus will not take an undefined value, as opossed to a tri-state version. TODO: Why we use the values we do for the bus when 0 or 2+ seleteced. Ask assitants.
+
 \subsection{Controller}
 (max: 2 pages)
 \\\\
