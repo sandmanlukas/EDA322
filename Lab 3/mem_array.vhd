@@ -5,9 +5,9 @@ USE std.textio.all;
 
 ENTITY mem_array IS
 	GENERIC (
-		data_width: INTEGER := 8;
+		data_width: INTEGER := 12;
 		addr_width: INTEGER := 8;
-		init_file:  STRING := "data_mem.mif"
+		init_file:  STRING := "inst_mem.mif"
 	);
 	
 	PORT(
