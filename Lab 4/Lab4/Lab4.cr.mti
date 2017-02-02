@@ -1,0 +1,122 @@
+{C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/cmp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/cmp.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cmp
+-- Compiling architecture dataflow of cmp
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1_bit.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1_bit.vhdl}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1_bit
+-- Compiling architecture dataflow of mux2to1_bit
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/Testbenchlab4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/Testbenchlab4.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity testbenchlab4
+-- Compiling architecture Behavioral of testbenchlab4
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/reggister.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/reggister.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reggister
+-- Compiling architecture behavioral of reggister
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/alu_wRCA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/alu_wRCA.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu_wRCA
+-- Compiling architecture dataflow of alu_wRCA
+-- Loading entity rca
+-- Loading entity cmp
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/procbus.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/procbus.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity procBus
+-- Compiling architecture dataflow of procBus
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/RCA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/RCA.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity rca
+-- Compiling architecture structural of rca
+-- Loading entity fa
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/procController.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/procController.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity procController
+-- Compiling architecture mixed of procController
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1
+-- Compiling architecture dataflow of mux2to1
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1_8wide.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux2to1_8wide.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1_8wide
+-- Compiling architecture structural of mux2to1_8wide
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mux4to1.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture structural of mux4to1
+-- Loading entity mux2to1
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mem_array.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/mem_array.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mem_array
+-- Compiling architecture behavioral of mem_array
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/pcinc.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/pcinc.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pcinc
+-- Compiling architecture structural of pcinc
+-- Loading entity rca
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/FA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4/FA.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture dataflow of fa
+
+} {} {}}
