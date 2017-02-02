@@ -141,6 +141,7 @@ dmRd <= '1' WHEN opcode = X"0" AND state = EX ELSE
 	'1' WHEN opcode = X"1" AND state = EX ELSE
 	'1' WHEN opcode = X"2" AND state = EX ELSE
 	'1' WHEN opcode = X"3" AND state = EX ELSE
+	'1' WHEN opcode = X"4" AND state = EX ELSE --!!!ADDED!!!
 	'1' WHEN opcode = X"5" AND state = EX ELSE
 	'1' WHEN opcode = X"6" AND state = EX ELSE
 	'1' WHEN opcode = X"8" AND state = EX ELSE

@@ -145,7 +145,7 @@ dmRd <= '1' WHEN opcode = X"0" AND state = EX ELSE
 	'1' WHEN opcode = X"6" AND state = EX ELSE
 	'1' WHEN opcode = X"8" AND state = EX ELSE
 	'1' WHEN opcode = X"9" AND state = EX ELSE
-	'0;
+	'0';
 
 acc2bus <= '1' WHEN opcode = X"7" ELSE
 	   '1' WHEN opcode = X"A" ELSE
