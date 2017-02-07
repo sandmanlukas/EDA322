@@ -1,0 +1,17 @@
+{C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/Exercise 10.18/bitcntr.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\bitcntr.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bitcntr
+-- Compiling architecture structural of bitcntr
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/Exercise 10.18/FullAdder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\FullAdder.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder
+-- Compiling architecture dataflow of fulladder
+
+} {} {}}

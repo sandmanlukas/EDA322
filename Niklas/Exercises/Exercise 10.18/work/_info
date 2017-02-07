@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/MrWicki/Documents/Skola/eda322/Lab 4/Lab4
+Ebitcntr
+Z0 w1486109369
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/MrWicki/Documents/Skola/eda322/Niklas/Exercises/Exercise 10.18
+Z4 8C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\bitcntr.vhd
+Z5 FC:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\bitcntr.vhd
+l0
+L4
+V?d4iBUX=F87nC;FQg`4S91
+!s100 fAS2<d6[iXcn8ZGhoSSR`3
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1486109373
+!i10b 1
+Z8 !s108 1486109373.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\bitcntr.vhd|
+Z10 !s107 C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\bitcntr.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Astructural
+R1
+R2
+Z13 DEx4 work 7 bitcntr 0 22 ?d4iBUX=F87nC;FQg`4S91
+l25
+L11
+Vbn`gnk>_3?9dRlg=5OQBN2
+!s100 5BTV4SThYP2BSaGSPNL8V0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efulladder
+Z14 w1486109140
+R1
+R2
+R3
+Z15 8C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\FullAdder.vhd
+Z16 FC:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\FullAdder.vhd
+l0
+L4
+Vaf]O:4a4`LcX]f=><[MHZ3
+!s100 P5ENJVhKWC;bJF2jRDTPW3
+R6
+32
+Z17 !s110 1486109253
+!i10b 1
+Z18 !s108 1486109253.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\FullAdder.vhd|
+Z20 !s107 C:\Users\MrWicki\Documents\Skola\eda322\Niklas\Exercises\Exercise 10.18\FullAdder.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 9 fulladder 0 22 af]O:4a4`LcX]f=><[MHZ3
+l15
+L14
+V78Fd<EKjPK9flTW4In[OI3
+!s100 gR6>dKGZAd7eO59AI9Z<m0
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
