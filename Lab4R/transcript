@@ -1,0 +1,16 @@
+# Compile of Testbenchlab4.vhd was successful.
+# Compile of alu_wRCA.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux2to1_bit.vhdl was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd was successful.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# 15 compiles, 0 failed with no errors.

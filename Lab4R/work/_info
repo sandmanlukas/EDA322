@@ -1,0 +1,630 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.5b/examples
+T_opt
+!s110 1486468790
+Vc<fa^Kj3W;ziV;6J`UL;d1
+Z1 04 13 10 work testbenchlab4 behavioral 1
+=1-989096c7fff1-5899b6b6-12f-1278
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.5b;63
+R0
+T_opt1
+!s110 1486475464
+V4C@AE=ONI:VN5VbNBK7>K3
+R1
+=10-989096c7fff1-5899d0c8-2b-13a4
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+Ealu_wrca
+Z4 w1486468638
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dZ:/NyaMappen/EDA322/Lab4R
+Z8 8Z:/NyaMappen/EDA322/Lab4R/alu_wRCA.vhd
+Z9 FZ:/NyaMappen/EDA322/Lab4R/alu_wRCA.vhd
+l0
+L5
+V<Jbke@S:h8Dznk0@z7don1
+!s100 5ojOXAOde@7O1kf2i5mXM1
+Z10 OL;C;10.5b;63
+32
+Z11 !s110 1486476529
+!i10b 1
+Z12 !s108 1486476529.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/alu_wRCA.vhd|
+Z14 !s107 Z:/NyaMappen/EDA322/Lab4R/alu_wRCA.vhd|
+!i113 0
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Adataflow
+Z17 DEx4 work 3 cmp 0 22 V5]PGeo6kWfNOSN7]NCog2
+Z18 DEx4 work 3 rca 0 22 F]OZ6OmdOaF^AL<ml9WLM2
+R5
+R6
+DEx4 work 8 alu_wrca 0 22 <Jbke@S:h8Dznk0@z7don1
+l36
+L21
+VfV34AHbjz=F9OGa3@3Nf13
+!s100 F0h7^SZW8Y:2=3N0OJ5go1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Ecmp
+R4
+R5
+R6
+R7
+Z19 8Z:/NyaMappen/EDA322/Lab4R/cmp.vhd
+Z20 FZ:/NyaMappen/EDA322/Lab4R/cmp.vhd
+l0
+L5
+VV5]PGeo6kWfNOSN7]NCog2
+!s100 Oc5fc4b02in_U212dl1?C1
+R10
+32
+R11
+!i10b 1
+R12
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/cmp.vhd|
+Z22 !s107 Z:/NyaMappen/EDA322/Lab4R/cmp.vhd|
+!i113 0
+R15
+R16
+Adataflow
+R5
+R6
+R17
+l17
+L14
+V:XO?i=AaJQ<3bD9EGYB7i1
+!s100 NA<C1_ke^]3[o8`1b?YKH2
+R10
+32
+R11
+!i10b 1
+R12
+R21
+R22
+!i113 0
+R15
+R16
+Eeda322_processor
+Z23 w1486468637
+Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R5
+R6
+R7
+Z25 8Z:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd
+Z26 FZ:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd
+l0
+L6
+VoiaNJWzFYFTief[=A<G4_1
+!s100 H_N317mVIAjH4jjJ9gzMb2
+R10
+32
+R11
+!i10b 1
+R12
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd|
+Z28 !s107 Z:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd|
+!i113 0
+R15
+R16
+Astructural
+R24
+R5
+R6
+DEx4 work 16 eda322_processor 0 22 oiaNJWzFYFTief[=A<G4_1
+l174
+L26
+Vo<j1DA^FKG?^Jah<UKTP;2
+!s100 OT;DRh1lj:=Lg=]Ec=hl52
+R10
+32
+R11
+!i10b 1
+R12
+R27
+R28
+!i113 0
+R15
+R16
+Efa
+R23
+R5
+R6
+R7
+Z29 8Z:/NyaMappen/EDA322/Lab4R/FA.vhd
+Z30 FZ:/NyaMappen/EDA322/Lab4R/FA.vhd
+l0
+L4
+V_KY?hkP;;=Q?dLj<T<iiT3
+!s100 4C0HLkml1hTMR5?G>5zHC3
+R10
+32
+R11
+!i10b 1
+R12
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/FA.vhd|
+Z32 !s107 Z:/NyaMappen/EDA322/Lab4R/FA.vhd|
+!i113 0
+R15
+R16
+Adataflow
+R5
+R6
+Z33 DEx4 work 2 fa 0 22 _KY?hkP;;=Q?dLj<T<iiT3
+l15
+L14
+VhN0;m607X^z9R3;Xh>DQ<1
+!s100 T^7lK933@e=QB_c>GeN[P1
+R10
+32
+R11
+!i10b 1
+R12
+R31
+R32
+!i113 0
+R15
+R16
+Emem_array
+Z34 w1486476509
+R24
+R5
+R6
+R7
+Z35 8Z:/NyaMappen/EDA322/Lab4R/mem_array.vhd
+Z36 FZ:/NyaMappen/EDA322/Lab4R/mem_array.vhd
+l0
+L6
+VDH14ZjOOk7>3[XVn7;1k;3
+!s100 8__f5dfNoF9WZ?QY5YNgI1
+R10
+32
+R11
+!i10b 1
+R12
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/mem_array.vhd|
+Z38 !s107 Z:/NyaMappen/EDA322/Lab4R/mem_array.vhd|
+!i113 0
+R15
+R16
+Abehavioral
+R24
+R5
+R6
+DEx4 work 9 mem_array 0 22 DH14ZjOOk7>3[XVn7;1k;3
+l42
+L22
+VTLj?V64l_;I0C`A4A]>cn2
+!s100 o<3?QYeLZCSiV5aIi8zfY0
+R10
+32
+R11
+!i10b 1
+R12
+R37
+R38
+!i113 0
+R15
+R16
+Emux2to1
+R4
+R5
+R6
+R7
+Z39 8Z:/NyaMappen/EDA322/Lab4R/mux2to1.vhd
+Z40 FZ:/NyaMappen/EDA322/Lab4R/mux2to1.vhd
+l0
+L5
+Vhc>1K8:4T_<aM`L^6fK5M2
+!s100 R3A^fY8gHQ]8E^:VSVE1j1
+R10
+32
+R11
+!i10b 1
+R12
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/mux2to1.vhd|
+Z42 !s107 Z:/NyaMappen/EDA322/Lab4R/mux2to1.vhd|
+!i113 0
+R15
+R16
+Adataflow
+R5
+R6
+Z43 DEx4 work 7 mux2to1 0 22 hc>1K8:4T_<aM`L^6fK5M2
+l14
+L13
+VLgMi8a99m;24IR19GjKAg0
+!s100 8E>l15HIGUMJKMo_[8b_O2
+R10
+32
+R11
+!i10b 1
+R12
+R41
+R42
+!i113 0
+R15
+R16
+Emux2to1_8wide
+R4
+R5
+R6
+R7
+Z44 8Z:/NyaMappen/EDA322/Lab4R/mux2to1_8wide.vhd
+Z45 FZ:/NyaMappen/EDA322/Lab4R/mux2to1_8wide.vhd
+l0
+L5
+V2nXcL_L7_cjaA1Z>WA[D_2
+!s100 QK@44H353UUY0SF`^DZ<K1
+R10
+32
+R11
+!i10b 1
+R12
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/mux2to1_8wide.vhd|
+Z47 !s107 Z:/NyaMappen/EDA322/Lab4R/mux2to1_8wide.vhd|
+!i113 0
+R15
+R16
+Astructural
+R5
+R6
+DEx4 work 13 mux2to1_8wide 0 22 2nXcL_L7_cjaA1Z>WA[D_2
+l29
+L16
+VW<9Y6[gj4C]SS:mjYMY:Y2
+!s100 8L_mc]6H0PS@MJI0zIk9J0
+R10
+32
+Z48 !s110 1486476530
+!i10b 1
+R12
+R46
+R47
+!i113 0
+R15
+R16
+Emux2to1_bit
+R4
+R5
+R6
+R7
+Z49 8Z:/NyaMappen/EDA322/Lab4R/mux2to1_bit.vhdl
+Z50 FZ:/NyaMappen/EDA322/Lab4R/mux2to1_bit.vhdl
+l0
+L4
+V1Q@M@V3kNWN8iGLhl0ZhQ2
+!s100 NU^l?27FF[jjTfMG2zmHg1
+R10
+32
+R48
+!i10b 1
+Z51 !s108 1486476530.000000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/mux2to1_bit.vhdl|
+Z53 !s107 Z:/NyaMappen/EDA322/Lab4R/mux2to1_bit.vhdl|
+!i113 0
+R15
+R16
+Adataflow
+R5
+R6
+DEx4 work 11 mux2to1_bit 0 22 1Q@M@V3kNWN8iGLhl0ZhQ2
+l14
+L13
+V7fBlC>XgdQX27;beSogfa3
+!s100 5aC>zXTmX>eDF992=JT`62
+R10
+32
+R48
+!i10b 1
+R51
+R52
+R53
+!i113 0
+R15
+R16
+Emux4to1
+R4
+R5
+R6
+R7
+Z54 8Z:/NyaMappen/EDA322/Lab4R/mux4to1.vhd
+Z55 FZ:/NyaMappen/EDA322/Lab4R/mux4to1.vhd
+l0
+L5
+V@PoNBm;e4O]3ZbMFU_WgF1
+!s100 i<TJ4QjGzBk4`BZ1SBNzR3
+R10
+32
+R48
+!i10b 1
+R51
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/mux4to1.vhd|
+Z57 !s107 Z:/NyaMappen/EDA322/Lab4R/mux4to1.vhd|
+!i113 0
+R15
+R16
+Astructural
+R43
+R5
+R6
+DEx4 work 7 mux4to1 0 22 @PoNBm;e4O]3ZbMFU_WgF1
+l32
+L15
+V3i7i`cEUZ;6dN`a>ka0W;2
+!s100 QVb2aaQX^ibMM_C:YSdlK3
+R10
+32
+R48
+!i10b 1
+R51
+R56
+R57
+!i113 0
+R15
+R16
+Epcinc
+R4
+R5
+R6
+R7
+Z58 8Z:/NyaMappen/EDA322/Lab4R/pcinc.vhd
+Z59 FZ:/NyaMappen/EDA322/Lab4R/pcinc.vhd
+l0
+L7
+V`dYA9RbfjBn@>h[f5JlF@1
+!s100 zb[Y?`H1mjG]2ikRk[ogD2
+R10
+32
+R48
+!i10b 1
+R51
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/pcinc.vhd|
+Z61 !s107 Z:/NyaMappen/EDA322/Lab4R/pcinc.vhd|
+!i113 0
+R15
+R16
+Astructural
+R18
+R5
+R6
+DEx4 work 5 pcinc 0 22 `dYA9RbfjBn@>h[f5JlF@1
+l18
+L14
+VDden<8Uc:OZ`nEhKhRi1i3
+!s100 YQFRh1N66]JAf<3??N>G>0
+R10
+32
+R48
+!i10b 1
+R51
+R60
+R61
+!i113 0
+R15
+R16
+Eprocbus
+R4
+R5
+R6
+R7
+Z62 8Z:/NyaMappen/EDA322/Lab4R/procbus.vhd
+Z63 FZ:/NyaMappen/EDA322/Lab4R/procbus.vhd
+l0
+L4
+VcCLa?K7mz^FR143VS2XHb0
+!s100 dCb_EO3AEfWJ;mEC>5KFJ1
+R10
+32
+R48
+!i10b 1
+R51
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/procbus.vhd|
+Z65 !s107 Z:/NyaMappen/EDA322/Lab4R/procbus.vhd|
+!i113 0
+R15
+R16
+Adataflow
+R5
+R6
+DEx4 work 7 procbus 0 22 cCLa?K7mz^FR143VS2XHb0
+l34
+L18
+VG5GK?o`27z>DjQ4W9UXlg3
+!s100 @6Z=PO@`z0Q?G[kf<fLBR2
+R10
+32
+R48
+!i10b 1
+R51
+R64
+R65
+!i113 0
+R15
+R16
+Eproccontroller
+Z66 w1486476498
+R5
+R6
+R7
+Z67 8Z:\NyaMappen\EDA322\Lab4R\procController.vhd
+Z68 FZ:\NyaMappen\EDA322\Lab4R\procController.vhd
+l0
+L4
+VF2In`TYRH;l3JU]QMea9_0
+!s100 EL_TSOJQf08Dd^?U;l6jh1
+R10
+32
+R48
+!i10b 1
+R51
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:\NyaMappen\EDA322\Lab4R\procController.vhd|
+Z70 !s107 Z:\NyaMappen\EDA322\Lab4R\procController.vhd|
+!i113 0
+R15
+R16
+Amixed
+R5
+R6
+DEx4 work 14 proccontroller 0 22 F2In`TYRH;l3JU]QMea9_0
+l36
+L29
+VAe3UfC7L0JLnS^If=]DTB1
+!s100 5h6o2;6B;oKY[ncUdkHEc3
+R10
+32
+R48
+!i10b 1
+R51
+R69
+R70
+!i113 0
+R15
+R16
+Erca
+R4
+R5
+R6
+R7
+Z71 8Z:/NyaMappen/EDA322/Lab4R/RCA.vhd
+Z72 FZ:/NyaMappen/EDA322/Lab4R/RCA.vhd
+l0
+L5
+VF]OZ6OmdOaF^AL<ml9WLM2
+!s100 dS^lT1R]hk;`VWE[JOYe;1
+R10
+32
+R48
+!i10b 1
+R51
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/RCA.vhd|
+Z74 !s107 Z:/NyaMappen/EDA322/Lab4R/RCA.vhd|
+!i113 0
+R15
+R16
+Astructural
+R33
+R5
+R6
+R18
+l21
+L17
+VzUBGV?mhE;Z87B^?IjBBE0
+!s100 fDlKZlbZ2MhSJz6?I8MQb0
+R10
+32
+R48
+!i10b 1
+R51
+R73
+R74
+!i113 0
+R15
+R16
+Ereggister
+Z75 w1486476525
+R5
+R6
+R7
+Z76 8Z:/NyaMappen/EDA322/Lab4R/reggister.vhd
+Z77 FZ:/NyaMappen/EDA322/Lab4R/reggister.vhd
+l0
+L4
+VXoUgW8D1AMOa67zmj7fdb3
+!s100 EY:2T4ejo;FGWH[W_4T@R0
+R10
+32
+R48
+!i10b 1
+R51
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/reggister.vhd|
+Z79 !s107 Z:/NyaMappen/EDA322/Lab4R/reggister.vhd|
+!i113 0
+R15
+R16
+Abehavioral
+R5
+R6
+Z80 DEx4 work 9 reggister 0 22 XoUgW8D1AMOa67zmj7fdb3
+l19
+L18
+VcHb]`SaYA:Gf=bZC]FzQk1
+!s100 Q2cFO0;]o2fL@]TXbQe[^1
+R10
+32
+R48
+!i10b 1
+R51
+R78
+R79
+!i113 0
+R15
+R16
+Etestbenchlab4
+R4
+Z81 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z82 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R24
+R5
+R6
+R7
+Z83 8Z:/NyaMappen/EDA322/Lab4R/Testbenchlab4.vhd
+Z84 FZ:/NyaMappen/EDA322/Lab4R/Testbenchlab4.vhd
+l0
+L14
+V9>@[V^Z[SehO`:5oE0S]X1
+!s100 I[`>VcAH2a^TU7VD6B7Xm2
+R10
+32
+R11
+!i10b 1
+R12
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|Z:/NyaMappen/EDA322/Lab4R/Testbenchlab4.vhd|
+Z86 !s107 Z:/NyaMappen/EDA322/Lab4R/Testbenchlab4.vhd|
+!i113 0
+R15
+R16
+Abehavioral
+R81
+R82
+R24
+R5
+R6
+DEx4 work 13 testbenchlab4 0 22 9>@[V^Z[SehO`:5oE0S]X1
+l63
+L17
+V1A[TU`AMAD:g9ZT3=]o^=1
+!s100 B<zXk_^Yb37Ke^RWAb:^c2
+R10
+32
+R11
+!i10b 1
+R12
+R85
+R86
+!i113 0
+R15
+R16
