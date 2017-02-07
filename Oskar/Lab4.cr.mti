@@ -1,0 +1,95 @@
+C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/cmp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/cmp.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cmp
+-- Compiling architecture dataflow of cmp
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/EDA322_processor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/EDA322_processor.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity EDA322_processor
+-- Compiling architecture structural of EDA322_processor
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1
+-- Compiling architecture dataflow of mux2to1
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1_8wide.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1_8wide.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1_8wide
+-- Compiling architecture structural of mux2to1_8wide
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mem_array.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mem_array.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mem_array
+-- Compiling architecture behavioral of mem_array
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1_bit.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux2to1_bit.vhdl
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2to1_bit
+-- Compiling architecture dataflow of mux2to1_bit
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu_wRCA
+-- Compiling architecture dataflow of alu_wRCA
+** Error: (vcom-11) Could not find work.rca.
+
+** Error (suppressible): C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(59): (vcom-1195) Cannot find expanded name "work.rca".
+
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(59): Unknown expanded name.
+** Error: (vcom-11) Could not find work.cmp.
+
+** Error (suppressible): C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(76): (vcom-1195) Cannot find expanded name "work.cmp".
+
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(76): Unknown expanded name.
+** Error: (vcom-11) Could not find work.cmp.
+
+** Error (suppressible): C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(84): (vcom-1195) Cannot find expanded name "work.cmp".
+
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(84): Unknown expanded name.
+** Error: C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/alu_wRCA.vhd(94): VHDL Compiler exiting
+
+} {8.0 9.0 12.0 14.0 17.0 19.0 22.0 24.0} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux4to1.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/mux4to1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture structural of mux4to1
+-- Loading entity mux2to1
+** Warning: (vcom-31) Unable to unlink file "C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/work/_lock".
+
+Permission denied. (errno = EACCES)
+
+} {} {}} C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/FA.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Oskar/Dropbox/Kurser/EDA322/GitDelat/Oskar/FA.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture dataflow of fa
+
+} {} {}}
