@@ -123,20 +123,39 @@ The last step was to connect all components of the datapath as described by figu
   \label{fig:datapath}
 \end{figure} 
 
+\newpage
+
 \subsection{Controller}
-(max: 2 pages)
-\\\\
-Describe what you did in lab4. More specifically, show the \emph{Finite-state machine} (FSM) of the controller by presenting the diagram you drew. Which design decisions did you make and why? Also include few waveforms, where you show that the controller runs correctly for some particular instructions using the provided testbench. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
 \textbf{The FSM} \\
 We chose to design our controller as a Mealy FSM. We did this in order to reduce the amount of states (fewer flip-flops). If we would've chosen a Moore design we would roughly need one state for each combination of opcode and stage, although we would be able to minimize it to some extent. Fewer states means that we only have to keep track of five states, namely the stages (FE,DE,DE*,EX,ME), and hence the resulting VHDL code as well as the circuit itself becomes simpler. The statements for assigning the output signals a value are rather long. This would however be the case no matter which design we chose. If we had chosen a Moore design each row in these statements would represent a state and hence the code would be equally long. 
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\linewidth]{states.jpg}
+  \includegraphics[width=0.75\linewidth]{states.jpg}
   \caption{The state diagram.}
   \label{fig:etikett}
 \end{figure}
+
+\textbf{Testing} \\
+When we first ran the testbench we noticed a problem. The contents of the data memory did not match the specifications of what it should contain after running the testbench. We started troubleshooting and found three problems.
+
+\begin{enumerate}
+  \item We found that our EQ and NEQ signals to the controller weren't assigned at all. We fixed this but the problem remained.
+  \item We continued to troubleshoot the controller by examining the waveform diagram of the controller and datapath when running the testbench. While doing this we noticed that after about 500ns the opcodes didn't match the instructions that should be executed. It turned out that the \textit{dmRd} signal didn't have the correct value when the AND instruction was executed. In the processors specification document this signal was a \"don't care\" for this opcode when it really should've been set to 1. A few days after writing the code we checked the processors specification document and noticed that this had been changed. We assume that this simply was a mistake. 
+  \item The instruction for the jump statement was placed at memory location 256 (index starts from 0). This meant that when we jumped to memory location 255 a \textit{NOOP} instruction was executed, the PC overflowed and started from the beginning of the program. We corrected this by moving the contents of memory location 256 to memory location 255. After this the testbench ran successfully.  
+\end{enumerate}
+
+In figure \ref{fig:waves_instr} we see the waveform diagram of instructions 1 to 3 in the test program being executed. If you compare the diagram with the processors specification document it's clear that the signals have the correct value at the correct time. You can also see that it's first after the fetch stage is completed that the opcode changes. This is because the fetch stage has to be completed before the opcode can be sent from the FE/DE register to the controller. 
+
+ \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.75\linewidth]{controller_waves.JPG}
+  \caption{The waveform diagram for executing instructions 1 to 3 in the test program.}
+  \label{fig:waves_instr}
+\end{figure}
+
+Note that when the opcode changes from 1 to 7 in figure \ref{fig:waves_instr} a spike occurs for the signal dataLd. This is an effect of our Mealy design. The output signal only depends on state and input (opcode). Since the stage is DE and the opcode is 1 for a brief moment the dataLd signal becomes 1. When the opcode changes to 7 dataLd becomes 0. This is not a problem since the spike occurs after the positive edge of the clock. Since everything is synchronous the control signals have corrected themselves before the next positive edge, meaning that no errors will be made. 
 
 \subsection{Processor's Testbench}
 (max: 2 pages)
