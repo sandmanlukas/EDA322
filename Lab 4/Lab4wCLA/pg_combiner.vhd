@@ -1,0 +1,25 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY pg_combiner IS
+	PORT(
+		p   : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		g   : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		c   : IN STD_LOGIC;
+		co  : OUT STD_LOGIC_VECTOR(3 DOWNTO 1);
+		po  : OUT STD_LOGIC;
+		go  : OUT STD_LOGIC
+	);
+END pg_combiner;
+
+ARCHITECTURE dataflow OF pg_combiner IS
+
+
+BEGIN
+	co(1) <= g(0) OR (p(0) AND c);	--First c out signal
+	co(2) <= g(1) OR (p(1) AND g(0)) OR (p(1) AND p(0) AND c);
+	co(3) <= g(2) OR (p(2) AND g(1)) OR (p(2) AND p(1) AND g(0)) OR (p(2) AND p(1) AND p(0) AND c);
+	po <= p(0) AND p(1) AND p(2) AND p(3);
+	go <= g(3) OR (p(3) AND g(2)) OR (p(3) AND p(2) AND g(1)) OR (p(3) AND p(2) AND p(1) AND g(0));
+END dataflow;
