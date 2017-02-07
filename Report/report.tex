@@ -94,7 +94,7 @@ We also made our implementation of the memory generic. We have two integer varia
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\linewidth]{inst_mem_2.png}
+  \includegraphics[width=\linewidth]{inst_mem_2.PNG}
   \caption{The operation of the memory.}
   \label{fig:memory}
 \end{figure}
@@ -127,6 +127,16 @@ The last step was to connect all components of the datapath as described by figu
 (max: 2 pages)
 \\\\
 Describe what you did in lab4. More specifically, show the \emph{Finite-state machine} (FSM) of the controller by presenting the diagram you drew. Which design decisions did you make and why? Also include few waveforms, where you show that the controller runs correctly for some particular instructions using the provided testbench. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
+
+\textbf{The FSM} \\
+We chose to design our controller as a Mealy FSM. We did this in order to reduce the amount of states (fewer flip-flops). If we would've chosen a Moore design we would roughly need one state for each combination of opcode and stage, although we would be able to minimize it to some extent. Fewer states means that we only have to keep track of five states, namely the stages (FE,DE,DE*,EX,ME), and hence the resulting VHDL code as well as the circuit itself becomes simpler. The statements for assigning the output signals a value are rather long. This would however be the case no matter which design we chose. If we had chosen a Moore design each row in these statements would represent a state and hence the code would be equally long. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\linewidth]{states.jpg}
+  \caption{The state diagram.}
+  \label{fig:etikett}
+\end{figure}
 
 \subsection{Processor's Testbench}
 (max: 2 pages)
