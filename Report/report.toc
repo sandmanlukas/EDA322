@@ -5,6 +5,6 @@
 \contentsline {subsection}{\numberline {2.3}Controller}{6}
 \contentsline {subsection}{\numberline {2.4}Processor's Testbench}{8}
 \contentsline {subsection}{\numberline {2.5}ChAcc on Nexys 3 board \emph {(Optional)}}{8}
-\contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis \emph {(Optional)}}{8}
-\contentsline {section}{\numberline {3}Analysis}{8}
+\contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis \emph {(Optional)}}{9}
+\contentsline {section}{\numberline {3}Analysis}{9}
 \contentsline {section}{\numberline {A}Appendix}{10}
