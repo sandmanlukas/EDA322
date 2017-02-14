@@ -33,7 +33,7 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity procController
 -- Compiling architecture mixed of procController
 
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd}
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322_processor.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -57,17 +57,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading package std_logic_1164
 -- Compiling entity mux2to1_8wide
 -- Compiling architecture structural of mux2to1_8wide
-
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322Testbench.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322Testbench.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_textio
--- Compiling entity EDA322Testbench
--- Compiling architecture behavioral of EDA322Testbench
--- Loading package NUMERIC_STD
--- Loading entity EDA322_processor
 
 } {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015

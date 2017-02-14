@@ -183,7 +183,7 @@ acc_process : PROCESS (acc2seg)
 disp_process : PROCESS (disp2seg)
 	BEGIN
 		IF (aresetn = '1') THEN
-			ASSERT disp2seg /= "10010000"
+			ASSERT disp2seg /= "11101001"
 			REPORT "Test successfull if no previous error!"
 			SEVERITY failure;
 		

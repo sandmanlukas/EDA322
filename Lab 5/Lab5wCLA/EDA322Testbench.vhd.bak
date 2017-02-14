@@ -146,7 +146,7 @@ dmemout_process : PROCESS (dmemout2seg)
 			ASSERT dmemouttrace(dmem_current) = dmemout2seg
 			REPORT "Dmem not correct"
 			SEVERITY error;
-			dmem_current <= dmem_current + 1; 
+		--	dmem_current <= dmem_current + 1; 
 		END IF; 
 	END PROCESS dmemout_process;
 
@@ -156,7 +156,7 @@ BEGIN
 			ASSERT (flagtrace(flag_current) (3 DOWNTO 0)) = flag2seg
 			REPORT "Flag not correct"
 			SEVERITY error;
-			flag_current <= flag_current + 1; 
+		--	flag_current <= flag_current + 1; 
 		END IF; 
 END PROCESS flag_process;
 
@@ -166,7 +166,7 @@ pc_process : PROCESS (pc2seg)
 			ASSERT pctrace(pc_current) = pc2seg
 			REPORT "PC not correct"
 			SEVERITY error;
-			pc_current <= pc_current + 1; 
+		--	pc_current <= pc_current + 1; 
 		END IF; 
 	END PROCESS pc_process;
 
@@ -176,7 +176,7 @@ acc_process : PROCESS (acc2seg)
 			ASSERT acctrace(acc_current) = acc2seg
 			REPORT "ACC not correct"
 			SEVERITY error;
-			acc_current <= acc_current + 1; 
+		--	acc_current <= acc_current + 1; 
 		END IF; 
 	END PROCESS acc_process;
 
@@ -187,10 +187,10 @@ disp_process : PROCESS (disp2seg)
 			REPORT "Disp not correct"
 			SEVERITY error;
 
-			ASSERT disp2seg = "10010000";
+			ASSERT disp2seg /= "11101001";
 			REPORT "Test successfull if no previous errors!"
-			SEVERITY error;
-			disp_current <= disp_current + 1; 
+			SEVERITY failure;
+		--	disp_current <= disp_current + 1; 
 		END IF; 
 	END PROCESS disp_process;
 
