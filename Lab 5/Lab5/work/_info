@@ -21,9 +21,9 @@ VZP<1`Y:kg2jO_RnHn<@7n1
 !s100 5ojOXAOde@7O1kf2i5mXM1
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1486482766
+Z7 !s110 1487066238
 !i10b 1
-Z8 !s108 1486482766.000000
+Z8 !s108 1487066238.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/alu_wRCA.vhd|
 Z10 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/alu_wRCA.vhd|
 !i113 1
@@ -94,8 +94,8 @@ Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z22 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd
-Z23 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd
+Z22 8C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322_processor.vhd
+Z23 FC:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322_processor.vhd
 l0
 L6
 V@P<_cgT]H7elg]kYnl7gd0
@@ -105,8 +105,8 @@ R6
 R7
 !i10b 1
 R8
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd|
-Z25 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/EDA322_processor.vhd|
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322_processor.vhd|
+Z25 !s107 C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322_processor.vhd|
 !i113 1
 R11
 R12
@@ -130,7 +130,7 @@ R25
 R11
 R12
 Eeda322testbench
-Z27 w1486482754
+Z27 w1487066234
 Z28 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
@@ -143,9 +143,9 @@ V=M4R5fiZV?C_SHF=XkaG;3
 !s100 jZ2HTJd3nCI?cA17Ni3I81
 R6
 32
-Z31 !s110 1486482768
+Z31 !s110 1487066240
 !i10b 1
-Z32 !s108 1486482767.000000
+Z32 !s108 1487066240.000000
 Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322Testbench.vhd|
 Z34 !s107 C:\Users\MrWicki\Documents\Skola\eda322\Lab 5\Lab5\EDA322Testbench.vhd|
 !i113 1
@@ -160,8 +160,8 @@ R2
 Z35 DEx4 work 15 eda322testbench 0 22 =M4R5fiZV?C_SHF=XkaG;3
 l60
 L9
-Vl6Rd9cOJZBGO]o;8<AiAl1
-!s100 YQK^BP]JR673fNOG6aNWN2
+VZFXjDcAg4ZdMkXb]BkFW_2
+!s100 6C<A8g@aGf>X>PAi:oRlQ3
 R6
 32
 R31
@@ -225,11 +225,11 @@ V9R6O=<B3Jb1F4Bh^XWHBf1
 !s100 8__f5dfNoF9WZ?QY5YNgI1
 R6
 32
-R7
+Z44 !s110 1487066239
 !i10b 1
-R8
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mem_array.vhd|
-Z45 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mem_array.vhd|
+Z45 !s108 1487066239.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mem_array.vhd|
+Z47 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mem_array.vhd|
 !i113 1
 R11
 R12
@@ -244,11 +244,11 @@ VN4gULf`XaVj@`I]fdIbFH2
 !s100 o<3?QYeLZCSiV5aIi8zfY0
 R6
 32
-R7
-!i10b 1
-R8
 R44
+!i10b 1
 R45
+R46
+R47
 !i113 1
 R11
 R12
@@ -257,37 +257,37 @@ R15
 R1
 R2
 R3
-Z46 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd
-Z47 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd
+Z48 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd
+Z49 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd
 l0
 L5
 V@l5NB0RVNncGRbUmGL;gN3
 !s100 R3A^fY8gHQ]8E^:VSVE1j1
 R6
 32
-R7
+R44
 !i10b 1
-R8
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd|
-Z49 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd|
+R45
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd|
+Z51 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1.vhd|
 !i113 1
 R11
 R12
 Adataflow
 R1
 R2
-Z50 DEx4 work 7 mux2to1 0 22 @l5NB0RVNncGRbUmGL;gN3
+Z52 DEx4 work 7 mux2to1 0 22 @l5NB0RVNncGRbUmGL;gN3
 l14
 L13
 VzDXLYIFofB602>nPLT_VO2
 !s100 8E>l15HIGUMJKMo_[8b_O2
 R6
 32
-R7
+R44
 !i10b 1
-R8
-R48
-R49
+R45
+R50
+R51
 !i113 1
 R11
 R12
@@ -296,19 +296,19 @@ R15
 R1
 R2
 R3
-Z51 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd
-Z52 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd
+Z53 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd
+Z54 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd
 l0
 L5
 VOAmGhzn3BcJk>igHh5_U:3
 !s100 QK@44H353UUY0SF`^DZ<K1
 R6
 32
-R7
+R44
 !i10b 1
-R8
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd|
-Z54 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd|
+R45
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd|
+Z56 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_8wide.vhd|
 !i113 1
 R11
 R12
@@ -322,11 +322,11 @@ VLf7iQQzOc=]NQ@]3=Ie`I2
 !s100 8L_mc]6H0PS@MJI0zIk9J0
 R6
 32
-R7
+R44
 !i10b 1
-R8
-R53
-R54
+R45
+R55
+R56
 !i113 1
 R11
 R12
@@ -335,19 +335,19 @@ R15
 R1
 R2
 R3
-Z55 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl
-Z56 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl
+Z57 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl
+Z58 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl
 l0
 L4
 VTj:^JjPM@i91bh_KzA=zB0
 !s100 NU^l?27FF[jjTfMG2zmHg1
 R6
 32
-Z57 !s110 1486482767
+R44
 !i10b 1
-R32
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl|
-Z59 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl|
+R45
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl|
+Z60 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux2to1_bit.vhdl|
 !i113 1
 R11
 R12
@@ -361,11 +361,11 @@ VTmIe66>RQKdQFJ4L<[]o^0
 !s100 5aC>zXTmX>eDF992=JT`62
 R6
 32
-R57
+R44
 !i10b 1
-R32
-R58
+R45
 R59
+R60
 !i113 1
 R11
 R12
@@ -374,24 +374,24 @@ R15
 R1
 R2
 R3
-Z60 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd
-Z61 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd
+Z61 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd
+Z62 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd
 l0
 L5
 VVLf[_o[4Ec?JbVT_G_Y8o2
 !s100 i<TJ4QjGzBk4`BZ1SBNzR3
 R6
 32
-R57
+R44
 !i10b 1
-R32
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd|
-Z63 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd|
+R45
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd|
+Z64 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/mux4to1.vhd|
 !i113 1
 R11
 R12
 Astructural
-R50
+R52
 R1
 R2
 DEx4 work 7 mux4to1 0 22 VLf[_o[4Ec?JbVT_G_Y8o2
@@ -401,11 +401,11 @@ VXZ0JIUA^ORmdfDX8;]YC@1
 !s100 QVb2aaQX^ibMM_C:YSdlK3
 R6
 32
-R57
+R44
 !i10b 1
-R32
-R62
+R45
 R63
+R64
 !i113 1
 R11
 R12
@@ -414,19 +414,19 @@ R15
 R1
 R2
 R3
-Z64 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd
-Z65 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd
+Z65 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd
+Z66 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd
 l0
 L7
 VPbH5D]eg3P0ClAJX<>9S23
 !s100 zb[Y?`H1mjG]2ikRk[ogD2
 R6
 32
-R57
+R44
 !i10b 1
-R32
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd|
-Z67 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd|
+R45
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd|
+Z68 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/pcinc.vhd|
 !i113 1
 R11
 R12
@@ -441,32 +441,32 @@ Vz]<XSO8C>kRKcgDDJVHh33
 !s100 YQFRh1N66]JAf<3??N>G>0
 R6
 32
-R57
+R44
 !i10b 1
-R32
-R66
+R45
 R67
+R68
 !i113 1
 R11
 R12
 Eprocbus
-Z68 w1485938574
+Z69 w1485938574
 R1
 R2
 R3
-Z69 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd
-Z70 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd
+Z70 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd
+Z71 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd
 l0
 L4
 VfZLH5z5MLYMa7Tj@7X9^S1
 !s100 dCb_EO3AEfWJ;mEC>5KFJ1
 R6
 32
-R57
+R44
 !i10b 1
-R32
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd|
-Z72 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd|
+R45
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd|
+Z73 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procbus.vhd|
 !i113 1
 R11
 R12
@@ -480,32 +480,32 @@ V>A1bWKU];AFLZL@Mb8@]<1
 !s100 @6Z=PO@`z0Q?G[kf<fLBR2
 R6
 32
-R57
+R44
 !i10b 1
-R32
-R71
+R45
 R72
+R73
 !i113 1
 R11
 R12
 Eproccontroller
-Z73 w1486481533
+Z74 w1486481533
 R1
 R2
 R3
-Z74 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd
-Z75 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd
+Z75 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd
+Z76 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd
 l0
 L4
 V6edc3PejEFg:]1<_^`Me<1
 !s100 EL_TSOJQf08Dd^?U;l6jh1
 R6
 32
-R57
+R44
 !i10b 1
-R32
-Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd|
-Z77 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd|
+R45
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd|
+Z78 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/procController.vhd|
 !i113 1
 R11
 R12
@@ -519,11 +519,11 @@ V13CkV:eB6W7I1GS;ZQ;^;2
 !s100 5h6o2;6B;oKY[ncUdkHEc3
 R6
 32
-R57
+R44
 !i10b 1
-R32
-R76
+R45
 R77
+R78
 !i113 1
 R11
 R12
@@ -532,19 +532,19 @@ R15
 R1
 R2
 R3
-Z78 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd
-Z79 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd
+Z79 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd
+Z80 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd
 l0
 L5
 VnU@g2h1>SHZ5YT2IL2Yd<2
 !s100 dS^lT1R]hk;`VWE[JOYe;1
 R6
 32
-R57
+R31
 !i10b 1
 R32
-Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd|
-Z81 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd|
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd|
+Z82 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/RCA.vhd|
 !i113 1
 R11
 R12
@@ -559,32 +559,32 @@ Vb49;X;Ni1D0]GQK5oTQOH0
 !s100 fDlKZlbZ2MhSJz6?I8MQb0
 R6
 32
-R57
+R31
 !i10b 1
 R32
-R80
 R81
+R82
 !i113 1
 R11
 R12
 Ereggister
-Z82 w1486481423
+Z83 w1486481423
 R1
 R2
 R3
-Z83 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd
-Z84 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd
+Z84 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd
+Z85 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd
 l0
 L4
 VGo]<lZ<Tc_OkjnUiC^AFL3
 !s100 EY:2T4ejo;FGWH[W_4T@R0
 R6
 32
-R57
+R31
 !i10b 1
 R32
-Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd|
-Z86 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd|
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd|
+Z87 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/reggister.vhd|
 !i113 1
 R11
 R12
@@ -598,41 +598,41 @@ V[`mhZ3R8j21:ed7JHL`c51
 !s100 eMm:;gYnaVLeig^WPe=iQ3
 R6
 32
-R57
+R31
 !i10b 1
 R32
-R85
 R86
+R87
 !i113 1
 R11
 R12
 Etestbenchlab4
-Z87 w1486023565
-Z88 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z89 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z88 w1486023565
+Z89 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z90 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R21
 R1
 R2
 R3
-Z90 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd
-Z91 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd
+Z91 8C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd
+Z92 FC:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd
 l0
 L14
 VkJQ]z[B@dVd>UVnQ6<C>_2
 !s100 I[`>VcAH2a^TU7VD6B7Xm2
 R6
 32
-R57
+R31
 !i10b 1
 R32
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd|
-Z93 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd|
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd|
+Z94 !s107 C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5/Testbenchlab4.vhd|
 !i113 1
 R11
 R12
 Abehavioral
-R88
 R89
+R90
 R21
 R1
 R2
@@ -643,11 +643,11 @@ VTPlebcEYJFX]daO6Z]hZ:2
 !s100 B<zXk_^Yb37Ke^RWAb:^c2
 R6
 32
-R57
+R31
 !i10b 1
 R32
-R92
 R93
+R94
 !i113 1
 R11
 R12

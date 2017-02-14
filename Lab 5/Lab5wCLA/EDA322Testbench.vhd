@@ -156,7 +156,7 @@ BEGIN
 			ASSERT (flagtrace(flag_current) (3 DOWNTO 0)) = flag2seg
 			REPORT "Flag not correct"
 			SEVERITY error;
-			flag_current <= flag_current + 1; 
+		--	flag_current <= flag_current + 1; 
 		END IF; 
 END PROCESS flag_process;
 
@@ -187,7 +187,7 @@ disp_process : PROCESS (disp2seg)
 			REPORT "Disp not correct"
 			SEVERITY error;
 
-			ASSERT disp2seg = "10010000";
+			ASSERT disp2seg /= "11101001";
 			REPORT "Test successfull if no previous errors!"
 			SEVERITY failure;
 			disp_current <= disp_current + 1; 

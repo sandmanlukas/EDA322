@@ -94,22 +94,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading entity rca
 -- Loading entity cmp
 
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/EDA322_processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/EDA322_processor.vhd}
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procController.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procController.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity EDA322_processor
--- Compiling architecture structural of EDA322_processor
-
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/cmp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/cmp.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity cmp
--- Compiling architecture dataflow of cmp
+-- Compiling entity procController
+-- Compiling architecture mixed of procController
 
 } {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/alu_wCLA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/alu_wCLA.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -121,13 +112,22 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Loading entity cla
 -- Loading entity cmp
 
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procController.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procController.vhd}
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/cmp.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/cmp.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity procController
--- Compiling architecture mixed of procController
+-- Compiling entity cmp
+-- Compiling architecture dataflow of cmp
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/EDA322_processor.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/EDA322_processor.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity EDA322_processor
+-- Compiling architecture structural of EDA322_processor
 
 } {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/Testbenchlab4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/Testbenchlab4.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
@@ -156,14 +156,6 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity pg_combiner
 -- Compiling architecture dataflow of pg_combiner
 
-} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procbus.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procbus.vhd}
-Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity procBus
--- Compiling architecture dataflow of procBus
-
 } {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/RCA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/RCA.vhd}
 Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
 -- Loading package STANDARD
@@ -172,5 +164,13 @@ Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 
 -- Compiling entity rca
 -- Compiling architecture structural of rca
 -- Loading entity fa
+
+} {} {}} {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procbus.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/MrWicki/Documents/Skola/eda322/Lab 5/Lab5wCLA/procbus.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity procBus
+-- Compiling architecture dataflow of procBus
 
 } {} {}}
