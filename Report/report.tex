@@ -162,6 +162,8 @@ Note that when the opcode changes from 1 to 7 in figure \ref{fig:waves_instr} a 
 \\\\
 The testbench is used to verify the processors correct operation. By simulating inputs to the processor and examining the outputs you can determine wether an operation was carried out in a correct fashion or not. In practice this is done by writing an assembler program which you load into the memory of the processor. The verification is done by comparing the actual outputs with the expected outputs while running the program on the processor. If any of the outputs take an unexpected value an error has been found.
 \\\\
+When designing the testbench we initially thought that there were huge issues with the flag register. We got no output to the \textit{flag2seg} signal which indicated that something was wrong with the flag register. This seemed a little bit odd however, since the flag register had worked just fine previously. When checking the VHDL code for the processor it turned out that we'd forgotten to connect the \textit{flag2seg} signal to the flag register. After connecting this our testbench ran successfully. 
+\\\\
 Describe what you did in lab5. More specifically, describe how you made the testbench to verify that your processor design was functionally correct. For example, you can specify how you generated inputs to the processor during the testing, how you were reading the expected outputs and how you compare the expected outputs with the actual outputs. Also mention if your processor design was working correctly from the beginning and if not describe how you backtrack the bugs. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
 \subsection{ChAcc on Nexys 3 board \emph{(Optional)}}

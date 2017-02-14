@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  14 FEB 2017 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  14 FEB 2017 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,7 +380,20 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(./report.aux)
+(./report.aux
+
+LaTeX Warning: Label `fig:etikett' multiply defined.
+
+
+LaTeX Warning: Label `fig:etikett' multiply defined.
+
+
+LaTeX Warning: Label `fig:etikett' multiply defined.
+
+
+LaTeX Warning: Label `fig:etikett' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -395,8 +408,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
 \scratchdimen=\dimen105
@@ -467,7 +479,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 3.
+)
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
@@ -487,19 +502,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
 [1
 
-] <fulladder.png, id=17, 552.0625pt x 351.3125pt>
+] <fulladder.png, id=19, 552.0625pt x 351.3125pt>
 File: fulladder.png Graphic file (type png)
  <use fulladder.png>
 Package pdftex.def Info: fulladder.png used on input line 47.
 (pdftex.def)             Requested size: 180.0pt x 114.54507pt.
 
-<fulladderfromhalfadder.jpg, id=19, 813.0375pt x 349.305pt>
+<fulladderfromhalfadder.jpg, id=21, 813.0375pt x 349.305pt>
 File: fulladderfromhalfadder.jpg Graphic file (type jpg)
 
 <use fulladderfromhalfadder.jpg>
 Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 56.
 (pdftex.def)             Requested size: 180.0pt x 77.33235pt.
- <rca.jpg, id=20, 804.75656pt x 234.8775pt>
+ <rca.jpg, id=22, 804.75656pt x 234.8775pt>
 File: rca.jpg Graphic file (type jpg)
 
 <use rca.jpg>
@@ -510,97 +525,80 @@ Package pdftex.def Info: rca.jpg used on input line 65.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./fulladder.png> <./fulladderfromhalfadder.jpg>]
-<subtractionlogic.jpg, id=25, 1470.24281pt x 378.66469pt>
+<subtractionlogic.jpg, id=27, 1470.24281pt x 378.66469pt>
 File: subtractionlogic.jpg Graphic file (type jpg)
 
 <use subtractionlogic.jpg>
 Package pdftex.def Info: subtractionlogic.jpg used on input line 78.
 (pdftex.def)             Requested size: 323.9978pt x 83.44514pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 85.
  [3 <./rca.jpg> <./subtractionlogic.jpg>]
-<inst_mem_2.PNG, id=30, 833.36343pt x 66.2475pt>
+<inst_mem_2.PNG, id=32, 833.36343pt x 66.2475pt>
 File: inst_mem_2.PNG Graphic file (type png)
  <use inst_mem_2.PNG>
 Package pdftex.def Info: inst_mem_2.PNG used on input line 97.
 (pdftex.def)             Requested size: 360.0pt x 28.61829pt.
-
-
-LaTeX Warning: Reference `fig:memory' on page 4 undefined on input line 102.
-
-[4 <./inst_mem_2.PNG>]
-
-LaTeX Warning: Reference `fig:datapath' on page 5 undefined on input line 117.
-
-<datapath.png, id=37, 703.12688pt x 436.63126pt>
+ [4 <./inst_mem_2.PNG>] <datapath.png, id=38, 703.12688pt x 436.63126pt>
 File: datapath.png Graphic file (type png)
- <use datapath.png>
+
+<use datapath.png>
 Package pdftex.def Info: datapath.png used on input line 121.
 (pdftex.def)             Requested size: 360.0pt x 223.55177pt.
- [5 <./datapath.png>] <states.jpg, id=44, 3694.80376pt x 2972.10374pt>
+ [5 <./datapath.png>]
+<states.jpg, id=44, 3694.80376pt x 2972.10374pt>
 File: states.jpg Graphic file (type jpg)
  <use states.jpg>
 Package pdftex.def Info: states.jpg used on input line 135.
 (pdftex.def)             Requested size: 251.9989pt x 202.6718pt.
-
-[6 <./states.jpg>]
-
-LaTeX Warning: Reference `fig:waves_instr' on page 7 undefined on input line 14
-9.
-
-<controller_waves.JPG, id=48, 653.44125pt x 235.63031pt>
+ [6 <./states.jpg>] <controller_waves.JPG, id=48, 653.44125pt x 235.63031pt>
 File: controller_waves.JPG Graphic file (type jpg)
 
 <use controller_waves.JPG>
 Package pdftex.def Info: controller_waves.JPG used on input line 153.
 (pdftex.def)             Requested size: 270.0pt x 97.36049pt.
 
-
-LaTeX Warning: Reference `fig:waves_instr' on page 7 undefined on input line 15
-8.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--166
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--166
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
 [7 <./controller_waves.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 168--171
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 175--178
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
 
  []
 
 [10] (./report.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  1984 strings out of 493013
  26131 string characters out of 6135682
- 89217 words of memory out of 5000000
+ 89288 words of memory out of 5000000
  5501 multiletter control sequences out of 15000+600000
  10509 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -615,7 +613,7 @@ ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb>
-Output written on report.pdf (12 pages, 2942050 bytes).
+Output written on report.pdf (12 pages, 2947154 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
