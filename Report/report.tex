@@ -30,11 +30,28 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \section{Introduction}
-(max: 1 page)
-\\\\
 This part will introduce the reader to the report. 
 
-At the beginning, describe what the purpose of this lab report is. Then describe briefly what each section discusses and finally summarize the most important conclusions. 
+At the beginning, describe what the purpose of this lab report is. Then describe briefly what each section discusses and finally summarize the most important conclusions.
+
+The purpose of this report is to describe the steps of building the ChAcc processor. Each section is intended to describe the most important parts of the work as well as the different challenges we faced.
+
+In lab 2 we created an RCA and a CLA from full-adders. We then used this in combination with extra logic to create an ALU that can perform some basic operations such as addition, bitwise AND-ing and equality-testing.
+
+In lab 3 we implemented register and a memory with generic sizes. We also designed a bus using multiplexers instead of tri-state buffers. These components were then combined to create the datapath of the processor.
+
+In lab 4 we engineered the controller of the processor.We started out with a state diagram describing our controller as a mealy FSM and then realized it in VHDL with three processes. The datapath now had a functioning controller so we now tested it with a provided testbench.
+
+In lab 5 we designed a testbench for the processor. We were provided with a program and expected outputs of some control signals. The testbench loads the program, executes it and compares the output with the expected values.
+
+In lab 6 we synthesized our design of the processor. We encountered warnings from the synthesis tool which we had previously not seen. These errors were corrected and then we generated a bitsream which we loaded to the FPGA. We also made sure the program worked as expected.
+
+Our main conclusions after completing all of the labs are that:
+\begin{itemize}
+	\item You need to follow the specifications for control signals exactly, otherwise the instructions will either do nothing or do something completely wrong. 
+	\item Unlike when programming, there are more non-obvious things to take care of when describing hardware.
+	\item test
+\end{itemize}
 
 \newpage
 \section{Method}
@@ -170,11 +187,35 @@ When designing the testbench we initially thought that there were huge issues wi
   \item \underline{Comparing outputs and expected outputs.} The output signals of interest have one process each, sensitive to the signal. When that signal changes the process is triggered and its value is compared to its expected value in the array by using asserts. If they are equal, the index for that array is incremented. Otherwise the testbench stops and reports the error. The output signals that are checked are \textit{DataMemOut, flag2seg, pc2seg, acc2seg} and \textit{disp2seg}.
 \end{itemize}
 
-\subsection{ChAcc on Nexys 3 board \emph{(Optional)}}
-(max: 2 pages)
-\\\\
-Describe how you verified the correctness of your FPGA implementation. Note that the code that is executed on the implementation is the same code used for testing in Lab 5. You should compare sequences of values on various signals observed on the seven-segment displays to values seen in Modelsim simulation of the design. Please include in the report the sequence of program counter (PC) and display register values you observed during a successful execution on the FPGA. 
+\newpage
+\subsection{ChAcc on Nexys 3 board}
 
+\textbf{Synthesis vs simulation}\\
+We encountered three problems in particular:
+\begin{itemize}
+  \item In the process that assigned the next state we did not have \textit{else} clauses and \textit{when others} statement. We thought we didn't need this since we had exhautsed all possibilites already. When synthesizing, latches were created because we did not have these statements and hence we added them.
+  \item When synthesizing we got warnings that we did not have all signals used in the process in the sensitivity list. This warning did not occur when simulating so it did not affect the correctness when just simulating. This will not change the behaviour of the program logically but we added it to avoid glitches.
+  \item When we ran the program on the FPGA we observed the PC values and opcode values. They did not match the program. It appeared that the values jumped more than one step each cycle. The lab assistant suggested that we should make sure that the load control signals were set only if \textit{master\_load\_enable} was set. This fixed the problem. If, for instance, \textit{pcLd} does not depend on \textit{master\_load\_enable} PC will be incremented at the pace of the main clock. But the stage would not change if \textit{master\_load\_enable} was 0. This is of course unwanted beaviour. If the stage would change independently of \textit{master\_load\_enable} the hardware would function correctly, but we would not be able to toggle the progress manually and observe changes ourselves.
+\end{itemize}
+
+When we simulated our processor all of our tests were completed successfully. We didn't get any indications that we should make any of the changes mentioned in bullets 1 and 2. It was when we synthesized our design that we got warnings about the sensitivity list and not exhausting all possibilities. Since it's hardware we're dealing with we have to make sure that the VHDL we write is possible to synthesize into well functioning hardware. If the synthesis tool ask us to make certain changes it's a good idea to follow its advice. 
+
+\textbf{Verifying the correctness}\\
+
+We began the verifictation by observing the PC value. Since it should just go from 0 to 6 it would be easy to detect an error and follow the progress. But instead in jumped between 0 and 6 directly, and sometimes to 1 and 2, indicating that something was wrong. This lead us to the conclusions above. After fixing it, we observed PC again and this time it went from 0 all the way to 6 and the started over again from 0, as we expected. Next we observed the opcode. The opcode was also easy to follow since we could just compare it to the \textit{inst\_mem.mif} file. The opcode sequence was correct as well. Finally we observed the \textit{Display} sequence. It correctly showed the Fibonacci sequence. Table 1 shows the sequence for all three seven segment displays. This was the same sequence we saw in Modelsim.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  pc & 0, 1, 2, 3, 4, 5, 6, 0,...\\
+  opcode & 6, 2, F, 7, 1 , 7, C, 6,... \\
+  display & 0, 2, 3, 5, 8, D, 15, 22, 37, 59, 90\\ \hline
+\end{tabular}
+\label{tab:sequences}
+\caption{These are the sequences of the seven segment displays on the FPGA. The values are hexdecimal.}
+\end{table}
+
+\newpage
 \subsection{Performance, Area and Power Analysis \emph{(Optional)}}
 (max: 2 pages)
 \\\\
