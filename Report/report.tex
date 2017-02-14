@@ -158,8 +158,7 @@ In figure \ref{fig:waves_instr} we see the waveform diagram of instructions 1 to
 Note that when the opcode changes from 1 to 7 in figure \ref{fig:waves_instr} a spike occurs for the signal dataLd. This is an effect of our Mealy design. The output signal only depends on state and input (opcode). Since the stage is DE and the opcode is 1 for a brief moment the \textit{dataLd} signal becomes 1. When the opcode changes to 7 \textit{dataLd} becomes 0. This is not a problem since the spike occurs after the positive edge of the clock. Since everything is synchronous the control signals have corrected themselves before the next positive edge, meaning that no errors will be made. 
 
 \subsection{Processor's Testbench}
-(max: 2 pages)
-\\\\
+
 The testbench is used to verify the processor's correct operation. By simulating inputs to the processor and examining the outputs you can determine whether an operation was carried out in a correct fashion or not. In practice this is done by writing an assembler program which you load into the memory of the processor. The verification is done by comparing the actual outputs with the expected outputs while running the program on the processor. If any of the outputs take an unexpected value an error has been found.
 \\\\
 When designing the testbench we initially thought that there were huge issues with the flag register. We got no output to the \textit{flag2seg} signal which indicated that something was wrong with the flag register. This seemed a little bit odd however, since the flag register had worked just fine previously. When checking the VHDL code for the processor it turned out that we'd forgotten to connect the \textit{flag2seg} signal to the flag register. After connecting this our testbench ran successfully. 
@@ -181,14 +180,20 @@ Describe how you verified the correctness of your FPGA implementation. Note that
 \\\\
 To be announced in the Lab7PM.
 
+\newpage
 \section{Analysis}
-(max: 1 page)
-\\\\
-Summarize your results after performing all the labs (2, 3, 4 and 5).
 
-Mention and discuss interesting findings and observations, as well as difficulties in completing some of the tasks of the four last labs.
+After performing lab 2 to 5 we have a processor which can perform some basic operations. The processor consists of an ALU, registers, memories, muxes, a bus and a controller. Through careful testing and debugging we have verified that each component works as intended, both individually and together. We used waveforms to test the components and a testbench we designed ourselves to test the processor as a whole.
 
-After looking at your results, draw conclusions and describe briefly the learning outcome, that is what have you learnt by performing these labs?  
+We've made two projects for each of our labs, one using an ALU based on an RCA and one based on a CLA. Although we haven't been able to notice any difference in performance (which we didn't expect to be able to) it's been interesting to see both implementations and how they accomplish the same task. Since the critical path of the CLA is shorter the clock frequency can be increased and the performance enhanced.
+ 
+When testing our controller in lab 4 we had some issues. In order to solve this we needed to use waveforms to check what instructions were being executed as well as if the correct state and control signals were set. By examining the waveforms we were able to track the error to a certain control signal which wasn't set when it should've been. This gave us valuable experience in how to use simulations and waveforms to debug errors.
+
+It was a good learning experience to design the controller as an FSM. Previously we had only designed smaller circuits for the purpose of learning how to do it, and not for use in practice. Designing an FSM for use in practice gave use a better understanding of the characteristics of a mealy FSM compared to a moore FSM (number of states and timing).
+
+The hardware and the testbench have been described in VHDL. We have gained experience in this and also seen the difference between programming and describing hardware in code. Throughout this lab series we have kept in mind to write the VHDL in such a way that no unwnated  hardware (e.g. latches) is synthesized. This was new to us compared to programming, where you can write more freely.
+
+We realize that if the goal was to design an ASIC much more work would be needed. For example we would need to describe the placement of the components on the chip. And if we were to make some errors (which we have done) it would cost both money and time.
 
 % Appendix
 \newpage

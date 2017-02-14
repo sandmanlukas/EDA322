@@ -17,7 +17,7 @@ END reggister;
 
 ARCHITECTURE behavioral OF reggister IS
 BEGIN
-	PROCESS (clk,aresetn)
+	PROCESS (clk,aresetn, load_enable)
 	BEGIN
 		IF(aresetn = '0') THEN
 			res <= (OTHERS => '0');
