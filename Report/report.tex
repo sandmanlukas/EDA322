@@ -162,6 +162,13 @@ Note that when the opcode changes from 1 to 7 in figure \ref{fig:waves_instr} a 
 \\\\
 Describe what you did in lab5. More specifically, describe how you made the testbench to verify that your processor design was functionally correct. For example, you can specify how you generated inputs to the processor during the testing, how you were reading the expected outputs and how you compare the expected outputs with the actual outputs. Also mention if your processor design was working correctly from the beginning and if not describe how you backtrack the bugs. Remember to always explain your design choices and mention any assumptions. Finally, make use of figures and tables. 
 
+\textbf{How the testbench works}
+\begin{itemize}
+  \item \underline{Generating input.} The input to the processor are control signlas (such as \textit{clk} and \textit{aresetn}) and the instruction and data memory files. The control signals are assigned values, some periodically,  in the architecture of the testbench. The memory content is read when the memory entities are instantiated. Based on the memory content different output is expected, hence we consider those files an input from the testbench.
+  \item \underline{Reading expected outputs.} The expected output values are read into five different arrays, one for each output signals to check. The reading is done inside a process in the testbench architecture. For each file, while it has not reached the end, read the current line. That line is parsed as an 8-bit vector and is stored in the array at the current index. The index is incremented and the same procedure is repeated.
+  \item \underline{Comparing outputs and expected outputs.} The output signals of interest have one process each, sensitive to the signal. When that signal changes the process is triggered and its value is compared to its expected value in the array. If they are equal, the index for that array is incremented. Otherwise the testbench stops and reports the error.
+\end{itemize}
+
 \subsection{ChAcc on Nexys 3 board \emph{(Optional)}}
 (max: 2 pages)
 \\\\
