@@ -1,0 +1,199 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_textio.all;
+USE std.textio.all;
+
+ENTITY EDA322Testbench IS
+END EDA322Testbench;
+
+ARCHITECTURE behavioral OF EDA322Testbench IS
+
+SIGNAL externalIn 		: STD_LOGIC_VECTOR (7 downto 0); -- ?extIn? in Figure 1
+SIGNAL CLK 			: STD_LOGIC := '0';
+SIGNAL master_load_enable	: STD_LOGIC;
+SIGNAL ARESETN 			: STD_LOGIC := '0';
+SIGNAL pc2seg 			: STD_LOGIC_VECTOR (7 downto 0); -- PC
+SIGNAL instr2seg 		: STD_LOGIC_VECTOR (11 downto 0); -- Instruction register
+SIGNAL Addr2seg 		: STD_LOGIC_VECTOR (7 downto 0); -- Address register
+SIGNAL dMemOut2seg 		: STD_LOGIC_VECTOR (7 downto 0); -- Data memory output
+SIGNAL aluOut2seg 		: STD_LOGIC_VECTOR (7 downto 0); -- ALU output
+SIGNAL acc2seg 			: STD_LOGIC_VECTOR (7 downto 0); -- Accumulator
+SIGNAL flag2seg 		: STD_LOGIC_VECTOR (3 downto 0); -- Flags
+SIGNAL busOut2seg 		: STD_LOGIC_VECTOR (7 downto 0); -- Value on the bus
+SIGNAL disp2seg			: STD_LOGIC_VECTOR(7 downto 0); --Display register
+SIGNAL errSig2seg 		: STD_LOGIC; -- Bus Error signal
+SIGNAL ovf 			: STD_LOGIC; -- Overflow
+SIGNAL zero 			: STD_LOGIC; -- Zero
+
+CONSTANT clk_period		: TIME := 10 ns;
+CONSTANT dmemouttrace_length	: INTEGER := 20;
+CONSTANT flagtrace_length	: INTEGER := 20;
+CONSTANT pc_length		: INTEGER := 66;
+CONSTANT acc_length		: INTEGER := 30;
+CONSTANT disp_length		: INTEGER := 10;
+
+TYPE test_vector_dmemouttrace IS ARRAY (0 TO dmemouttrace_length-1) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
+TYPE test_vector_flagtrace IS ARRAY (0 TO flagtrace_length-1) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
+TYPE test_vector_pctrace IS ARRAY (0 TO pc_length-1) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
+TYPE test_vector_acctrace IS ARRAY (0 TO acc_length-1) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
+TYPE test_vector_disptrace IS ARRAY (0 TO disp_length-1) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+
+SIGNAL dmemouttrace : test_vector_dmemouttrace;
+SIGNAL flagtrace : test_vector_flagtrace;
+SIGNAL pctrace : test_vector_pctrace;
+SIGNAL acctrace : test_vector_acctrace;
+SIGNAL disptrace : test_vector_disptrace;
+
+FILE dmemout_file : TEXT OPEN READ_MODE IS "dMemOuttrace.txt";
+FILE flag_file	  : TEXT OPEN READ_MODE IS "flagtrace.txt";
+FILE pc_file	  : TEXT OPEN READ_MODE IS "pctrace.txt";
+FILE acc_file	  : TEXT OPEN READ_MODE IS "acctrace.txt";
+FILE disp_file	  : TEXT OPEN READ_MODE IS "disptrace.txt";
+
+SIGNAL dmem_current : INTEGER := 0;
+SIGNAL flag_current : INTEGER := 0;
+SIGNAL pc_current   : INTEGER := 0;
+SIGNAL acc_current  : INTEGER := 0;
+SIGNAL disp_current : INTEGER := 0;
+
+BEGIN
+
+readTestSignals : PROCESS
+	VARIABLE vector_line : LINE;
+	VARIABLE index : INTEGER := 0;
+	VARIABLE dmemout_temp : test_vector_dmemouttrace;
+	VARIABLE flag_temp : test_vector_flagtrace;
+	VARIABLE pc_temp : test_vector_pctrace;
+	VARIABLE acc_temp : test_vector_acctrace;
+	VARIABLE disp_temp : test_vector_disptrace;
+	BEGIN
+		--dMemOuttrace
+		WHILE (NOT ENDFILE (dmemout_file)) AND (index < dmemouttrace_length)  LOOP
+			readLine(dmemout_file,vector_line);				--Reads one line from the file and stores it in vector_line
+			read(vector_line,dmemout_temp(index));				--Saves the line at index in the array 
+			index := index + 1;
+		END LOOP;
+		dmemouttrace <= dmemout_temp;
+
+		--flagtrace
+		index := 0;
+		WHILE (NOT ENDFILE (flag_file)) AND (index < flagtrace_length)  LOOP
+			readLine(flag_file,vector_line);				--Reads one line from the file and stores it in vector_line
+			read(vector_line,flag_temp(index));				--Saves the line at index in the array 
+			index := index + 1;
+		END LOOP;
+		flagtrace <= flag_temp;
+
+		--pctrace
+		index := 0;
+		WHILE (NOT ENDFILE (pc_file)) AND (index < pc_length)  LOOP
+			readLine(pc_file,vector_line);				--Reads one line from the file and stores it in vector_line
+			read(vector_line,pc_temp(index));				--Saves the line at index in the array 
+			index := index + 1;
+		END LOOP;
+		pctrace <= pc_temp;
+
+		--acctrace
+		index := 0;
+		WHILE (NOT ENDFILE (acc_file)) AND (index < acc_length)  LOOP
+			readLine(acc_file,vector_line);				--Reads one line from the file and stores it in vector_line
+			read(vector_line,acc_temp(index));				--Saves the line at index in the array 
+			index := index + 1;
+		END LOOP;
+		acctrace <= acc_temp;
+
+		--disptrace
+		index := 0;
+		WHILE (NOT ENDFILE (disp_file)) AND (index < disp_length)  LOOP
+			readLine(disp_file,vector_line);				--Reads one line from the file and stores it in vector_line
+			read(vector_line,disp_temp(index));				--Saves the line at index in the array 
+			index := index + 1;
+		END LOOP;
+		disptrace <= disp_temp;
+
+		WAIT;
+	END PROCESS readTestSignals;
+
+processor : ENTITY work.EDA322_processor(structural)
+	PORT MAP(
+		externalIn,
+		CLK,
+		master_load_enable,
+		ARESETN,
+		pc2seg,
+		instr2seg,
+		Addr2seg,
+		dMemOut2seg,
+		aluOut2seg,
+		acc2seg,
+		flag2seg,
+		busOut2seg,
+		disp2seg,
+		errSig2seg,
+		ovf,
+		zero
+	);
+
+externalIn <= "00000000";
+master_load_enable <= '1';         --Should always be 1
+clk <= NOT clk AFTER clk_period/2;
+aresetn <= '1' AFTER clk_period*2; --Reset is active for two cycles and then becomes 1
+
+dmemout_process : PROCESS (dmemout2seg)
+	BEGIN
+		IF (aresetn = '1') THEN
+			ASSERT dmemouttrace(dmem_current) = dmemout2seg
+			REPORT "Dmem not correct"
+			SEVERITY error;
+			dmem_current <= dmem_current + 1; 
+		END IF; 
+	END PROCESS dmemout_process;
+
+flag_process : PROCESS (flag2seg)
+BEGIN
+		IF (aresetn = '1') THEN
+			ASSERT (flagtrace(flag_current) (3 DOWNTO 0)) = flag2seg
+			REPORT "Flag not correct"
+			SEVERITY error;
+			flag_current <= flag_current + 1; 
+		END IF; 
+END PROCESS flag_process;
+
+pc_process : PROCESS (pc2seg)
+	BEGIN
+		IF (aresetn = '1') THEN
+			ASSERT pctrace(pc_current) = pc2seg
+			REPORT "PC not correct"
+			SEVERITY error;
+			pc_current <= pc_current + 1; 
+		END IF; 
+	END PROCESS pc_process;
+
+acc_process : PROCESS (acc2seg)
+	BEGIN
+		IF (aresetn = '1') THEN
+			ASSERT acctrace(acc_current) = acc2seg
+			REPORT "ACC not correct"
+			SEVERITY error;
+			acc_current <= acc_current + 1; 
+		END IF; 
+	END PROCESS acc_process;
+
+disp_process : PROCESS (disp2seg)
+	BEGIN
+		IF (aresetn = '1') THEN
+			ASSERT disp2seg /= "10010000"
+			REPORT "Test successfull if no previous error!"
+			SEVERITY failure;
+		
+			ASSERT disptrace(disp_current) = disp2seg
+			REPORT "Disp not correct"
+			SEVERITY error;
+
+			disp_current <= disp_current + 1; 
+		END IF; 
+	END PROCESS disp_process;
+
+END behavioral;
+

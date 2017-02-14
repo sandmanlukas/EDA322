@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.xst" -ofn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.xst" -ofn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.xst" -ofn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin.ucf -p xc6slx16-csg324-3 proc_top.ngc proc_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o proc_top_map.ncd proc_top.ngd proc_top.pcf 
+par -w -intstyle ise -ol high -mt off proc_top_map.ncd proc_top.ncd proc_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml proc_top.twx proc_top.ncd -o proc_top.twr proc_top.pcf -ucf pin.ucf 
+bitgen -intstyle ise -f proc_top.ut proc_top.ncd 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.xst" -ofn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.xst" -ofn "Z:/NyaMappen/EDA322/Lab6/Lab6/proc_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pin.ucf -p xc6slx16-csg324-3 proc_top.ngc proc_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o proc_top_map.ncd proc_top.ngd proc_top.pcf 
+par -w -intstyle ise -ol high -mt off proc_top_map.ncd proc_top.ncd proc_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml proc_top.twx proc_top.ncd -o proc_top.twr proc_top.pcf -ucf pin.ucf 
+bitgen -intstyle ise -f proc_top.ut proc_top.ncd 

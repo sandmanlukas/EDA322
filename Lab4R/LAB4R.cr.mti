@@ -103,13 +103,13 @@ QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading entity rca
 -- Loading entity cmp
 
-} {} {}} Z:/NyaMappen/EDA322/Lab4R/procController.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {Z:\NyaMappen\EDA322\Lab4R\procController.vhd}
+} {} {}} Z:/NyaMappen/EDA322/Lab4R/cmp.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab4R/cmp.vhd
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity procController
--- Compiling architecture mixed of procController
+-- Compiling entity cmp
+-- Compiling architecture dataflow of cmp
 
 } {} {}} Z:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab4R/EDA322_processor.vhd
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
@@ -120,12 +120,12 @@ QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Compiling entity EDA322_processor
 -- Compiling architecture structural of EDA322_processor
 
-} {} {}} Z:/NyaMappen/EDA322/Lab4R/cmp.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab4R/cmp.vhd
+} {} {}} Z:/NyaMappen/EDA322/Lab4R/procController.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {Z:\NyaMappen\EDA322\Lab4R\procController.vhd}
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity cmp
--- Compiling architecture dataflow of cmp
+-- Compiling entity procController
+-- Compiling architecture mixed of procController
 
 } {} {}}

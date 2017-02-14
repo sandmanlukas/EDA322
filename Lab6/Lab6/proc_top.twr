@@ -1,0 +1,88 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml proc_top.twx proc_top.ncd -o proc_top.twr proc_top.pcf
+-ucf pin.ucf
+
+Design file:              proc_top.ncd
+Physical constraint file: proc_top.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK100MEG
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+ARESETN_RAW |    0.818(R)|      FAST  |    0.064(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+CLK_MANUAL  |    1.052(R)|      FAST  |   -0.237(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+DBG1<0>     |    0.388(R)|      FAST  |    0.626(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+DBG1<1>     |    0.587(R)|      FAST  |    0.392(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+DBG2<0>     |    0.725(R)|      FAST  |    0.208(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+DBG2<1>     |    0.470(R)|      FAST  |    0.518(R)|      SLOW  |CLK100MEG_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK100MEG to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED1        |        10.823(R)|      SLOW  |         5.687(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+LED2        |         8.529(R)|      SLOW  |         4.869(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+LED3        |         8.755(R)|      SLOW  |         4.996(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_AN<0>  |         8.163(R)|      SLOW  |         4.589(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_AN<1>  |         8.579(R)|      SLOW  |         4.828(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_AN<2>  |         8.117(R)|      SLOW  |         4.566(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_AN<3>  |         8.693(R)|      SLOW  |         4.884(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<0>  |        14.059(R)|      SLOW  |         5.762(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<1>  |        14.205(R)|      SLOW  |         5.498(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<2>  |        13.760(R)|      SLOW  |         5.461(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<3>  |        14.076(R)|      SLOW  |         5.836(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<4>  |        13.972(R)|      SLOW  |         5.701(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<5>  |        13.930(R)|      SLOW  |         5.749(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+SSEG_CA<6>  |        14.233(R)|      SLOW  |         5.473(R)|      FAST  |CLK100MEG_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK100MEG
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK100MEG      |    6.154|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Feb 14 14:23:52 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 221 MB
+
+
+

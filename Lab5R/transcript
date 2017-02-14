@@ -1,0 +1,140 @@
+# Compile of mux2to1_bit.vhdl was successful.
+# Compile of alu_wRCA.vhd failed with 10 errors.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of EDA322Testbench.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd failed with 4 errors.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# Compile of Testbenchlab4.vhd was successful.
+# Compile of Lab5.cr.mti failed with 1 errors.
+# 17 compiles, 3 failed with 15 errors.
+# Compile of mux2to1_bit.vhdl was successful.
+# Compile of alu_wRCA.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of EDA322Testbench.vhd was successful.
+# Compile of FA.vhd was successful.
+# Compile of mem_array.vhd was successful.
+# Compile of mux2to1.vhd was successful.
+# Compile of mux2to1_8wide.vhd was successful.
+# Compile of mux4to1.vhd was successful.
+# Compile of pcinc.vhd was successful.
+# Compile of procbus.vhd was successful.
+# Compile of procController.vhd was successful.
+# Compile of RCA.vhd was successful.
+# Compile of reggister.vhd was successful.
+# Compile of Testbenchlab4.vhd was successful.
+# Compile of Lab5.cr.mti failed with 1 errors.
+# 17 compiles, 1 failed with 1 error.
+vsim -gui work.eda322testbench
+# vsim -gui work.eda322testbench 
+# Start time: 13:09:25 on Feb 14,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.eda322testbench(behavioral)#1
+# Loading work.eda322_processor(structural)#1
+# Loading work.proccontroller(mixed)#1
+# Loading work.rca(structural)#1
+# Loading work.mem_array(behavioral)#1
+# Loading work.cmp(dataflow)#1
+add wave -position insertpoint  \
+sim:/eda322testbench/processor/externalIn \
+sim:/eda322testbench/processor/CLK \
+sim:/eda322testbench/processor/master_load_enable \
+sim:/eda322testbench/processor/ARESETN \
+sim:/eda322testbench/processor/pc2seg \
+sim:/eda322testbench/processor/instr2seg \
+sim:/eda322testbench/processor/Addr2seg \
+sim:/eda322testbench/processor/dMemOut2seg \
+sim:/eda322testbench/processor/aluOut2seg \
+sim:/eda322testbench/processor/acc2seg \
+sim:/eda322testbench/processor/flag2seg \
+sim:/eda322testbench/processor/busOut2seg \
+sim:/eda322testbench/processor/disp2seg \
+sim:/eda322testbench/processor/errSig2seg \
+sim:/eda322testbench/processor/ovf \
+sim:/eda322testbench/processor/zero
+run 2000
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/instruction_memory
+# ** Fatal: (vsim-3421) Value 66 is out of range 0 to 65.
+#    Time: 1935 ns  Iteration: 2  Process: /eda322testbench/pc_process File: Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd
+# Fatal error in Process pc_process at Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd line 166
+# 
+# HDL call sequence:
+# Stopped at Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd 166 Process pc_process
+# 
+# Compile of EDA322Testbench.vhd was successful.
+restart -f
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.eda322testbench(behavioral)#1
+# Loading work.eda322_processor(structural)#1
+# Loading work.proccontroller(mixed)#1
+# Loading work.rca(structural)#1
+# Loading work.mem_array(behavioral)#1
+# Loading work.cmp(dataflow)#1
+run 2000
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/instruction_memory
+# ** Failure: Test successfull if no previous error!
+#    Time: 1905 ns  Iteration: 1  Process: /eda322testbench/disp_process File: Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd
+# Break in Process disp_process at Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd line 187
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run 2000
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/instruction_memory
+# ** Failure: Test successfull if no previous error!
+#    Time: 1905 ns  Iteration: 1  Process: /eda322testbench/disp_process File: Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd
+# Break in Process disp_process at Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd line 187
+# Compile of procController.vhd was successful.
+vsim -gui work.eda322testbench
+# End time: 14:21:37 on Feb 14,2017, Elapsed time: 1:12:12
+# Errors: 2, Warnings: 6
+# vsim -gui work.eda322testbench 
+# Start time: 14:21:37 on Feb 14,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading work.eda322testbench(behavioral)#1
+# Loading work.eda322_processor(structural)#1
+# Loading work.proccontroller(mixed)#1
+# Loading work.rca(structural)#1
+# Loading work.mem_array(behavioral)#1
+# Loading work.cmp(dataflow)#1
+run 2000
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /eda322testbench/processor/instruction_memory
+# ** Failure: Test successfull if no previous error!
+#    Time: 1905 ns  Iteration: 1  Process: /eda322testbench/disp_process File: Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd
+# Break in Process disp_process at Z:/NyaMappen/EDA322/Lab5R/EDA322Testbench.vhd line 187
+# End time: 14:45:13 on Feb 14,2017, Elapsed time: 0:23:36
+# Errors: 0, Warnings: 2

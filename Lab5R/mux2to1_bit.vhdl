@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY mux2to1_bit IS
+	PORT(
+		b0 : IN STD_LOGIC;
+		b1 : IN STD_LOGIC;
+		s  : IN STD_LOGIC; 	--Input bits and select bit
+		f  : OUT STD_LOGIC  	--Result
+	    );
+END mux2to1_bit;
+
+ARCHITECTURE dataflow OF mux2to1_bit IS
+BEGIN
+	f <= b0 WHEN s ='0' ELSE b1;			--When select is 0 we choose b0
+END dataflow;
