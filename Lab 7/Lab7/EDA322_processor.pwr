@@ -1,0 +1,782 @@
+--------------------------------------------------------------------
+|                      Xilinx XPower Analyzer                      |
+--------------------------------------------------------------------
+| Release                | 14.7 - P.20131013 (nt64)                |
+| Command Line           | Generated from Graphical User Interface |
+--------------------------------------------------------------------
+
+--------------------------------
+|      Table of Contents       |
+--------------------------------
+| 1.  Settings                 |
+| 1.1.  Project                |
+| 1.2.  Device                 |
+| 1.3.  Environment            |
+| 1.4.  Default Activity Rates |
+| 2.  Summary                  |
+| 2.1.  On-Chip Power Summary  |
+| 2.2.  Thermal Summary        |
+| 2.3.  Power Supply Summary   |
+| 2.4.  Confidence Level       |
+| 3.  Detailed Reports         |
+| 3.1.  By Hierarchy           |
+| 3.2.  By Clock Domain        |
+| 3.3.  By Resource Type       |
+| 3.3.1.  Core Dynamic         |
+| 3.3.1.1.  Logic              |
+| 3.3.1.2.  Signals            |
+| 3.3.2.  IO                   |
+| 4.  Errors                   |
+| 5.  Warnings                 |
+--------------------------------
+
+1.  Settings
+1.1.  Project
+--------------------------------------------------------------------------------------
+|                                      Project                                       |
+--------------------------------------------------------------------------------------
+| Design File               | Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.ncd    |
+| Settings File             | NA                                                     |
+| Physical Constraints File | Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.pcf    |
+| Simulation Activity File  | Z:/NyaMappen/EDA322/Lab 7 Modelsim/lab7_power_goal.vcd |
+| Design Nets Matched       | 37%   (153/416)                                        |
+| Simulation Nets Matched   | 36%   (150/414)                                        |
+--------------------------------------------------------------------------------------
+
+1.2.  Device
+-------------------------------------------------
+|                    Device                     |
+-------------------------------------------------
+| Family           | Spartan6                   |
+| Part             | xc6slx16                   |
+| Package          | csg324                     |
+| Temp Grade       | C-Grade                    |
+| Process          | Typical                    |
+| Speed Grade      | -3                         |
+| Characterization | Production,v1.3,2011-05-04 |
+-------------------------------------------------
+
+1.3.  Environment
+---------------------------
+|       Environment       |
+---------------------------
+| Ambient Temp (C) | 25.0 |
+| Use custom TJA?  | No   |
+| Custom TJA (C/W) | NA   |
+| Airflow (LFM)    | 0    |
+| Heat Sink        | None |
+| Custom TSA (C/W) | NA   |
+---------------------------
+
+1.4.  Default Activity Rates
+----------------------------------
+|     Default Activity Rates     |
+----------------------------------
+| FF Toggle Rate (%)     | 12.5  |
+| I/O Toggle Rate (%)    | 12.5  |
+| Output Load (pF)       | 5.0   |
+| I/O Enable Rate (%)    | 100.0 |
+| BRAM Write Rate (%)    | 50.0  |
+| BRAM Enable Rate (%)   | 50.0  |
+| DSP Toggle Rate (%)    | 12.5  |
+----------------------------------
+
+2.  Summary
+2.1.  On-Chip Power Summary
+-----------------------------------------------------------------------------
+|                           On-Chip Power Summary                           |
+-----------------------------------------------------------------------------
+|        On-Chip        | Power (mW) |  Used  | Available | Utilization (%) |
+-----------------------------------------------------------------------------
+| Clocks                |       3.50 |      2 |    ---    |       ---       |
+| Logic                 |       0.45 |    140 |      9112 |               2 |
+| Signals               |       1.00 |    204 |    ---    |       ---       |
+| IOs                   |      77.19 |     86 |       232 |              37 |
+| Static Power          |      20.73 |        |           |                 |
+| Total                 |     102.88 |        |           |                 |
+-----------------------------------------------------------------------------
+
+2.2.  Thermal Summary
+------------------------------
+|      Thermal Summary       |
+------------------------------
+| Effective TJA (C/W) | 27.8 |
+| Max Ambient (C)     | 82.1 |
+| Junction Temp (C)   | 27.9 |
+------------------------------
+
+2.3.  Power Supply Summary
+----------------------------------------------------------
+|                  Power Supply Summary                  |
+----------------------------------------------------------
+|                      | Total  | Dynamic | Static Power |
+----------------------------------------------------------
+| Supply Power (mW)    | 102.88 | 82.14   | 20.73        |
+----------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+|                                            Power Supply Currents                                            |
+---------------------------------------------------------------------------------------------------------------
+|     Supply Source     | Supply Voltage | Total Current (mA) | Dynamic Current (mA) | Quiescent Current (mA) |
+---------------------------------------------------------------------------------------------------------------
+| Vccint                |          1.200 |              11.40 |                 4.82 |                   6.58 |
+| Vccaux                |          2.500 |               4.72 |                 1.58 |                   3.13 |
+| Vcco25                |          2.500 |              30.96 |                28.96 |                   2.00 |
+---------------------------------------------------------------------------------------------------------------
+
+2.4.  Confidence Level
+------------------------------------------------------------------------------------------------------
+|                                          Confidence Level                                          |
+------------------------------------------------------------------------------------------------------
+|       User Input Data       | Confidence |                    Details                     | Action |
+------------------------------------------------------------------------------------------------------
+| Design implementation state | High       | Design is completely routed                    |        |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |        |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |        |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes |        |
+| Device models               | High       | Device models are Production                   |        |
+|                             |            |                                                |        |
+| Overall confidence level    | High       |                                                |        |
+------------------------------------------------------------------------------------------------------
+
+3.  Details
+3.1.  By Hierarchy
+--------------------------------------------------------------------------------------------------------------------------------
+|      By Hierarchy      |   Power (mW)    | Logic Power (mW) | Signal Power (mW) |      # FFs      | # LUTs |     # DRAMs     |
+--------------------------------------------------------------------------------------------------------------------------------
+| Hierarchy total        |   1.46          |   0.45           |   1.00            |     39          |     90 |     72          |
+|   EDA322_processor     |   1.36 /   1.46 |   0.43 /   0.45  |   0.93 /   1.00   |      0 /     39 |     90 |      0 /     72 |
+|     controller         |   0.08          |   0.00           |   0.08            |      3          |      0 |      0          |
+|     data_memory        |   0.00 /   0.02 |   0.00 /   0.02  |   0.00            |      0          |      0 |      0 /     32 |
+|       Mram_memory3     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory1     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory2     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory4     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory5     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory6     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory7     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory8     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|     instruction_memory |   0.00 /   0.00 |   0.00 /   0.00  |   0.00            |      0          |      0 |      0 /     40 |
+|       Mram_memory1     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory9     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory10    |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory2     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory11    |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory12    |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory3     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory4     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory5     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|       Mram_memory6     |   0.00          |   0.00           |   0.00            |      0          |      0 |      4          |
+|     acc_register       |   0.00          |   0.00           |   0.00            |      8          |      0 |      0          |
+|     de_ex_register     |   0.00          |   0.00           |   0.00            |      8          |      0 |      0          |
+|     fe_de_register     |   0.00          |   0.00           |   0.00            |     10          |      0 |      0          |
+|     fe_register        |   0.00          |   0.00           |   0.00            |      8          |      0 |      0          |
+|     freg               |   0.00          |   0.00           |   0.00            |      2          |      0 |      0          |
+--------------------------------------------------------------------------------------------------------------------------------
+
+3.2.  By Clock Domain
+---------------------------------------------------------------------------------------------------------------------------------
+|     By Clock Domain : 2      | Power (mW) | Freq (MHz) |  Buffer  | Buffer Enable (%) | Enable Signal | Fanout | Slice Fanout |
+---------------------------------------------------------------------------------------------------------------------------------
+| CLK_BUFGP/IBUFG              |            |            |          |                   |               |        |              |
+|  Logic:                      |            |            |          |                   |               |        |              |
+|   CLK_BUFGP/BUFG             |       1.35 |     100.00 | BUFG     |                NA | NA            |     NA |           NA |
+|  Nets:                       |            |            |          |                   |               |        |              |
+|   CLK_BUFGP                  |       2.12 |     100.00 | BUFG     |                NA | NA            |    161 |           81 |
+|   CLK_BUFGP/IBUFG            |       0.03 |     100.00 | NA       |                NA | NA            |      1 |            1 |
+| ARESETN/ProtoComp40.IINV.OUT |            |            |          |                   |               |        |              |
+|  Logic:                      |            |            |          |                   |               |        |              |
+|   ProtoComp40.IINV           |       0.00 |       0.00 | INVERTER |                NA | NA            |     NA |           NA |
+|                              |            |            |          |                   |               |        |              |
+| Total                        |       3.50 |            |          |                   |               |        |              |
+---------------------------------------------------------------------------------------------------------------------------------
+
+3.3.  By Resource Type
+3.3.1.  Core Dynamic
+3.3.1.1.  Logic
+-----------------------------------------------------------------------------------------------------------
+|                 Logic                 | Power (mW) |   Type    | Clock (MHz) | Clock Name | Signal Rate |
+-----------------------------------------------------------------------------------------------------------
+| lut579_196                            |       0.03 | LUT6      |       Async | Async      |       106.7 |
+| lut215_29                             |       0.03 | LUT6      |       Async | Async      |        98.0 |
+| ][523_191                             |       0.03 | LUT6      |       Async | Async      |        93.9 |
+| lut218_32                             |       0.03 | LUT6      |       Async | Async      |        85.3 |
+| lut226_40                             |       0.02 | LUT6      |       Async | Async      |        76.8 |
+| lut222_36                             |       0.02 | LUT6      |       Async | Async      |        60.0 |
+| ][520_188                             |       0.01 | LUT6      |       Async | Async      |        42.9 |
+| lut489_146                            |       0.01 | LUT6      |       Async | Async      |        28.7 |
+| lut623_219                            |       0.01 | LUT6      |       Async | Async      |        27.5 |
+| lut217_31                             |       0.01 | LUT6      |       Async | Async      |        27.0 |
+| ][526_194                             |       0.01 | LUT6      |       Async | Async      |        25.9 |
+| lut629_223                            |       0.01 | LUT5      |       Async | Async      |        28.1 |
+| lut191_7                              |       0.01 | LUT6      |       Async | Async      |        27.4 |
+| lut200_16                             |       0.01 | LUT5      |       Async | Async      |        27.4 |
+| lut205_21                             |       0.01 | LUT6      |       Async | Async      |        27.4 |
+| lut219_33                             |       0.01 | LUT6      |       Async | Async      |        25.6 |
+| lut595_207                            |       0.01 | LUT5      |       Async | Async      |        25.6 |
+| lut634_226                            |       0.01 | LUT5      |       Async | Async      |        22.7 |
+| lut225_39                             |       0.01 | LUT6      |       Async | Async      |        21.6 |
+| lut583_199                            |       0.01 | LUT6      |       Async | Async      |        21.4 |
+| lut603_211                            |       0.01 | LUT6      |       Async | Async      |        20.1 |
+| lut192_8                              |       0.01 | LUT6      |       Async | Async      |        18.8 |
+| lut202_18                             |       0.01 | LUT5      |       Async | Async      |        21.5 |
+| lut602_210                            |       0.01 | LUT6      |       Async | Async      |        18.6 |
+| lut227_41_SW0                         |       0.01 | LUT5      |       Async | Async      |        22.2 |
+| lut587_202                            |       0.01 | LUT6      |       Async | Async      |        17.0 |
+| lut201_17                             |       0.01 | LUT6      |       Async | Async      |        18.8 |
+| lut208_24                             |       0.01 | LUT6      |       Async | Async      |        17.7 |
+| lut628_222                            |       0.01 | LUT6      |       Async | Async      |        17.2 |
+| lut547_176                            |       0.01 | LUT6      |       Async | Async      |        17.2 |
+| lut220_34                             |       0.01 | LUT6      |       Async | Async      |        17.2 |
+| lut94_0                               |       0.01 | LUT6      |       Async | Async      |        16.4 |
+| lut488_145                            |       0.01 | LUT6      |       Async | Async      |        16.4 |
+| lut207_23                             |       0.01 | LUT5      |       Async | Async      |        20.6 |
+| lut206_22                             |       0.01 | LUT6      |       Async | Async      |        18.8 |
+| lut198_14                             |       0.01 | LUT6      |       Async | Async      |        17.7 |
+| lut197_13                             |       0.01 | LUT6      |       Async | Async      |        20.6 |
+| lut188_4                              |       0.01 | LUT6      |       Async | Async      |        16.4 |
+| lut564_185                            |       0.01 | LUT6      |       Async | Async      |        16.4 |
+| lut190_6                              |       0.01 | LUT6      |       Async | Async      |        17.0 |
+| lut591_204                            |       0.00 | LUT6      |       Async | Async      |        17.0 |
+| lut228_42                             |       0.00 | LUT6      |       Async | Async      |         3.1 |
+| lut203_19                             |       0.00 | LUT6      |       Async | Async      |        17.8 |
+| lut546_175                            |       0.00 | LUT6      |       Async | Async      |        18.9 |
+| lut189_5                              |       0.00 | LUT6      |       Async | Async      |        17.0 |
+| lut194_10                             |       0.00 | LUT6      |       Async | Async      |        17.0 |
+| lut193_9                              |       0.00 | LUT5      |       Async | Async      |        17.0 |
+| lut604_212                            |       0.00 | LUT6      |       Async | Async      |         7.4 |
+| ][547_214                             |       0.00 | LUT5      |       Async | Async      |         2.6 |
+| lut605_213                            |       0.00 | LUT6      |       Async | Async      |         2.6 |
+| data_memory/Mram_memory3/F8           |       0.00 | SELMUX2_1 |       Async | Async      |        19.9 |
+| ][253_26                              |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut221_35                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| data_memory/Mram_memory1/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory1/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory2/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory2/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory3/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory3/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory4/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory4/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory5/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory5/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory6/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory6/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory7/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory7/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory8/F7.A         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| data_memory/Mram_memory8/F7.B         |       0.00 | SELMUX2_1 |       Async | Async      |        17.0 |
+| lut347_43                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut223_37                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| data_memory/Mram_memory1/F8           |       0.00 | SELMUX2_1 |       Async | Async      |        14.2 |
+| instruction_memory/Mram_memory1/F8    |       0.00 | SELMUX2_1 |       Async | Async      |        14.2 |
+| instruction_memory/Mram_memory9/F8    |       0.00 | SELMUX2_1 |       Async | Async      |        14.2 |
+| lut204_20                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut350_46                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut438_127                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut195_11                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| data_memory/Mram_memory2/F8           |       0.00 | SELMUX2_1 |       Async | Async      |        11.4 |
+| lut351_47                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut504_152                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut508_155                            |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| controller/state_FSM_FFd3             |       0.00 | FF        |       100.0 | CLK_BUFGP  |        19.4 |
+| data_memory/Mram_memory4/F8           |       0.00 | SELMUX2_1 |       Async | Async      |         9.9 |
+| controller/state_FSM_FFd2             |       0.00 | FF        |       100.0 | CLK_BUFGP  |        19.7 |
+| controller/state_FSM_FFd1             |       0.00 | FF        |       100.0 | CLK_BUFGP  |        17.2 |
+| lut224_38                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut520_164                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory10/F8   |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| instruction_memory/Mram_memory2/F8    |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| lut196_12                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory11/F8   |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| data_memory/Mram_memory5/F8           |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| data_memory/Mram_memory6/F8           |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| data_memory/Mram_memory7/F8           |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| data_memory/Mram_memory8/F8           |       0.00 | SELMUX2_1 |       Async | Async      |         8.5 |
+| lut512_158                            |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut528_170                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut516_161                            |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory12/F8   |       0.00 | SELMUX2_1 |       Async | Async      |         5.7 |
+| instruction_memory/Mram_memory3/F8    |       0.00 | SELMUX2_1 |       Async | Async      |         5.7 |
+| instruction_memory/Mram_memory4/F8    |       0.00 | SELMUX2_1 |       Async | Async      |         5.7 |
+| lut500_148                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory5/F8    |       0.00 | SELMUX2_1 |       Async | Async      |         2.8 |
+| instruction_memory/Mram_memory6/F8    |       0.00 | SELMUX2_1 |       Async | Async      |         2.8 |
+| lut199_15                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut622_218                            |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut524_167                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut532_173                            |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| acc_register/res_0                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_1                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_2                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_3                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_4                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_5                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_6                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| acc_register/res_7                    |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| data_memory/Mram_memory1/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory1/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory1/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory1/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory2/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory2/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory2/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory2/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory3/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory3/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory3/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory3/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory4/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory4/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory4/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory4/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory5/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory5/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory5/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory5/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory6/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory6/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory6/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory6/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory7/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory7/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory7/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory7/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory8/A            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory8/B            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory8/C            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| data_memory/Mram_memory8/D            |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |        17.0 |
+| de_ex_register/res_0                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_1                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_2                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_3                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_4                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_5                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_6                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| de_ex_register/res_7                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_0                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_1                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_10                 |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_11                 |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_2                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_3                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_4                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_6                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_8                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_de_register/res_9                  |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_0                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_1                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_2                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_3                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_4                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_5                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_6                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| fe_register/res_7                     |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| freg/res_1                            |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| freg/res_2                            |       0.00 | FF        |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory1/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory1/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory1/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory1/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory1/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory1/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory10/A    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory10/B    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory10/C    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory10/D    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory10/F7.A |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory10/F7.B |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory11/A    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory11/B    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory11/C    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory11/D    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory11/F7.A |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory11/F7.B |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory12/A    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory12/B    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory12/C    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory12/D    |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory12/F7.A |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory12/F7.B |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory2/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory2/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory2/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory2/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory2/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory2/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory3/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory3/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory3/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory3/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory3/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory3/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory4/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory4/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory4/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory4/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory4/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory4/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory5/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory5/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory5/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory5/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory5/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory5/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory6/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory6/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory6/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory6/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory6/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory6/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory9/A     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory9/B     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory9/C     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory9/D     |       0.00 | DRAM      |       100.0 | CLK_BUFGP  |         0.0 |
+| instruction_memory/Mram_memory9/F7.A  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| instruction_memory/Mram_memory9/F7.B  |       0.00 | SELMUX2_1 |       Async | Async      |         0.0 |
+| lut185_1                              |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut186_2                              |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut187_3                              |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut213_27                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut214_28                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut216_30                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut348_44                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut352_48                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut354_50                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut356_52                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut358_54                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut360_56                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut362_58                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut364_60                             |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut366_62                             |       0.00 | LUT5      |       Async | Async      |         0.0 |
+| lut501_149                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut502_150                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+| lut503_151                            |       0.00 | LUT6      |       Async | Async      |         0.0 |
+|                                       |            |           |             |            |             |
+| Total                                 |       0.45 |           |             |            |             |
+-----------------------------------------------------------------------------------------------------------
+
+3.3.1.2.  Signals
+-------------------------------------------------------------------------------------------------------------------------
+|          Signals          | Power (mW) | Signal Rate | % High | Fanout | Slice Fanout |   Clock   |    Logic Type     |
+-------------------------------------------------------------------------------------------------------------------------
+| ][453_140                 |       0.06 |       85.33 |   39.5 |      2 |            2 | Async     | NA                |
+| ][454_141                 |       0.06 |       98.02 |   39.5 |      3 |            2 | Async     | NA                |
+| ][466_147                 |       0.05 |       28.67 |   21.0 |     16 |           10 | CLK_BUFGP | FF, OLOGIC2_OUTFF |
+| lut206_22                 |       0.04 |       18.82 |   39.5 |     13 |            8 | Async     | NA                |
+| ][450_137                 |       0.04 |       76.81 |   39.5 |      2 |            2 | Async     | NA                |
+| lut198_14                 |       0.04 |       17.66 |   39.5 |     11 |            8 | Async     | NA                |
+| controller/state_FSM_FFd3 |       0.03 |       19.45 |   37.0 |     12 |           10 | CLK_BUFGP | NA                |
+| lut203_19                 |       0.03 |       17.80 |   39.5 |     10 |            7 | Async     | NA                |
+| ][502_177                 |       0.03 |       17.25 |   37.1 |     16 |           10 | CLK_BUFGP | FF, OLOGIC2_OUTFF |
+| lut190_6                  |       0.03 |       17.05 |   39.5 |     10 |            7 | Async     | NA                |
+| controller/state_FSM_FFd2 |       0.03 |       19.65 |   43.3 |     12 |           11 | CLK_BUFGP | NA                |
+| lut201_17                 |       0.03 |       18.82 |   39.5 |      9 |            6 | Async     | NA                |
+| ][518_186                 |       0.03 |       16.38 |   21.0 |     16 |           11 | CLK_BUFGP | FF, OLOGIC2_OUTFF |
+| lut208_24                 |       0.03 |       17.66 |   39.5 |     10 |            7 | Async     | NA                |
+| lut192_8                  |       0.03 |       18.82 |   39.5 |     11 |            7 | Async     | NA                |
+| ][451_138                 |       0.03 |       59.96 |   39.5 |      2 |            2 | Async     | NA                |
+| ][529_197                 |       0.02 |      106.67 |   39.5 |      2 |            1 | Async     | NA                |
+| ][541_208                 |       0.02 |       25.57 |   39.5 |      2 |            2 | Async     | NA                |
+| lut94_0                   |       0.02 |       16.38 |   21.0 |      8 |            7 | CLK_BUFGP | FF, OLOGIC2_OUTFF |
+| ][456_143                 |       0.02 |       25.57 |   39.5 |      2 |            2 | Async     | NA                |
+| lut194_10                 |       0.02 |       17.05 |   39.5 |     11 |            7 | Async     | NA                |
+| ][520_188                 |       0.02 |       42.92 |   39.5 |      2 |            1 | Async     | NA                |
+| master_load_enable_IBUF   |       0.01 |       12.50 |   50.0 |      3 |            2 | Async     | NA                |
+| ][455_142                 |       0.01 |       27.01 |   39.5 |      3 |            3 | Async     | NA                |
+| ][523_191                 |       0.01 |       93.86 |   39.5 |      2 |            1 | Async     | NA                |
+| ][538_205                 |       0.01 |       17.05 |   39.5 |      2 |            1 | Async     | NA                |
+| controller/state_FSM_FFd1 |       0.01 |       17.25 |   37.1 |      8 |            8 | CLK_BUFGP | NA                |
+| lut587_202                |       0.01 |       17.05 |   39.5 |      2 |            1 | Async     | NA                |
+| lut200_16                 |       0.01 |       27.44 |   39.5 |      1 |            1 | Async     | NA                |
+| externalIn_1_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| InstrMemOut<0>            |       0.01 |       14.21 |   40.0 |      2 |            2 | Async     | NA                |
+| externalIn_0_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| ][452_139                 |       0.01 |       17.17 |   39.5 |      2 |            2 | Async     | NA                |
+| InstrMemOut<8>            |       0.01 |       14.20 |   47.0 |      2 |            2 | Async     | NA                |
+| MemDataOut<0>             |       0.01 |       14.21 |   38.0 |      2 |            2 | Async     | NA                |
+| externalIn_4_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| externalIn_5_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| ][449_136                 |       0.01 |       21.61 |   39.5 |      2 |            2 | Async     | NA                |
+| externalIn_2_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| externalIn_3_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| MemDataOut<2>             |       0.01 |       19.89 |   46.0 |      2 |            2 | Async     | NA                |
+| externalIn_7_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| MemDataOut<1>             |       0.01 |       11.37 |   38.0 |      2 |            2 | Async     | NA                |
+| lut207_23                 |       0.01 |       20.63 |   39.5 |      1 |            1 | Async     | NA                |
+| InstrMemOut<10>           |       0.01 |        8.52 |   31.0 |      2 |            2 | Async     | NA                |
+| ][IN_virtPIBox_60_302     |       0.01 |        1.00 |    1.0 |     89 |           63 | Async     | NA                |
+| externalIn_6_IBUF         |       0.01 |       12.50 |   50.0 |      1 |            1 | Async     | NA                |
+| lut189_5                  |       0.01 |       17.05 |   39.5 |      1 |            1 | Async     | NA                |
+| ][532_200                 |       0.01 |       21.41 |   39.5 |      2 |            1 | Async     | NA                |
+| InstrMemOut<9>            |       0.00 |        8.53 |   43.0 |      2 |            2 | Async     | NA                |
+| lut188_4                  |       0.00 |       16.38 |   79.0 |      8 |            4 | Async     | NA                |
+| N11                       |       0.00 |       22.17 |   22.1 |      1 |            1 | Async     | NA                |
+| ][526_194                 |       0.00 |       25.87 |   39.5 |      2 |            1 | Async     | NA                |
+| InstrMemOut<1>            |       0.00 |        8.52 |   25.0 |      2 |            2 | Async     | NA                |
+| MemDataOut<6>             |       0.00 |        8.52 |   11.0 |      2 |            2 | Async     | NA                |
+| MemDataOut<4>             |       0.00 |        8.52 |   11.0 |      2 |            2 | Async     | NA                |
+| lut202_18                 |       0.00 |       21.47 |   39.5 |      2 |            2 | Async     | NA                |
+| InstrMemOut<11>           |       0.00 |        5.68 |   31.0 |      2 |            2 | Async     | NA                |
+| InstrMemOut<3>            |       0.00 |        5.68 |   18.0 |      2 |            2 | Async     | NA                |
+| InstrMemOut<2>            |       0.00 |        5.68 |   31.0 |      2 |            2 | Async     | NA                |
+| MemDataOut<3>             |       0.00 |        9.94 |   10.0 |      2 |            2 | Async     | NA                |
+| lut603_211                |       0.00 |       20.13 |   13.4 |      1 |            1 | Async     | NA                |
+| MemDataOut<7>             |       0.00 |        8.52 |   11.0 |      2 |            2 | Async     | NA                |
+| InstrMemOut<5>            |       0.00 |        2.84 |    4.0 |      4 |            4 | Async     | NA                |
+| InstrMemOut<4>            |       0.00 |        2.84 |    4.0 |      2 |            2 | Async     | NA                |
+| MemDataOut<5>             |       0.00 |        8.52 |   11.0 |      2 |            2 | Async     | NA                |
+| lut193_9                  |       0.00 |       17.05 |   39.5 |      1 |            1 | Async     | NA                |
+| ][547_214                 |       0.00 |        2.56 |   98.2 |      2 |            2 | Async     | NA                |
+| lut628_222                |       0.00 |       17.25 |   37.1 |      1 |            1 | Async     | NA                |
+| lut228_42                 |       0.00 |        3.07 |    1.8 |      2 |            2 | Async     | NA                |
+| lut605_213                |       0.00 |        2.56 |    1.8 |      2 |            1 | Async     | NA                |
+| lut191_7                  |       0.00 |       27.44 |   39.5 |      1 |            1 | Async     | NA                |
+| lut205_21                 |       0.00 |       27.44 |   39.5 |      1 |            1 | Async     | NA                |
+| lut197_13                 |       0.00 |       20.63 |   39.5 |      1 |            1 | Async     | NA                |
+| lut546_175                |       0.00 |       18.89 |   27.3 |      1 |            1 | Async     | NA                |
+| lut602_210                |       0.00 |       18.64 |   22.1 |      1 |            1 | Async     | NA                |
+| lut488_145                |       0.00 |       16.38 |   79.0 |      1 |            1 | Async     | NA                |
+| lut604_212                |       0.00 |        7.45 |    4.9 |      2 |            1 | Async     | NA                |
+| ][253_26                  |       0.00 |        0.00 |    0.0 |      2 |            2 | Async     | NA                |
+| ][338_45                  |       0.00 |        0.00 |    0.0 |     32 |            8 | CLK_BUFGP | DRAM              |
+| ][339_49                  |       0.00 |        0.00 |    0.0 |     41 |            9 | Async     | NA                |
+| ][340_51                  |       0.00 |        0.00 |    0.0 |     49 |           17 | Async     | NA                |
+| ][341_53                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][342_55                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][343_57                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][344_59                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][345_61                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][346_63                  |       0.00 |        0.00 |    0.0 |     33 |           33 | Async     | NA                |
+| ][468_153                 |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| ][471_156                 |       0.00 |        0.00 |    0.0 |      2 |            2 | Async     | NA                |
+| ][474_159                 |       0.00 |        0.00 |    0.0 |      2 |            2 | Async     | NA                |
+| ][477_162                 |       0.00 |        0.00 |    0.0 |      2 |            2 | Async     | NA                |
+| ][480_165                 |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| ][483_168                 |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| ][486_171                 |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| ][489_174                 |       0.00 |        0.00 |  100.0 |      2 |            2 | Async     | NA                |
+| acc_register/res<0>       |       0.00 |        0.00 |    0.0 |      7 |            6 | CLK_BUFGP | NA                |
+| acc_register/res<1>       |       0.00 |        0.00 |    0.0 |      6 |            5 | CLK_BUFGP | NA                |
+| acc_register/res<2>       |       0.00 |        0.00 |    0.0 |      5 |            5 | CLK_BUFGP | NA                |
+| acc_register/res<3>       |       0.00 |        0.00 |    0.0 |      7 |            7 | CLK_BUFGP | NA                |
+| acc_register/res<4>       |       0.00 |        0.00 |    0.0 |      7 |            7 | CLK_BUFGP | NA                |
+| acc_register/res<5>       |       0.00 |        0.00 |    0.0 |      6 |            6 | CLK_BUFGP | NA                |
+| acc_register/res<6>       |       0.00 |        0.00 |    0.0 |      7 |            7 | CLK_BUFGP | NA                |
+| acc_register/res<7>       |       0.00 |        0.00 |    0.0 |      7 |            6 | CLK_BUFGP | NA                |
+| acc_register/res_0_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_1_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_2_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_3_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_4_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_5_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_6_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| acc_register/res_7_1      |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res<0>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<1>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<2>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<3>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<4>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<5>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<6>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res<7>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| de_ex_register/res_0_1    |       0.00 |        0.05 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_1_1    |       0.00 |        0.04 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_2_1    |       0.00 |        0.07 |   99.5 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_3_1    |       0.00 |        0.04 |   99.1 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_4_1    |       0.00 |        0.03 |   99.1 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_5_1    |       0.00 |        0.03 |   99.1 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_6_1    |       0.00 |        0.03 |   99.1 |      1 |            1 | CLK_BUFGP | NA                |
+| de_ex_register/res_7_1    |       0.00 |        0.03 |   99.1 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<0>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<1>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<2>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<3>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<4>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<5>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<6>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| display_rgister/res<7>    |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res<0>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| fe_de_register/res<10>    |       0.00 |        0.00 |    0.0 |     16 |           14 | CLK_BUFGP | NA                |
+| fe_de_register/res<11>    |       0.00 |        0.00 |    0.0 |     16 |           14 | CLK_BUFGP | NA                |
+| fe_de_register/res<1>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| fe_de_register/res<2>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| fe_de_register/res<3>     |       0.00 |        0.00 |    0.0 |      2 |            2 | CLK_BUFGP | NA                |
+| fe_de_register/res<4>     |       0.00 |        0.00 |    0.0 |      3 |            3 | CLK_BUFGP | NA                |
+| fe_de_register/res<6>     |       0.00 |        0.00 |    0.0 |      6 |            5 | CLK_BUFGP | NA                |
+| fe_de_register/res<8>     |       0.00 |        0.00 |    0.0 |     17 |           15 | CLK_BUFGP | NA                |
+| fe_de_register/res<9>     |       0.00 |        0.00 |    0.0 |     19 |           17 | CLK_BUFGP | NA                |
+| fe_de_register/res_0_1    |       0.00 |        0.14 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_10_1   |       0.00 |        0.09 |   99.3 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_11_1   |       0.00 |        0.06 |   99.3 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_1_1    |       0.00 |        0.09 |   99.3 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_2_1    |       0.00 |        0.06 |   99.3 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_3_1    |       0.00 |        0.06 |   99.2 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_4_1    |       0.00 |        0.03 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_6_1    |       0.00 |        0.03 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_6_2    |       0.00 |        0.03 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_6_3    |       0.00 |        0.03 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_8_1    |       0.00 |        0.14 |   99.5 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_de_register/res_9_1    |       0.00 |        0.09 |   99.4 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res<0>        |       0.00 |        0.00 |    0.0 |     45 |           44 | CLK_BUFGP | NA                |
+| fe_register/res<1>        |       0.00 |        0.00 |    0.0 |     44 |           44 | CLK_BUFGP | NA                |
+| fe_register/res<2>        |       0.00 |        0.00 |    0.0 |     43 |           43 | CLK_BUFGP | NA                |
+| fe_register/res<3>        |       0.00 |        0.00 |    0.0 |     42 |           42 | CLK_BUFGP | NA                |
+| fe_register/res<4>        |       0.00 |        0.00 |    0.0 |     42 |           41 | CLK_BUFGP | NA                |
+| fe_register/res<5>        |       0.00 |        0.00 |    0.0 |     42 |           41 | CLK_BUFGP | NA                |
+| fe_register/res<6>        |       0.00 |        0.00 |    0.0 |     62 |           21 | CLK_BUFGP | NA                |
+| fe_register/res<7>        |       0.00 |        0.00 |    0.0 |     51 |           11 | CLK_BUFGP | NA                |
+| fe_register/res_0_1       |       0.00 |        0.00 |  100.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_1_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_2_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_3_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_4_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_5_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_6_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| fe_register/res_7_1       |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res<0>               |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res<1>               |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res<2>               |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res<3>               |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res_0_1              |       0.00 |        0.01 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res_1_1              |       0.00 |        0.01 |   99.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res_2_1              |       0.00 |        0.01 |  100.0 |      1 |            1 | CLK_BUFGP | NA                |
+| freg/res_3_1              |       0.00 |        0.00 |    0.0 |      1 |            1 | CLK_BUFGP | NA                |
+| lut185_1                  |       0.00 |        0.00 |    0.0 |     18 |           17 | Async     | NA                |
+| lut186_2                  |       0.00 |        0.00 |    0.0 |      9 |            9 | Async     | NA                |
+| lut187_3                  |       0.00 |        0.00 |    0.0 |     10 |           10 | Async     | NA                |
+| lut195_11                 |       0.00 |        0.00 |  100.0 |      2 |            2 | Async     | NA                |
+| lut196_12                 |       0.00 |        0.00 |    0.0 |      4 |            4 | Async     | NA                |
+| lut199_15                 |       0.00 |        0.00 |    0.0 |      3 |            3 | Async     | NA                |
+| lut204_20                 |       0.00 |        0.00 |  100.0 |      4 |            4 | Async     | NA                |
+| lut213_27                 |       0.00 |        0.00 |    0.0 |     10 |            9 | Async     | NA                |
+| lut214_28                 |       0.00 |        0.00 |    0.0 |      8 |            7 | Async     | NA                |
+| lut216_30                 |       0.00 |        0.00 |  100.0 |      5 |            5 | Async     | NA                |
+| lut221_35                 |       0.00 |        0.00 |  100.0 |      2 |            2 | Async     | NA                |
+| lut223_37                 |       0.00 |        0.00 |    0.0 |      9 |            9 | Async     | NA                |
+| lut224_38                 |       0.00 |        0.00 |    0.0 |      2 |            2 | Async     | NA                |
+| lut347_43                 |       0.00 |        0.00 |  100.0 |      1 |            1 | Async     | NA                |
+| lut350_46                 |       0.00 |        0.00 |  100.0 |      1 |            1 | Async     | NA                |
+| lut351_47                 |       0.00 |        0.00 |  100.0 |      8 |            4 | Async     | NA                |
+| lut438_127                |       0.00 |        0.00 |    0.0 |      8 |            8 | CLK_BUFGP | OLOGIC2_OUTFF     |
+| lut500_148                |       0.00 |        0.00 |    0.0 |      8 |            6 | Async     | NA                |
+| lut501_149                |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| lut502_150                |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| lut503_151                |       0.00 |        0.00 |    0.0 |      2 |            1 | Async     | NA                |
+| lut622_218                |       0.00 |        0.00 |    0.0 |      1 |            1 | Async     | NA                |
+|                           |            |             |        |        |              |           |                   |
+| Total                     |       1.00 |             |        |        |              |           |                   |
+-------------------------------------------------------------------------------------------------------------------------
+
+3.3.2.  IO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|         IO         | Power (mW) |   I/O Standard   | Signal Rate | % High | Clock (MHz) | Clock Name | Input Pins | Output Pins | Bidir Pins | Output Enable (%) | Output Load (pF) | Data Rate | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Vccint (mW) | Vccaux (mW) | Vcco On-Chip Termal (mW)  | Input Term. Type | Input R/RDIFF | Output Term. Type | Output R/RDIFF | Output RS | Vcco Supply Current (mA) |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| aluOut2seg<1>      |       4.92 | LVCMOS25_12_SLOW |       59.64 |   72.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.04 |        0.25 |                      4.63 | None             |            NA | None              |             NA |        NA |                     1.85 |
+| aluOut2seg<2>      |       4.45 | LVCMOS25_12_SLOW |       53.96 |   51.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.04 |        0.23 |                      4.19 | None             |            NA | None              |             NA |        NA |                     1.68 |
+| aluOut2seg<5>      |       4.33 | LVCMOS25_12_SLOW |       52.54 |   31.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.22 |                      4.08 | None             |            NA | None              |             NA |        NA |                     1.63 |
+| aluOut2seg<6>      |       4.22 | LVCMOS25_12_SLOW |       51.12 |   31.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.22 |                      3.97 | None             |            NA | None              |             NA |        NA |                     1.59 |
+| aluOut2seg<4>      |       4.22 | LVCMOS25_12_SLOW |       51.11 |   31.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.22 |                      3.97 | None             |            NA | None              |             NA |        NA |                     1.59 |
+| aluOut2seg<7>      |       3.98 | LVCMOS25_12_SLOW |       48.28 |   31.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.20 |                      3.75 | None             |            NA | None              |             NA |        NA |                     1.50 |
+| aluOut2seg<0>      |       3.75 | LVCMOS25_12_SLOW |       45.45 |   36.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.19 |                      3.53 | None             |            NA | None              |             NA |        NA |                     1.41 |
+| aluOut2seg<3>      |       3.75 | LVCMOS25_12_SLOW |       45.44 |   59.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.03 |        0.19 |                      3.53 | None             |            NA | None              |             NA |        NA |                     1.41 |
+| busOut2seg<0>      |       2.81 | LVCMOS25_12_SLOW |       34.09 |   75.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.02 |        0.14 |                      2.65 | None             |            NA | None              |             NA |        NA |                     1.06 |
+| busOut2seg<1>      |       2.58 | LVCMOS25_12_SLOW |       31.25 |   75.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.02 |        0.13 |                      2.42 | None             |            NA | None              |             NA |        NA |                     0.97 |
+| busOut2seg<2>      |       2.34 | LVCMOS25_12_SLOW |       28.40 |   82.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.02 |        0.12 |                      2.20 | None             |            NA | None              |             NA |        NA |                     0.88 |
+| Addr2seg<0>        |       1.87 | LVCMOS25_12_SLOW |       22.72 |   45.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.02 |        0.10 |                      1.76 | None             |            NA | None              |             NA |        NA |                     0.71 |
+| pc2seg<0>          |       1.64 | LVCMOS25_12_SLOW |       19.89 |   49.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.08 |                      1.54 | None             |            NA | None              |             NA |        NA |                     0.62 |
+| Addr2seg<1>        |       1.41 | LVCMOS25_12_SLOW |       17.04 |   31.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.07 |                      1.32 | None             |            NA | None              |             NA |        NA |                     0.53 |
+| busOut2seg<4>      |       1.41 | LVCMOS25_12_SLOW |       17.04 |   18.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.07 |                      1.32 | None             |            NA | None              |             NA |        NA |                     0.53 |
+| busOut2seg<5>      |       1.41 | LVCMOS25_12_SLOW |       17.04 |   18.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.07 |                      1.32 | None             |            NA | None              |             NA |        NA |                     0.53 |
+| busOut2seg<6>      |       1.41 | LVCMOS25_12_SLOW |       17.04 |   18.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.07 |                      1.32 | None             |            NA | None              |             NA |        NA |                     0.53 |
+| busOut2seg<7>      |       1.41 | LVCMOS25_12_SLOW |       17.04 |   18.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.07 |                      1.32 | None             |            NA | None              |             NA |        NA |                     0.53 |
+| instr2seg<0>       |       1.17 | LVCMOS25_12_SLOW |       14.21 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.06 |                      1.10 | None             |            NA | None              |             NA |        NA |                     0.44 |
+| instr2seg<8>       |       1.17 | LVCMOS25_12_SLOW |       14.20 |   47.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.06 |                      1.10 | None             |            NA | None              |             NA |        NA |                     0.44 |
+| dMemOut2seg<2>     |       1.05 | LVCMOS25_12_SLOW |       12.78 |   50.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.05 |                      0.99 | None             |            NA | None              |             NA |        NA |                     0.40 |
+| busOut2seg<3>      |       1.05 | LVCMOS25_12_SLOW |       12.78 |   15.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.05 |                      0.99 | None             |            NA | None              |             NA |        NA |                     0.40 |
+| dMemOut2seg<0>     |       0.94 | LVCMOS25_12_SLOW |       11.36 |   34.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.05 |                      0.88 | None             |            NA | None              |             NA |        NA |                     0.35 |
+| pc2seg<1>          |       0.94 | LVCMOS25_12_SLOW |       11.36 |   49.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.05 |                      0.88 | None             |            NA | None              |             NA |        NA |                     0.35 |
+| instr2seg<9>       |       0.70 | LVCMOS25_12_SLOW |        8.53 |   43.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| dMemOut2seg<1>     |       0.70 | LVCMOS25_12_SLOW |        8.52 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| instr2seg<10>      |       0.70 | LVCMOS25_12_SLOW |        8.52 |   31.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| instr2seg<1>       |       0.70 | LVCMOS25_12_SLOW |        8.52 |   25.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| Addr2seg<2>        |       0.70 | LVCMOS25_12_SLOW |        8.52 |   29.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| Addr2seg<3>        |       0.70 | LVCMOS25_12_SLOW |        8.52 |   18.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| acc2seg<1>         |       0.70 | LVCMOS25_12_SLOW |        8.52 |   63.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| acc2seg<0>         |       0.70 | LVCMOS25_12_SLOW |        8.52 |   56.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.01 |        0.04 |                      0.66 | None             |            NA | None              |             NA |        NA |                     0.26 |
+| acc2seg<3>         |       0.59 | LVCMOS25_12_SLOW |        7.10 |   49.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| acc2seg<4>         |       0.59 | LVCMOS25_12_SLOW |        7.10 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| acc2seg<5>         |       0.59 | LVCMOS25_12_SLOW |        7.10 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| acc2seg<6>         |       0.59 | LVCMOS25_12_SLOW |        7.10 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| acc2seg<7>         |       0.59 | LVCMOS25_12_SLOW |        7.10 |   40.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| flag2seg<3>        |       0.59 | LVCMOS25_12_SLOW |        7.10 |   67.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| ovf                |       0.59 | LVCMOS25_12_SLOW |        7.10 |   67.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.03 |                      0.55 | None             |            NA | None              |             NA |        NA |                     0.22 |
+| instr2seg<11>      |       0.47 | LVCMOS25_12_SLOW |        5.68 |   31.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| instr2seg<2>       |       0.47 | LVCMOS25_12_SLOW |        5.68 |   31.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| instr2seg<3>       |       0.47 | LVCMOS25_12_SLOW |        5.68 |   18.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| Addr2seg<4>        |       0.47 | LVCMOS25_12_SLOW |        5.68 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| Addr2seg<5>        |       0.47 | LVCMOS25_12_SLOW |        5.68 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| Addr2seg<6>        |       0.47 | LVCMOS25_12_SLOW |        5.68 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| Addr2seg<7>        |       0.47 | LVCMOS25_12_SLOW |        5.68 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| pc2seg<2>          |       0.47 | LVCMOS25_12_SLOW |        5.68 |   38.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| dMemOut2seg<4>     |       0.47 | LVCMOS25_12_SLOW |        5.68 |   13.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| dMemOut2seg<5>     |       0.47 | LVCMOS25_12_SLOW |        5.68 |   13.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| dMemOut2seg<6>     |       0.47 | LVCMOS25_12_SLOW |        5.68 |   13.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| dMemOut2seg<7>     |       0.47 | LVCMOS25_12_SLOW |        5.68 |   13.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| acc2seg<2>         |       0.47 | LVCMOS25_12_SLOW |        5.68 |   55.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.44 | None             |            NA | None              |             NA |        NA |                     0.18 |
+| dMemOut2seg<3>     |       0.35 | LVCMOS25_12_SLOW |        4.26 |   10.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.02 |                      0.33 | None             |            NA | None              |             NA |        NA |                     0.13 |
+| instr2seg<4>       |       0.23 | LVCMOS25_12_SLOW |        2.84 |    4.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| instr2seg<5>       |       0.23 | LVCMOS25_12_SLOW |        2.84 |    4.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| instr2seg<6>       |       0.23 | LVCMOS25_12_SLOW |        2.84 |    4.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| instr2seg<7>       |       0.23 | LVCMOS25_12_SLOW |        2.84 |    4.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| pc2seg<3>          |       0.23 | LVCMOS25_12_SLOW |        2.84 |   45.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| pc2seg<4>          |       0.23 | LVCMOS25_12_SLOW |        2.84 |    6.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| pc2seg<5>          |       0.23 | LVCMOS25_12_SLOW |        2.84 |    6.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| pc2seg<6>          |       0.23 | LVCMOS25_12_SLOW |        2.84 |    6.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| pc2seg<7>          |       0.23 | LVCMOS25_12_SLOW |        2.84 |    6.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.22 | None             |            NA | None              |             NA |        NA |                     0.09 |
+| CLK                |       0.13 | LVCMOS25         |      200.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.13 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| flag2seg<1>        |       0.12 | LVCMOS25_12_SLOW |        1.43 |   13.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.11 | None             |            NA | None              |             NA |        NA |                     0.04 |
+| flag2seg<2>        |       0.12 | LVCMOS25_12_SLOW |        1.43 |   86.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.11 | None             |            NA | None              |             NA |        NA |                     0.04 |
+| flag2seg<0>        |       0.12 | LVCMOS25_12_SLOW |        1.42 |    3.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.11 | None             |            NA | None              |             NA |        NA |                     0.04 |
+| zero               |       0.12 | LVCMOS25_12_SLOW |        1.42 |    3.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.01 |                      0.11 | None             |            NA | None              |             NA |        NA |                     0.04 |
+| externalIn<0>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<1>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<2>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<3>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<4>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<5>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<6>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| externalIn<7>      |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| master_load_enable |       0.01 | LVCMOS25         |       12.50 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| ARESETN            |       0.00 | LVCMOS25         |        1.00 |    1.0 |      100.00 | CLK_BUFGP  |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<0>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<1>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<2>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<3>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<4>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<5>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<6>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| disp2seg<7>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |      100.00 | CLK_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| errSig2seg         |       0.00 | LVCMOS25_12_SLOW |        0.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Internal VREFs (0) |       0.00 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Total              |      77.19 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4.  Errors
+--------------------------------------------------------------------------------
+ERROR:Power:1653 - Duty cycle <200.00> must be in range [0..100]% for externalIn<2>.
+ERROR:Power:1653 - Duty cycle <200.00> must be in range [0..100]% for externalIn<1>.
+ERROR:Power:1653 - Duty cycle <200.00> must be in range [0..100]% for externalIn<0>.
+--------------------------------------------------------------------------------
+
+5.  Warnings
+--------------------------------------------------------------------------------
+WARNING:Power:163 - PowerVcd_Dump: Declaration of variable 'controller/master_load_enable' ignored, identifier code '$' is already in use by 'master_load_enable'!
+WARNING:Power:164 - PowerVcd_Dump: Subsequent redeclarations of this or other identifier codes will be ignored without comment.
+--------------------------------------------------------------------------------
+
+Analysis completed: Tue Feb 21 15:38:52 2017
+----------------------------------------------------------------

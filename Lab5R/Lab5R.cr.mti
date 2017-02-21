@@ -112,14 +112,13 @@ QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Compiling entity reggister
 -- Compiling architecture behavioral of reggister
 
-} {} {}} Z:/NyaMappen/EDA322/Lab5R/RCA.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab5R/RCA.vhd
+} {} {}} Z:/NyaMappen/EDA322/Lab5R/procbus.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab5R/procbus.vhd
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity rca
--- Compiling architecture structural of rca
--- Loading entity fa
+-- Compiling entity procBus
+-- Compiling architecture dataflow of procBus
 
 } {} {}} Z:/NyaMappen/EDA322/Lab5R/alu_wRCA.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab5R/alu_wRCA.vhd
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
@@ -131,12 +130,13 @@ QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading entity rca
 -- Loading entity cmp
 
-} {} {}} Z:/NyaMappen/EDA322/Lab5R/procbus.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab5R/procbus.vhd
+} {} {}} Z:/NyaMappen/EDA322/Lab5R/RCA.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none Z:/NyaMappen/EDA322/Lab5R/RCA.vhd
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity procBus
--- Compiling architecture dataflow of procBus
+-- Compiling entity rca
+-- Compiling architecture structural of rca
+-- Loading entity fa
 
 } {} {}}

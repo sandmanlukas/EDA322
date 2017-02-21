@@ -1,0 +1,120 @@
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor_preroute.twx EDA322_processor_map.ncd -o EDA322_processor_preroute.twr EDA322_processor.pcf 
+netgen -intstyle ise -s 3  -pcf EDA322_processor.pcf -rpw 100 -tpw 0 -ar Structure -tm EDA322_processor -w -dir netgen/map -ofmt vhdl -sim EDA322_processor_map.ncd EDA322_processor_map.vhd 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor_preroute.twx EDA322_processor_map.ncd -o EDA322_processor_preroute.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol high -t 1 -xt 0 -r 4 -global_opt area -equivalent_register_removal on -mt off -ir off -ignore_keep_hierarchy -pr off -lc area -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol high -t 1 -xt 0 -r 4 -global_opt area -equivalent_register_removal on -mt off -ir off -ignore_keep_hierarchy -pr off -lc area -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol high -t 1 -xt 0 -r 4 -global_opt power -equivalent_register_removal on -mt off -ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -power on EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol high -t 1 -xt 0 -r 4 -global_opt power -equivalent_register_removal on -mt off -ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -power on EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol high -t 1 -xt 0 -r 4 -global_opt power -equivalent_register_removal on -mt off -ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -power on EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 
+xst -intstyle ise -ifn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.xst" -ofn "Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDA322_processor.ucf -p xc6slx16-csg324-3 "EDA322_processor.ngc" EDA322_processor.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
+par -w -intstyle ise -ol high -mt off EDA322_processor_map.ncd EDA322_processor.ncd EDA322_processor.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml EDA322_processor.twx EDA322_processor.ncd -o EDA322_processor.twr EDA322_processor.pcf -ucf EDA322_processor.ucf 

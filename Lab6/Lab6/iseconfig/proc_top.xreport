@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-02-14T13:30:49</DateModified>
+  <DateModified>2017-02-21T12:47:50</DateModified>
   <ModuleName>proc_top</ModuleName>
   <SummaryTimeStamp>2017-02-14T13:29:50</SummaryTimeStamp>
   <SavedFilePath>Z:/NyaMappen/EDA322/Lab6/Lab6/iseconfig/proc_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/NyaMappen/EDA322/Lab6/Lab6</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/NyaMappen/EDA322/Lab6/Lab6\</ImplementationReportsDirectory>
   <DateInitialized>2017-02-14T13:27:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
