@@ -218,7 +218,7 @@ We began the verifictation by observing the PC value. Since it should just go fr
 \newpage
 \subsection{Performance, Area and Power Analysis \emph{(Optional)}}
 
-We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each metric they all had the process properties below in common. 
+We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each metric they all had the process properties below in common. The most area-costly component was the processor entity itself. 
 
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|l|l|l|} \hline
@@ -239,7 +239,7 @@ Some of the results were the same in all of the cases.
 \end{tabular}
 
 \textbf{Performance} \\
-When optimizing for performance our goal was to get as high clock frequency by any mean at our disposal. Our general strategy when trying to accomplish this was to allow the tool to use all the power and area that it needed. We also used a one-hot representation in our FSM encoding to get as simple logic as possible and hence a shorter critical path. See table \ref{tab:performance} in the appendix for all details. We obtained the results in the table below. 
+When optimizing for performance our goal was to get as high clock frequency by any mean at our disposal. Our general strategy when trying to accomplish this was to allow the tool to use all the power and area that it needed. We also used a one-hot representation in our FSM encoding to get as simple logic as possible and hence a shorter critical path. See table \ref{tab:performance} in the appendix for all details. We obtained the results in the table below.
 
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|l|l|} \hline
@@ -272,7 +272,7 @@ When optimizing for power we generally used the same settings as for area. We th
   Power & Total: 0.00146 W, dynamic power: 0.082 W \\ \hline
 \end{tabular}}
 
-POWER STrANGE
+We believe that the reason that we got a smaller area when we optimized for power is that the tool realises that it can save power by reducing area in some part of the design. 
 
 \textbf{Efficiency}
 
