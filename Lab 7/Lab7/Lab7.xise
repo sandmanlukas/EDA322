@@ -102,7 +102,7 @@
     <property xil_pn:name="Case Implementation Style" xil_pn:value="None" xil_pn:valueState="default"/>
     <property xil_pn:name="Change Device Speed To" xil_pn:value="-3" xil_pn:valueState="default"/>
     <property xil_pn:name="Change Device Speed To Post Trace" xil_pn:value="-3" xil_pn:valueState="default"/>
-    <property xil_pn:name="Combinatorial Logic Optimization" xil_pn:value="true" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Combinatorial Logic Optimization" xil_pn:value="false" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Compile EDK Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile SIMPRIM (Timing) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile UNISIM (Functional) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -149,7 +149,7 @@
     <property xil_pn:name="Enable Suspend/Wake Global Set/Reset spartan6" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Encrypt Bitstream spartan6" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Encrypt Key Select spartan6" xil_pn:value="BBRAM" xil_pn:valueState="default"/>
-    <property xil_pn:name="Equivalent Register Removal Map" xil_pn:value="true" xil_pn:valueState="default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Equivalent Register Removal Map" xil_pn:value="false" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Equivalent Register Removal XST" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Essential Bits" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Evaluation Development Board" xil_pn:value="None Specified" xil_pn:valueState="default"/>
@@ -158,7 +158,7 @@
     <property xil_pn:name="Extra Cost Tables Map" xil_pn:value="0" xil_pn:valueState="default"/>
     <property xil_pn:name="Extra Effort (Highest PAR level only)" xil_pn:value="None" xil_pn:valueState="default"/>
     <property xil_pn:name="FPGA Start-Up Clock" xil_pn:value="CCLK" xil_pn:valueState="default"/>
-    <property xil_pn:name="FSM Encoding Algorithm" xil_pn:value="Gray" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="FSM Encoding Algorithm" xil_pn:value="One-Hot" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="FSM Style" xil_pn:value="LUT" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Filter Files From Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Flatten Output Netlist" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -185,7 +185,7 @@
     <property xil_pn:name="Generate Timegroups Section Post Trace" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Generics, Parameters" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Global Optimization Goal" xil_pn:value="AllClockNets" xil_pn:valueState="default"/>
-    <property xil_pn:name="Global Optimization map spartan6" xil_pn:value="Power" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Global Optimization map spartan6" xil_pn:value="Speed" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Global Set/Reset Port Name" xil_pn:value="GSR_PORT" xil_pn:valueState="default"/>
     <property xil_pn:name="Global Tristate Port Name" xil_pn:value="GTS_PORT" xil_pn:valueState="default"/>
     <property xil_pn:name="Hierarchy Separator" xil_pn:value="/" xil_pn:valueState="default"/>
@@ -207,8 +207,8 @@
     <property xil_pn:name="JTAG Pin TDO" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
     <property xil_pn:name="JTAG Pin TMS" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
     <property xil_pn:name="Keep Hierarchy" xil_pn:value="No" xil_pn:valueState="default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="LUT Combining Map" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="LUT Combining Xst" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="LUT Combining Map" xil_pn:value="Off" xil_pn:valueState="default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="LUT Combining Xst" xil_pn:value="No" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Language" xil_pn:value="VHDL" xil_pn:valueState="default"/>
     <property xil_pn:name="Last Applied Goal" xil_pn:value="Balanced" xil_pn:valueState="default"/>
     <property xil_pn:name="Last Applied Strategy" xil_pn:value="performance;Z:/NyaMappen/EDA322/Lab 7/performance.xds" xil_pn:valueState="non-default"/>
@@ -237,7 +237,7 @@
     <property xil_pn:name="Number of Paths in Error/Verbose Report" xil_pn:value="3" xil_pn:valueState="default"/>
     <property xil_pn:name="Number of Paths in Error/Verbose Report Post Trace" xil_pn:value="3" xil_pn:valueState="default"/>
     <property xil_pn:name="Optimization Effort spartan6" xil_pn:value="High" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="Optimization Goal" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Optimization Goal" xil_pn:value="Speed" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimize Instantiated Primitives" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Other Bitgen Command Line Options" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Other Bitgen Command Line Options spartan6" xil_pn:value="" xil_pn:valueState="default"/>
@@ -275,9 +275,9 @@
     <property xil_pn:name="Post Place &amp; Route Simulation Model Name" xil_pn:value="EDA322_processor_timesim.vhd" xil_pn:valueState="default"/>
     <property xil_pn:name="Post Synthesis Simulation Model Name" xil_pn:value="EDA322_processor_synthesis.vhd" xil_pn:valueState="default"/>
     <property xil_pn:name="Post Translate Simulation Model Name" xil_pn:value="EDA322_processor_translate.vhd" xil_pn:valueState="default"/>
-    <property xil_pn:name="Power Reduction Map spartan6" xil_pn:value="Extra Effort" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="Power Reduction Par" xil_pn:value="true" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="Power Reduction Xst" xil_pn:value="true" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Power Reduction Map spartan6" xil_pn:value="Off" xil_pn:valueState="default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Power Reduction Par" xil_pn:value="false" xil_pn:valueState="default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Power Reduction Xst" xil_pn:value="false" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="VHDL" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Produce Verbose Report" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Project Description" xil_pn:value="" xil_pn:valueState="default"/>

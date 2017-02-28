@@ -107,7 +107,7 @@
 <tr>
 <td>-opt_mode</td>
 <td>Optimization Goal</td>
-<td>Area</td>
+<td>Speed</td>
 <td>Speed</td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@
 <tr>
 <td>-power</td>
 <td>Power Reduction</td>
-<td>YES</td>
+<td>NO</td>
 <td>No</td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@
 <tr>
 <td>-fsm_encoding</td>
 <td>&nbsp;</td>
-<td>Gray</td>
+<td>One-Hot</td>
 <td>Auto</td>
 </tr>
 <tr>
@@ -435,34 +435,16 @@
 <td>FALSE</td>
 </tr>
 <tr>
-<td>-logic_opt</td>
-<td>Combinatorial Logic Optimization</td>
-<td>TRUE</td>
-<td>FALSE</td>
-</tr>
-<tr>
 <td>-t</td>
 <td>Starting Placer Cost Table (1-100) Map</td>
 <td>1</td>
 <td>0</td>
 </tr>
 <tr>
-<td>-power</td>
-<td>Power Reduction Map</td>
-<td>xe</td>
-<td>off</td>
-</tr>
-<tr>
 <td>-r</td>
 <td>Register Ordering</td>
 <td>4</td>
 <td>4</td>
-</tr>
-<tr>
-<td>-equivalent_register_removal</td>
-<td>Equivalent Register Removal</td>
-<td>TRUE</td>
-<td>TRUE</td>
 </tr>
 <tr>
 <td>-intstyle</td>
@@ -473,7 +455,7 @@
 <tr>
 <td>-lc</td>
 <td>LUT Combining</td>
-<td>area</td>
+<td>off</td>
 <td>off</td>
 </tr>
 <tr>
@@ -519,6 +501,12 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
+<td>-mt</td>
+<td>Enable Multi-Threading</td>
+<td>off</td>
+<td>off</td>
+</tr>
+<tr>
 <td>-ol</td>
 <td>Place & Route Effort Level (Overall)</td>
 <td>high</td>
@@ -529,12 +517,6 @@
 <td>&nbsp;</td>
 <td>true</td>
 <td>false</td>
-</tr>
-<tr>
-<td>-power</td>
-<td>Power Reduction Par</td>
-<td>on</td>
-<td>off</td>
 </tr>
 </TABLE>
 <A NAME="Operating System Information"></A>

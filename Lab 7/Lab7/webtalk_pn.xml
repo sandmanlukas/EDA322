@@ -3,26 +3,22 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Feb 28 16:14:57 2017">
+<application name="pn" timeStamp="Tue Feb 28 16:33:11 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="0" type="project"/>
-<property name="ProjectIteration" value="6" type="project"/>
+<property name="ProjectIteration" value="9" type="project"/>
 <property name="ProjectFile" value="Z:/NyaMappen/EDA322/Lab 7/Lab7/Lab7.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="YYYY-MM-DDTHH:MM:SS" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
-<property name="PROPEXT_MapGlobalOptimization_spartan6" value="Power" type="process"/>
+<property name="PROPEXT_MapGlobalOptimization_spartan6" value="Speed" type="process"/>
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
 <property name="PROP_LastAppliedStrategy" value="performance;Z:/NyaMappen/EDA322/Lab 7/performance.xds" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
-<property name="PROP_MapLUTCombining_spartan6" value="Area" type="process"/>
-<property name="PROP_MapLogicOptimization_spartan6" value="true" type="process"/>
-<property name="PROP_MapPowerReduction_spartan6" value="Extra Effort" type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
-<property name="PROP_SynthFsmEncode" value="Gray" type="process"/>
-<property name="PROP_SynthOpt" value="Area" type="process"/>
+<property name="PROP_SynthFsmEncode" value="One-Hot" type="process"/>
 <property name="PROP_SynthOptEffort_spartan6" value="High" type="process"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -30,17 +26,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserBrowsedStrategyFiles" value="Z:/NyaMappen/EDA322/Lab 7/performance.xds" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="YYYY-MM-DDTHH:MM:SS" type="design"/>
 <property name="PROP_intWbtProjectID" value="0" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="6" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="9" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="UnableToCalculate" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="Unknown" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_xilxMapAllowLogicOpt" value="true" type="process"/>
 <property name="PROP_xilxMapReportDetail" value="true" type="process"/>
-<property name="PROP_xstLUTCombining_spartan6" value="Area" type="process"/>
-<property name="PROP_xstPowerOptimization_spartan6" value="true" type="process"/>
-<property name="PROPEXT_parPowerReduction_spartan6" value="true" type="process"/>
+<property name="PROP_xstLUTCombining_spartan6" value="No" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
+<property name="PROP_MapEquivalentRegisterRemoval_spartan6" value="false" type="process"/>
 <property name="PROP_DevDevice" value="xc6slx16" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
 <property name="PROP_DevPackage" value="csg324" type="design"/>

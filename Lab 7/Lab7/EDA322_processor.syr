@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: EDA322_processor.prj
 
@@ -51,7 +51,7 @@ Target Device                      : xc6slx16-3-csg324
 ---- Source Options
 Top Module Name                    : EDA322_processor
 Automatic FSM Extraction           : YES
-FSM Encoding Algorithm             : Gray
+FSM Encoding Algorithm             : One-Hot
 Safe Implementation                : No
 FSM Style                          : LUT
 RAM Extraction                     : Yes
@@ -66,7 +66,7 @@ Use DSP Block                      : Auto
 Automatic Register Balancing       : No
 
 ---- Target Options
-LUT Combining                      : Area
+LUT Combining                      : Off
 Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
@@ -80,9 +80,9 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Area
+Optimization Goal                  : Speed
 Optimization Effort                : 2
-Power Reduction                    : YES
+Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -211,7 +211,7 @@ Synthesizing Unit <procController>.
     | Reset type         | asynchronous                                   |
     | Reset State        | fe                                             |
     | Power Up State     | fe                                             |
-    | Encoding           | Gray                                           |
+    | Encoding           | One-Hot                                        |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Summary:
@@ -423,15 +423,15 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-Optimizing FSM <controller/FSM_0> on signal <state[1:3]> with Gray encoding.
+Optimizing FSM <controller/FSM_0> on signal <state[1:5]> with One-Hot encoding.
 -------------------
  State | Encoding
 -------------------
- fe    | 000
- de    | 110
- de2   | 010
- ex    | 001
- me    | 011
+ fe    | 00001
+ de    | 10000
+ de2   | 01000
+ ex    | 00010
+ me    | 00100
 -------------------
 
 Optimizing unit <EDA322_processor> ...
@@ -452,14 +452,10 @@ INFO:Xst:2261 - The FF/Latch <fe_de_register/res_6> in Unit <EDA322_processor> i
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block EDA322_processor, actual ratio is 1.
-FlipFlop fe_register/res_7 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop fe_register/res_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fe_de_register/res_10 has been replicated 1 time(s)
+FlipFlop fe_de_register/res_11 has been replicated 1 time(s)
+FlipFlop fe_de_register/res_8 has been replicated 1 time(s)
+FlipFlop fe_de_register/res_9 has been replicated 1 time(s)
 FlipFlop fe_de_register/res_11 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fe_de_register/res_10 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fe_de_register/res_9 has been replicated 1 time(s) to handle iob=true attribute.
@@ -470,26 +466,6 @@ FlipFlop fe_de_register/res_3 has been replicated 1 time(s) to handle iob=true a
 FlipFlop fe_de_register/res_2 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fe_de_register/res_1 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fe_de_register/res_0 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_7 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop de_ex_register/res_0 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_7 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_6 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_5 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_4 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop acc_register/res_0 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop freg/res_3 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop freg/res_2 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop freg/res_1 has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop freg/res_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -497,8 +473,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 89
- Flip-Flops                                            : 89
+# Registers                                            : 67
+ Flip-Flops                                            : 67
 
 =========================================================================
 
@@ -521,17 +497,19 @@ Top Level Output File Name         : EDA322_processor.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 94
+# BELS                             : 142
 #      GND                         : 1
 #      INV                         : 1
-#      LUT2                        : 3
-#      LUT3                        : 15
-#      LUT4                        : 12
-#      LUT5                        : 13
-#      LUT6                        : 49
-# FlipFlops/Latches                : 89
-#      FDC                         : 25
-#      FDCE                        : 64
+#      LUT2                        : 1
+#      LUT3                        : 16
+#      LUT4                        : 14
+#      LUT5                        : 28
+#      LUT6                        : 73
+#      MUXF7                       : 8
+# FlipFlops/Latches                : 67
+#      FDC                         : 30
+#      FDCE                        : 36
+#      FDP                         : 1
 # RAMS                             : 18
 #      RAM256X1S                   : 18
 # Clock Buffers                    : 1
@@ -547,23 +525,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              39  out of  18224     0%  
- Number of Slice LUTs:                  165  out of   9112     1%  
-    Number used as Logic:                93  out of   9112     1%  
+ Number of Slice Registers:              55  out of  18224     0%  
+ Number of Slice LUTs:                  205  out of   9112     2%  
+    Number used as Logic:               133  out of   9112     1%  
     Number used as Memory:               72  out of   2176     3%  
        Number used as RAM:               72
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    165
-   Number with an unused Flip Flop:     126  out of    165    76%  
-   Number with an unused LUT:             0  out of    165     0%  
-   Number of fully used LUT-FF pairs:    39  out of    165    23%  
+ Number of LUT Flip Flop pairs used:    216
+   Number with an unused Flip Flop:     161  out of    216    74%  
+   Number with an unused LUT:            11  out of    216     5%  
+   Number of fully used LUT-FF pairs:    44  out of    216    20%  
    Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          86
  Number of bonded IOBs:                  86  out of    232    37%  
-    IOB Flip Flops/Latches:              50
+    IOB Flip Flops/Latches:              12
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -589,7 +567,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 107   |
+CLK                                | BUFGP                  | 85    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -600,10 +578,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 9.679ns (Maximum Frequency: 103.312MHz)
-   Minimum input arrival time before clock: 7.829ns
-   Maximum output required time after clock: 11.942ns
-   Maximum combinational path delay: 10.092ns
+   Minimum period: 7.907ns (Maximum Frequency: 126.474MHz)
+   Minimum input arrival time before clock: 6.482ns
+   Maximum output required time after clock: 11.157ns
+   Maximum combinational path delay: 9.732ns
 
 Timing Details:
 ---------------
@@ -611,110 +589,104 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 9.679ns (frequency: 103.312MHz)
-  Total number of paths / destination ports: 10483 / 275
+  Clock period: 7.907ns (frequency: 126.474MHz)
+  Total number of paths / destination ports: 6842 / 229
 -------------------------------------------------------------------------
-Delay:               9.679ns (Levels of Logic = 9)
-  Source:            fe_de_register/res_8 (FF)
+Delay:               7.907ns (Levels of Logic = 7)
+  Source:            fe_de_register/res_9_1 (FF)
   Destination:       freg/res_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: fe_de_register/res_8 to freg/res_0
+  Data Path: fe_de_register/res_9_1 to freg/res_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             20   0.447   1.321  fe_de_register/res_8 (fe_de_register/res_8)
-     LUT4:I1->O           17   0.205   1.256  controller/acc2bus1 (acc2bus)
-     LUT6:I3->O            1   0.205   0.580  buss/G1[1].muxes/mux3/Mmux_y11 (buss/G1[1].muxes/mux3/Mmux_y1)
-     LUT6:I5->O            7   0.205   0.878  buss/G1[1].muxes/mux3/Mmux_y12 (busOut2seg_1_OBUF)
-     LUT5:I3->O            3   0.203   0.651  alu/adder/fa1/co1 (alu/adder/c_int<1>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa3/co1 (alu/adder/c_int<3>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa5/co1 (alu/adder/c_int<5>)
-     LUT6:I5->O            2   0.205   0.617  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
-     LUT5:I4->O            2   0.205   0.617  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
-     LUT6:I5->O            2   0.205   0.000  alu/cmpZero/eq (FlagInp<0>)
+     FDC:C->Q              3   0.447   0.898  fe_de_register/res_9_1 (fe_de_register/res_9_1)
+     LUT4:I0->O           17   0.203   1.256  controller/acc2bus1 (acc2bus)
+     LUT6:I3->O            1   0.205   0.580  buss/G1[5].muxes/mux3/Mmux_y11 (buss/G1[5].muxes/mux3/Mmux_y1)
+     LUT6:I5->O           18   0.205   1.050  buss/G1[5].muxes/mux3/Mmux_y12 (busOut2seg_5_OBUF)
+     LUT6:I5->O            3   0.205   0.651  alu/adder/fa5/co1_SW0 (N19)
+     LUT6:I5->O            1   0.205   0.808  alu/Mmux_ALU_Out_int81_SW0 (N33)
+     LUT6:I3->O            1   0.205   0.684  alu/cmpZero/eq_SW1 (N22)
+     LUT6:I4->O            1   0.203   0.000  alu/cmpZero/eq (FlagInp<0>)
      FDCE:D                    0.102          freg/res_0
     ----------------------------------------
-    Total                      9.679ns (2.392ns logic, 7.287ns route)
-                                       (24.7% logic, 75.3% route)
+    Total                      7.907ns (1.980ns logic, 5.927ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 328 / 140
+  Total number of paths / destination ports: 235 / 100
 -------------------------------------------------------------------------
-Offset:              7.829ns (Levels of Logic = 8)
-  Source:            externalIn<2> (PAD)
+Offset:              6.482ns (Levels of Logic = 6)
+  Source:            externalIn<5> (PAD)
   Destination:       freg/res_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: externalIn<2> to freg/res_0
+  Data Path: externalIn<5> to freg/res_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.944  externalIn_2_IBUF (externalIn_2_IBUF)
-     LUT6:I0->O            7   0.203   0.774  buss/G1[2].muxes/mux3/Mmux_y12 (busOut2seg_2_OBUF)
-     LUT4:I3->O            3   0.205   0.755  alu/Mxor_b_int<2>_xo<0>1 (alu/b_int<2>)
-     LUT6:I4->O            4   0.203   0.684  alu/adder/fa3/co1 (alu/adder/c_int<3>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa5/co1 (alu/adder/c_int<5>)
-     LUT6:I5->O            2   0.205   0.617  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
-     LUT5:I4->O            2   0.205   0.617  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
-     LUT6:I5->O            2   0.205   0.000  alu/cmpZero/eq (FlagInp<0>)
+     IBUF:I->O             1   1.222   0.944  externalIn_5_IBUF (externalIn_5_IBUF)
+     LUT6:I0->O           18   0.203   1.050  buss/G1[5].muxes/mux3/Mmux_y12 (busOut2seg_5_OBUF)
+     LUT6:I5->O            3   0.205   0.651  alu/adder/fa5/co1_SW0 (N19)
+     LUT6:I5->O            1   0.205   0.808  alu/Mmux_ALU_Out_int81_SW0 (N33)
+     LUT6:I3->O            1   0.205   0.684  alu/cmpZero/eq_SW1 (N22)
+     LUT6:I4->O            1   0.203   0.000  alu/cmpZero/eq (FlagInp<0>)
      FDCE:D                    0.102          freg/res_0
     ----------------------------------------
-    Total                      7.829ns (2.755ns logic, 5.074ns route)
-                                       (35.2% logic, 64.8% route)
+    Total                      6.482ns (2.345ns logic, 4.137ns route)
+                                       (36.2% logic, 63.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 1975 / 75
+  Total number of paths / destination ports: 2270 / 75
 -------------------------------------------------------------------------
-Offset:              11.942ns (Levels of Logic = 9)
-  Source:            fe_de_register/res_8 (FF)
+Offset:              11.157ns (Levels of Logic = 8)
+  Source:            fe_de_register/res_9_1 (FF)
   Destination:       aluOut2seg<7> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: fe_de_register/res_8 to aluOut2seg<7>
+  Data Path: fe_de_register/res_9_1 to aluOut2seg<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             20   0.447   1.321  fe_de_register/res_8 (fe_de_register/res_8)
-     LUT4:I1->O           17   0.205   1.256  controller/acc2bus1 (acc2bus)
+     FDC:C->Q              3   0.447   0.898  fe_de_register/res_9_1 (fe_de_register/res_9_1)
+     LUT4:I0->O           17   0.203   1.256  controller/acc2bus1 (acc2bus)
      LUT6:I3->O            1   0.205   0.580  buss/G1[1].muxes/mux3/Mmux_y11 (buss/G1[1].muxes/mux3/Mmux_y1)
      LUT6:I5->O            7   0.205   0.878  buss/G1[1].muxes/mux3/Mmux_y12 (busOut2seg_1_OBUF)
-     LUT5:I3->O            3   0.203   0.651  alu/adder/fa1/co1 (alu/adder/c_int<1>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa3/co1 (alu/adder/c_int<3>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa5/co1 (alu/adder/c_int<5>)
-     LUT6:I5->O            2   0.205   0.617  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
-     LUT5:I4->O            2   0.205   0.616  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
+     LUT5:I3->O            8   0.203   0.803  alu/adder/fa1/co1 (alu/adder/c_int<1>)
+     LUT6:I5->O            7   0.205   1.138  alu/adder/fa3/co1 (alu/adder/c_int<3>)
+     LUT6:I0->O            1   0.203   0.580  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
+     LUT5:I4->O            1   0.205   0.579  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
      OBUF:I->O                 2.571          aluOut2seg_7_OBUF (aluOut2seg<7>)
     ----------------------------------------
-    Total                     11.942ns (4.656ns logic, 7.286ns route)
-                                       (39.0% logic, 61.0% route)
+    Total                     11.157ns (4.447ns logic, 6.710ns route)
+                                       (39.9% logic, 60.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 48 / 16
+  Total number of paths / destination ports: 61 / 16
 -------------------------------------------------------------------------
-Delay:               10.092ns (Levels of Logic = 8)
-  Source:            externalIn<2> (PAD)
+Delay:               9.732ns (Levels of Logic = 7)
+  Source:            externalIn<1> (PAD)
   Destination:       aluOut2seg<7> (PAD)
 
-  Data Path: externalIn<2> to aluOut2seg<7>
+  Data Path: externalIn<1> to aluOut2seg<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.944  externalIn_2_IBUF (externalIn_2_IBUF)
-     LUT6:I0->O            7   0.203   0.774  buss/G1[2].muxes/mux3/Mmux_y12 (busOut2seg_2_OBUF)
-     LUT4:I3->O            3   0.205   0.755  alu/Mxor_b_int<2>_xo<0>1 (alu/b_int<2>)
-     LUT6:I4->O            4   0.203   0.684  alu/adder/fa3/co1 (alu/adder/c_int<3>)
-     LUT6:I5->O            4   0.205   0.684  alu/adder/fa5/co1 (alu/adder/c_int<5>)
-     LUT6:I5->O            2   0.205   0.617  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
-     LUT5:I4->O            2   0.205   0.616  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
+     IBUF:I->O             1   1.222   0.944  externalIn_1_IBUF (externalIn_1_IBUF)
+     LUT6:I0->O            7   0.203   0.878  buss/G1[1].muxes/mux3/Mmux_y12 (busOut2seg_1_OBUF)
+     LUT5:I3->O            8   0.203   0.803  alu/adder/fa1/co1 (alu/adder/c_int<1>)
+     LUT6:I5->O            7   0.205   1.138  alu/adder/fa3/co1 (alu/adder/c_int<3>)
+     LUT6:I0->O            1   0.203   0.580  alu/Mmux_ALU_Out_int81 (alu/Mmux_ALU_Out_int8)
+     LUT5:I4->O            1   0.205   0.579  alu/Mmux_ALU_Out_int82 (aluOut2seg_7_OBUF)
      OBUF:I->O                 2.571          aluOut2seg_7_OBUF (aluOut2seg<7>)
     ----------------------------------------
-    Total                     10.092ns (5.019ns logic, 5.073ns route)
-                                       (49.7% logic, 50.3% route)
+    Total                      9.732ns (4.812ns logic, 4.920ns route)
+                                       (49.4% logic, 50.6% route)
 
 =========================================================================
 
@@ -726,18 +698,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    9.679|         |         |         |
+CLK            |    7.907|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.79 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.65 secs
  
 --> 
 
-Total memory usage is 261052 kilobytes
+Total memory usage is 260860 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
