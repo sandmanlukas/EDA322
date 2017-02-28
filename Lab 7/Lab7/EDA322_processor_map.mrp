@@ -5,13 +5,13 @@ Design Information
 ------------------
 Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol
 high -t 1 -xt 0 -r 4 -global_opt power -equivalent_register_removal on -mt off
--ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o
+-detail -ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o
 EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
 Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Feb 28 16:00:54 2017
+Mapped Date    : Tue Feb 28 16:14:27 2017
 
 Design Summary
 --------------
@@ -40,10 +40,10 @@ Slice Logic Utilization:
 Slice Logic Distribution:
   Number of occupied Slices:                    51 out of   2,278    2%
   Number of MUXCYs used:                         0 out of   4,556    0%
-  Number of LUT Flip Flop pairs used:          154
-    Number with an unused Flip Flop:           116 out of     154   75%
-    Number with an unused LUT:                  14 out of     154    9%
-    Number of fully used LUT-FF pairs:          24 out of     154   15%
+  Number of LUT Flip Flop pairs used:          155
+    Number with an unused Flip Flop:           117 out of     155   75%
+    Number with an unused LUT:                  15 out of     155    9%
+    Number of fully used LUT-FF pairs:          23 out of     155   14%
     Number of unique control sets:               7
     Number of slice register sites lost
       to control set restrictions:               9 out of  18,224    1%
@@ -87,9 +87,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                5.40
 
-Peak Memory Usage:  439 MB
-Total REAL time to MAP completion:  25 secs 
-Total CPU time to MAP completion:   24 secs 
+Peak Memory Usage:  449 MB
+Total REAL time to MAP completion:  27 secs 
+Total CPU time to MAP completion:   25 secs 
 
 Table of Contents
 -----------------
@@ -116,11 +116,8 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network CLK_BUFGP/N2 has no load.
-INFO:LIT:395 - The above info message is repeated 2 more times for the following
-   (max. 5 shown):
-   CLK_BUFGP/N3,
-   N3
-   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:243 - Logical network CLK_BUFGP/N3 has no load.
+INFO:LIT:243 - Logical network N3 has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -140,6 +137,7 @@ Section 4 - Removed Logic Summary
    3 block(s) removed
    1 block(s) optimized away
    3 signal(s) removed
+  36 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -165,8 +163,44 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 
-To enable printing of redundant blocks removed and signals merged, set the
-detailed map report option and rerun map.
+Redundant Block(s):
+TYPE 		BLOCK
+INV 		][338_45_INV_0
+INV 		][339_49_INV_0
+INV 		][340_51_INV_0
+INV 		][341_53_INV_0
+INV 		][342_55_INV_0
+INV 		][343_57_INV_0
+INV 		][344_59_INV_0
+INV 		][345_61_INV_0
+INV 		][346_63_INV_0
+INV 		][449_136_INV_0
+INV 		][450_137_INV_0
+INV 		][451_138_INV_0
+INV 		][452_139_INV_0
+INV 		][453_140_INV_0
+INV 		][454_141_INV_0
+INV 		][455_142_INV_0
+INV 		][456_143_INV_0
+INV 		][466_147_INV_0
+INV 		][468_153_INV_0
+INV 		][471_156_INV_0
+INV 		][474_159_INV_0
+INV 		][477_162_INV_0
+INV 		][480_165_INV_0
+INV 		][483_168_INV_0
+INV 		][486_171_INV_0
+INV 		][489_174_INV_0
+INV 		][502_177_INV_0
+INV 		][518_186_INV_0
+INV 		][529_197_INV_0
+INV 		][532_200_INV_0
+INV 		][538_205_INV_0
+INV 		][541_208_INV_0
+INV 		][14_220_INV_0
+INV 		][19_224_INV_0
+INV 		][24_227_INV_0
+INV 		][IN_virtPIBox_60_302_INV_0
 
 Section 6 - IOB Properties
 --------------------------
@@ -301,12 +335,43 @@ Command Line Tools User Guide "TRACE" chapter.
 
 Section 11 - Configuration String Details
 -----------------------------------------
-Use the "-detail" map option to print out Configuration Strings
 
 Section 12 - Control Set Information
 ------------------------------------
-Use the "-detail" map option to print out Control Set Information.
++-------------------------------------------------------------------------------------------------------+
+| Clock Signal | Reset Signal          | Set Signal | Enable Signal | Slice Load Count | Bel Load Count |
++-------------------------------------------------------------------------------------------------------+
+| CLK_BUFGP    |                       |            | GLOBAL_LOGIC0 | 10               | 40             |
+| CLK_BUFGP    |                       |            | ][338_45      | 8                | 32             |
+| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            |               | 6                | 13             |
+| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][466_147     | 2                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][502_177     | 3                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][518_186     | 3                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | lut94_0       | 1                | 2              |
++-------------------------------------------------------------------------------------------------------+
 
 Section 13 - Utilization by Hierarchy
 -------------------------------------
-Use the "-detail" map option to print out the Utilization by Hierarchy section.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module              | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name               |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EDA322_processor/   |           | 28/62         | 0/39          | 68/140        | 0/72          | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor                     |
+| +acc_register       |           | 3/3           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/acc_register        |
+| +controller         |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/controller          |
+| +data_memory        |           | 8/8           | 0/0           | 32/32         | 32/32         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/data_memory         |
+| +de_ex_register     |           | 3/3           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/de_ex_register      |
+| +display_rgister    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/display_rgister     |
+| +fe_de_register     |           | 5/5           | 10/10         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_de_register      |
+| +fe_register        |           | 2/2           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_register         |
+| +freg               |           | 1/1           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/freg                |
+| +instruction_memory |           | 10/10         | 0/0           | 40/40         | 40/40         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/instruction_memory  |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

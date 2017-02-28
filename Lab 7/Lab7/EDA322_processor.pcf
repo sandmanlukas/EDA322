@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Feb 28 16:01:20 2017
+// Written by: Map P.20131013 on Tue Feb 28 16:14:55 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -100,6 +100,6 @@ TIMEGRP CLK = BEL "freg/res_3" BEL "freg/res_2" BEL "freg/res_1" BEL
         "data_memory/Mram_memory7/A" BEL "data_memory/Mram_memory8/D" BEL
         "data_memory/Mram_memory8/C" BEL "data_memory/Mram_memory8/B" BEL
         "data_memory/Mram_memory8/A";
-TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50%;
+TS_CLK = PERIOD TIMEGRP "CLK" 9 ns HIGH 50%;
 SCHEMATIC END;
 

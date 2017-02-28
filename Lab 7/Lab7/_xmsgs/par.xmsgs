@@ -8,7 +8,7 @@
 <msg type="internal" file="Portability" num="0" delta="new" srcfile="Port_MsgStreamImp.c" srcline="468" srcrcs="1.20" >Unable to delete requested message stream.
 </msg>
 
-<msg type="info" file="Par" num="277" delta="new" >Power optimization/reduction has been run on this design.  Please use XPower to analyze and report the power usage for this design.
+<msg type="info" file="Par" num="277" delta="old" >Power optimization/reduction has been run on this design.  Please use XPower to analyze and report the power usage for this design.
 </msg>
 
 </messages>
