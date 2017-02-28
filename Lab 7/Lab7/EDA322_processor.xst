@@ -6,9 +6,9 @@ run
 -ofmt NGC
 -p xc6slx16-3-csg324
 -top EDA322_processor
--opt_mode Area
+-opt_mode Speed
 -opt_level 2
--power YES
+-power NO
 -iuc NO
 -keep_hierarchy No
 -netlist_hierarchy As_Optimized
@@ -23,9 +23,9 @@ run
 -slice_utilization_ratio 100
 -bram_utilization_ratio 100
 -dsp_utilization_ratio 100
--lc Area
+-lc Off
 -reduce_control_sets Auto
--fsm_extract YES -fsm_encoding Gray
+-fsm_extract YES -fsm_encoding One-Hot
 -safe_implementation No
 -fsm_style LUT
 -ram_extract Yes

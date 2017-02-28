@@ -3,31 +3,31 @@ Xilinx Mapping Report File for Design 'EDA322_processor'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt on -ol
-high -t 1 -xt 0 -r 4 -global_opt power -equivalent_register_removal on -mt off
--detail -ir off -ignore_keep_hierarchy -pr off -lc area -power xe -o
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal off -mt off
+-detail -ir off -ignore_keep_hierarchy -pr off -lc off -power off -o
 EDA322_processor_map.ncd EDA322_processor.ngd EDA322_processor.pcf 
 Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Feb 28 16:14:27 2017
+Mapped Date    : Tue Feb 28 16:32:47 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   86
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    39 out of  18,224    1%
-    Number used as Flip Flops:                  39
+  Number of Slice Registers:                    63 out of  18,224    1%
+    Number used as Flip Flops:                  63
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        140 out of   9,112    1%
-    Number used as logic:                       68 out of   9,112    1%
-      Number using O6 output only:              46
+  Number of Slice LUTs:                        212 out of   9,112    2%
+    Number used as logic:                      136 out of   9,112    1%
+      Number using O6 output only:             123
       Number using O5 output only:               0
-      Number using O5 and O6:                   22
+      Number using O5 and O6:                   13
       Number used as ROM:                        0
     Number used as Memory:                      72 out of   2,176    3%
       Number used as Dual Port RAM:              0
@@ -36,17 +36,21 @@ Slice Logic Utilization:
         Number using O5 output only:             0
         Number using O5 and O6:                  0
       Number used as Shift Register:             0
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         0
+      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    51 out of   2,278    2%
+  Number of occupied Slices:                    62 out of   2,278    2%
   Number of MUXCYs used:                         0 out of   4,556    0%
-  Number of LUT Flip Flop pairs used:          155
-    Number with an unused Flip Flop:           117 out of     155   75%
-    Number with an unused LUT:                  15 out of     155    9%
-    Number of fully used LUT-FF pairs:          23 out of     155   14%
-    Number of unique control sets:               7
+  Number of LUT Flip Flop pairs used:          218
+    Number with an unused Flip Flop:           161 out of     218   73%
+    Number with an unused LUT:                   6 out of     218    2%
+    Number of fully used LUT-FF pairs:          51 out of     218   23%
+    Number of unique control sets:               8
     Number of slice register sites lost
-      to control set restrictions:               9 out of  18,224    1%
+      to control set restrictions:              17 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -56,7 +60,7 @@ Slice Logic Distribution:
 
 IO Utilization:
   Number of bonded IOBs:                        86 out of     232   37%
-    IOB Flip Flops:                             50
+    IOB Flip Flops:                             12
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -69,8 +73,8 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                  50 out of     248   20%
-    Number used as OLOGIC2s:                    50
+  Number of OLOGIC2/OSERDES2s:                  12 out of     248    4%
+    Number used as OLOGIC2s:                    12
     Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
@@ -85,11 +89,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                5.40
+Average Fanout of Non-Clock Nets:                6.84
 
-Peak Memory Usage:  449 MB
-Total REAL time to MAP completion:  27 secs 
-Total CPU time to MAP completion:   25 secs 
+Peak Memory Usage:  430 MB
+Total REAL time to MAP completion:  23 secs 
+Total CPU time to MAP completion:   22 secs 
 
 Table of Contents
 -----------------
@@ -117,7 +121,7 @@ Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network CLK_BUFGP/N2 has no load.
 INFO:LIT:243 - Logical network CLK_BUFGP/N3 has no load.
-INFO:LIT:243 - Logical network N3 has no load.
+INFO:LIT:243 - Logical network N44 has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -129,15 +133,13 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 INFO:Pack:1650 - Map created a placed design.
-INFO:Map:207 - Power optimization/reduction has been run on this design. Please
-   use XPower to analyze and report the power usage for this design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
    3 block(s) removed
    1 block(s) optimized away
    3 signal(s) removed
-  36 Block(s) redundant
+  26 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -152,7 +154,7 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-The signal "N3" is loadless and has been removed.
+The signal "N44" is loadless and has been removed.
  Loadless block "XST_VCC" (ONE) removed.
 The signal "CLK_BUFGP/N2" is sourceless and has been removed.
 The signal "CLK_BUFGP/N3" is sourceless and has been removed.
@@ -165,42 +167,32 @@ GND 		XST_GND
 
 Redundant Block(s):
 TYPE 		BLOCK
-INV 		][338_45_INV_0
-INV 		][339_49_INV_0
-INV 		][340_51_INV_0
-INV 		][341_53_INV_0
-INV 		][342_55_INV_0
-INV 		][343_57_INV_0
-INV 		][344_59_INV_0
-INV 		][345_61_INV_0
-INV 		][346_63_INV_0
-INV 		][449_136_INV_0
-INV 		][450_137_INV_0
-INV 		][451_138_INV_0
-INV 		][452_139_INV_0
-INV 		][453_140_INV_0
-INV 		][454_141_INV_0
-INV 		][455_142_INV_0
-INV 		][456_143_INV_0
-INV 		][466_147_INV_0
-INV 		][468_153_INV_0
-INV 		][471_156_INV_0
-INV 		][474_159_INV_0
-INV 		][477_162_INV_0
-INV 		][480_165_INV_0
-INV 		][483_168_INV_0
-INV 		][486_171_INV_0
-INV 		][489_174_INV_0
-INV 		][502_177_INV_0
-INV 		][518_186_INV_0
-INV 		][529_197_INV_0
-INV 		][532_200_INV_0
-INV 		][538_205_INV_0
-INV 		][541_208_INV_0
-INV 		][14_220_INV_0
-INV 		][19_224_INV_0
-INV 		][24_227_INV_0
-INV 		][IN_virtPIBox_60_302_INV_0
+INV 		][575_5_INV_0
+INV 		][576_7_INV_0
+INV 		][577_10_INV_0
+INV 		][578_12_INV_0
+INV 		][579_14_INV_0
+INV 		][580_16_INV_0
+INV 		][582_19_INV_0
+INV 		][585_26_INV_0
+INV 		][595_35_INV_0
+INV 		][645_72_INV_0
+INV 		][679_99_INV_0
+INV 		][680_104_INV_0
+INV 		][682_111_INV_0
+INV 		][683_113_INV_0
+INV 		][685_117_INV_0
+INV 		][686_119_INV_0
+INV 		][115_139_INV_0
+INV 		][180_169_INV_0
+INV 		][185_173_INV_0
+INV 		][200_182_INV_0
+INV 		][295_218_INV_0
+INV 		][302_221_INV_0
+INV 		][350_244_INV_0
+INV 		][379_262_INV_0
+INV 		][385_266_INV_0
+INV 		][IN_virtPIBox_90_286_INV_0
 
 Section 6 - IOB Properties
 --------------------------
@@ -219,14 +211,14 @@ Section 6 - IOB Properties
 | Addr2seg<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Addr2seg<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | CLK                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| acc2seg<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| acc2seg<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| acc2seg<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| acc2seg<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | aluOut2seg<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | aluOut2seg<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | aluOut2seg<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -243,22 +235,22 @@ Section 6 - IOB Properties
 | busOut2seg<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | busOut2seg<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | busOut2seg<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| dMemOut2seg<0>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<1>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<2>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<3>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<4>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<5>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<6>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| dMemOut2seg<7>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| disp2seg<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| dMemOut2seg<0>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<1>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<2>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<3>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<4>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<5>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<6>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| dMemOut2seg<7>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| disp2seg<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | errSig2seg                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | externalIn<0>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | externalIn<1>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
@@ -268,10 +260,10 @@ Section 6 - IOB Properties
 | externalIn<5>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | externalIn<6>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | externalIn<7>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| flag2seg<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| flag2seg<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| flag2seg<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| flag2seg<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| flag2seg<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| flag2seg<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| flag2seg<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| flag2seg<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | instr2seg<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
 | instr2seg<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
 | instr2seg<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
@@ -285,16 +277,16 @@ Section 6 - IOB Properties
 | instr2seg<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
 | instr2seg<11>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
 | master_load_enable                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| ovf                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| pc2seg<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| zero                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| ovf                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| pc2seg<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| zero                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
@@ -342,30 +334,42 @@ Section 12 - Control Set Information
 | Clock Signal | Reset Signal          | Set Signal | Enable Signal | Slice Load Count | Bel Load Count |
 +-------------------------------------------------------------------------------------------------------+
 | CLK_BUFGP    |                       |            | GLOBAL_LOGIC0 | 10               | 40             |
-| CLK_BUFGP    |                       |            | ][338_45      | 8                | 32             |
-| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            |               | 6                | 13             |
-| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][466_147     | 2                | 8              |
-| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][502_177     | 3                | 8              |
-| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | ][518_186     | 3                | 8              |
-| CLK_BUFGP    | ][IN_virtPIBox_60_302 |            | lut94_0       | 1                | 2              |
+| CLK_BUFGP    |                       |            | ][576_7       | 8                | 32             |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            |               | 15               | 26             |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            | ][302_221     | 8                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            | ][350_244     | 4                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            | lut703_156    | 3                | 4              |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            | lut758_184    | 1                | 8              |
+| CLK_BUFGP    | ][IN_virtPIBox_90_286 |            | lut811_194    | 6                | 9              |
 +-------------------------------------------------------------------------------------------------------+
 
 Section 13 - Utilization by Hierarchy
 -------------------------------------
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Module              | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name               |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| EDA322_processor/   |           | 28/62         | 0/39          | 68/140        | 0/72          | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor                     |
-| +acc_register       |           | 3/3           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/acc_register        |
-| +controller         |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/controller          |
-| +data_memory        |           | 8/8           | 0/0           | 32/32         | 32/32         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/data_memory         |
-| +de_ex_register     |           | 3/3           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/de_ex_register      |
-| +display_rgister    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/display_rgister     |
-| +fe_de_register     |           | 5/5           | 10/10         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_de_register      |
-| +fe_register        |           | 2/2           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_register         |
-| +freg               |           | 1/1           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/freg                |
-| +instruction_memory |           | 10/10         | 0/0           | 40/40         | 40/40         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/instruction_memory  |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module              | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EDA322_processor/   |           | 41/109        | 0/63          | 117/212       | 0/72          | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor                        |
+| +acc_register       |           | 6/6           | 9/9           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/acc_register           |
+| +alu                |           | 2/9           | 0/0           | 2/15          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/alu                    |
+| ++adder             |           | 0/7           | 0/0           | 0/13          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/alu/adder              |
+| +++fa3              |           | 4/4           | 0/0           | 8/8           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/alu/adder/fa3          |
+| +++fa5              |           | 3/3           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/alu/adder/fa5          |
+| +buss               |           | 0/4           | 0/0           | 0/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss                   |
+| ++G1[4].muxes       |           | 0/2           | 0/0           | 0/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[4].muxes       |
+| +++mux3             |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[4].muxes/mux3  |
+| ++G1[5].muxes       |           | 0/1           | 0/0           | 0/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[5].muxes       |
+| +++mux3             |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[5].muxes/mux3  |
+| ++G1[6].muxes       |           | 0/1           | 0/0           | 0/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[6].muxes       |
+| +++mux3             |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/buss/G1[6].muxes/mux3  |
+| +controller         |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/controller             |
+| +data_memory        |           | 8/8           | 0/0           | 32/32         | 32/32         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/data_memory            |
+| +de_ex_register     |           | 8/8           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/de_ex_register         |
+| +display_rgister    |           | 1/1           | 8/8           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/display_rgister        |
+| +fe_de_register     |           | 12/12         | 21/21         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_de_register         |
+| +fe_register        |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/fe_register            |
+| +freg               |           | 3/3           | 4/4           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/freg                   |
+| +instruction_memory |           | 10/10         | 0/0           | 40/40         | 40/40         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | EDA322_processor/instruction_memory     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.
   Therefore, a slice will be counted in every hierarchical module

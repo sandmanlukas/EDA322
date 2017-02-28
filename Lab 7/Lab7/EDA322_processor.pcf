@@ -1,11 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Feb 28 16:14:55 2017
+// Written by: Map P.20131013 on Tue Feb 28 16:33:09 2017
 //! **************************************************************************
 
 SCHEMATIC START;
 TIMEGRP CLK = BEL "freg/res_3" BEL "freg/res_2" BEL "freg/res_1" BEL
         "freg/res_0" BEL "controller/state_FSM_FFd2" BEL
         "controller/state_FSM_FFd3" BEL "controller/state_FSM_FFd1" BEL
+        "controller/state_FSM_FFd5" BEL "controller/state_FSM_FFd4" BEL
         "display_rgister/res_7" BEL "display_rgister/res_6" BEL
         "display_rgister/res_5" BEL "display_rgister/res_4" BEL
         "display_rgister/res_3" BEL "display_rgister/res_2" BEL
@@ -24,27 +25,20 @@ TIMEGRP CLK = BEL "freg/res_3" BEL "freg/res_2" BEL "freg/res_1" BEL
         "fe_de_register/res_9" BEL "fe_de_register/res_8" BEL
         "fe_de_register/res_6" BEL "fe_de_register/res_4" BEL
         "fe_de_register/res_3" BEL "fe_de_register/res_2" BEL
-        "fe_de_register/res_1" BEL "fe_de_register/res_0" BEL "CLK_BUFGP/BUFG"
-        BEL "fe_register/res_7_1" BEL "fe_register/res_6_1" BEL
-        "fe_register/res_5_1" BEL "fe_register/res_4_1" BEL
-        "fe_register/res_3_1" BEL "fe_register/res_2_1" BEL
-        "fe_register/res_1_1" BEL "fe_register/res_0_1" BEL
-        "fe_de_register/res_11_1" BEL "fe_de_register/res_10_1" BEL
-        "fe_de_register/res_9_1" BEL "fe_de_register/res_8_1" BEL
-        "fe_de_register/res_6_1" BEL "fe_de_register/res_6_2" BEL
-        "fe_de_register/res_6_3" BEL "fe_de_register/res_4_1" BEL
-        "fe_de_register/res_3_1" BEL "fe_de_register/res_2_1" BEL
-        "fe_de_register/res_1_1" BEL "fe_de_register/res_0_1" BEL
-        "de_ex_register/res_7_1" BEL "de_ex_register/res_6_1" BEL
-        "de_ex_register/res_5_1" BEL "de_ex_register/res_4_1" BEL
-        "de_ex_register/res_3_1" BEL "de_ex_register/res_2_1" BEL
-        "de_ex_register/res_1_1" BEL "de_ex_register/res_0_1" BEL
-        "acc_register/res_7_1" BEL "acc_register/res_6_1" BEL
-        "acc_register/res_5_1" BEL "acc_register/res_4_1" BEL
-        "acc_register/res_3_1" BEL "acc_register/res_2_1" BEL
-        "acc_register/res_1_1" BEL "acc_register/res_0_1" BEL "freg/res_3_1"
-        BEL "freg/res_2_1" BEL "freg/res_1_1" BEL "freg/res_0_1" BEL
-        "instruction_memory/Mram_memory1/D" BEL
+        "fe_de_register/res_1" BEL "fe_de_register/res_0" BEL
+        "fe_de_register/res_10_1" BEL "fe_de_register/res_11_1" BEL
+        "fe_de_register/res_8_1" BEL "fe_de_register/res_9_1" BEL
+        "CLK_BUFGP/BUFG" BEL "fe_de_register/res_11_2" BEL
+        "fe_de_register/res_10_2" BEL "fe_de_register/res_9_2" BEL
+        "fe_de_register/res_8_2" BEL "fe_de_register/res_6_1" BEL
+        "fe_de_register/res_6_2" BEL "fe_de_register/res_6_3" BEL
+        "fe_de_register/res_4_1" BEL "fe_de_register/res_3_1" BEL
+        "fe_de_register/res_2_1" BEL "fe_de_register/res_1_1" BEL
+        "fe_de_register/res_0_1" BEL "fe_de_register/res_9_3" BEL
+        "acc_register/res_3_1" BEL "fe_de_register/res_11_3" BEL
+        "fe_de_register/res_8_3" BEL "fe_de_register/res_10_3" BEL
+        "fe_de_register/res_10_4" BEL "fe_de_register/res_8_4" BEL
+        "fe_de_register/res_11_4" BEL "instruction_memory/Mram_memory1/D" BEL
         "instruction_memory/Mram_memory1/C" BEL
         "instruction_memory/Mram_memory1/B" BEL
         "instruction_memory/Mram_memory1/A" BEL
@@ -100,6 +94,6 @@ TIMEGRP CLK = BEL "freg/res_3" BEL "freg/res_2" BEL "freg/res_1" BEL
         "data_memory/Mram_memory7/A" BEL "data_memory/Mram_memory8/D" BEL
         "data_memory/Mram_memory8/C" BEL "data_memory/Mram_memory8/B" BEL
         "data_memory/Mram_memory8/A";
-TS_CLK = PERIOD TIMEGRP "CLK" 9 ns HIGH 50%;
+TS_CLK = PERIOD TIMEGRP "CLK" 5.3 ns HIGH 50%;
 SCHEMATIC END;
 
