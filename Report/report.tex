@@ -391,10 +391,41 @@ We realize that if the goal was to design an ASIC much more work would be needed
 \centering
 \begin{tabular}{|l|l|} \hline
   \textbf{Module} & \textbf{Power dissipation}\\ \hline
-  
+  ALU & 0.000011 \\
+  FE/DE register & 0.00011 W \\
+  Controller & 0.0001 W \\
+  Bus & 0.00005 W \\
+  Data memory & 0.00003 W \\
+  Instruction memory & 0.00001 \\ \hline
 \end{tabular}
-\caption{The processors modules ranked after power dissipation (performance / area / power optimization.)}
-\label{tab:power_rank}
+\caption{The processors modules ranked after power dissipation when optimizing for performance. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_perf}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  \textbf{Module} & \textbf{Power dissipation}\\ \hline
+  ALU & 0.00015 W \\
+  Controller & 0.00013 W \\
+  Data memory & 0.00002 W \\ 
+  Instruction memory & 0.00001 W \\
+  ACC register & 0.00001 W \\ \hline
+\end{tabular}
+\caption{The processors modules ranked after power dissipation when optimizing for area. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_area}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  \textbf{Module} & \textbf{Power dissipation}\\ \hline
+  Controller & 0.00008 W \\
+  Data memory & 0.00002 W \\ 
+  Instruction memory & 0.00001 W \\ \hline
+\end{tabular}
+\caption{The processors modules ranked after power dissipation when optimizing for power. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_pow}
 \end{table}
 
 \end{appendix}
