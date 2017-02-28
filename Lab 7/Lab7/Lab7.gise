@@ -103,11 +103,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1488294049" xil_pn:in_ck="2875080251284980419" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6363438292547241043" xil_pn:start_ts="1488294041">
+    <transform xil_pn:end_ts="1488294561" xil_pn:in_ck="2875080251284980419" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6363438292547241043" xil_pn:start_ts="1488294551">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="EDA322_processor.lso"/>
       <outfile xil_pn:name="EDA322_processor.ngc"/>
       <outfile xil_pn:name="EDA322_processor.ngr"/>
@@ -120,22 +118,25 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1488294049" xil_pn:in_ck="-2226025892777605204" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6439059727323545748" xil_pn:start_ts="1488294049">
+    <transform xil_pn:end_ts="1488294538" xil_pn:in_ck="-2226025892777605204" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6439059727323545748" xil_pn:start_ts="1488294538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1488294053" xil_pn:in_ck="3975584781975634194" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2394947580868996215" xil_pn:start_ts="1488294049">
+    <transform xil_pn:end_ts="1488294543" xil_pn:in_ck="3975584781975634194" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2394947580868996215" xil_pn:start_ts="1488294538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="EDA322_processor.bld"/>
       <outfile xil_pn:name="EDA322_processor.ngd"/>
       <outfile xil_pn:name="EDA322_processor_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1488294081" xil_pn:in_ck="-147268449965950061" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="7807635961013981005" xil_pn:start_ts="1488294053">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1488294545" xil_pn:in_ck="-147268449965950061" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="7807635961013981005" xil_pn:start_ts="1488294543">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="EDA322_processor.pcf"/>
       <outfile xil_pn:name="EDA322_processor_map.map"/>
       <outfile xil_pn:name="EDA322_processor_map.mrp"/>
@@ -150,6 +151,9 @@
     <transform xil_pn:end_ts="1488294106" xil_pn:in_ck="2574030235365597356" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="4268113553293381099" xil_pn:start_ts="1488294081">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="EDA322_processor.ncd"/>
       <outfile xil_pn:name="EDA322_processor.pad"/>
       <outfile xil_pn:name="EDA322_processor.par"/>
@@ -165,11 +169,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1488294106" xil_pn:in_ck="9113780028746174735" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1488294101">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="EDA322_processor.twr"/>
       <outfile xil_pn:name="EDA322_processor.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
@@ -179,6 +187,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="netgen"/>
       <outfile xil_pn:name="netgen/map/EDA322_processor_map.nlf"/>
@@ -189,6 +198,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -196,10 +206,11 @@
       <outfile xil_pn:name="EDA322_processor_preroute.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1488293600" xil_pn:in_ck="-147268449965950061" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1488293600">
+    <transform xil_pn:end_ts="1488294519" xil_pn:in_ck="-147268449965950061" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1488294519">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
