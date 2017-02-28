@@ -22,17 +22,6 @@ QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Compiling entity mux2to1_bit
 -- Compiling architecture dataflow of mux2to1_bit
 
-} {} {}} {Z:/NyaMappen/EDA322/Lab 7 Modelsim/Testbenchlab4.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {Z:/NyaMappen/EDA322/Lab 7 Modelsim/Testbenchlab4.vhd}
-QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity testbenchlab4
--- Compiling architecture Behavioral of testbenchlab4
-
 } {} {}} {Z:/NyaMappen/EDA322/Lab 7 Modelsim/reggister.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {Z:/NyaMappen/EDA322/Lab 7 Modelsim/reggister.vhd}
 QuestaSim-64 vcom 10.5b Compiler 2016.05 May 21 2016
 -- Loading package STANDARD

@@ -6,20 +6,20 @@
   <DeviceList devices="spartan6"/>
 
   <Properties>
-    <property name="Synthesize - XST:Optimization Goal" value="Speed"/>
+    <property name="Synthesize - XST:Optimization Goal" value="Area"/>
     <property name="Synthesize - XST:Optimization Effort" value="High"/>
-    <property name="Synthesize - XST:Power Reduction" value="false"/>
+    <property name="Synthesize - XST:Power Reduction" value="true"/>
     <property name="Synthesize - XST:Keep Hierarchy" value="No"/>
-    <property name="Synthesize - XST:FSM Encoding Algorithm" value="One-Hot"/>
+    <property name="Synthesize - XST:FSM Encoding Algorithm" value="Gray"/>
     <property name="Synthesize - XST:FSM Style" value="LUT"/>
-    <property name="Synthesize - XST:LUT Combining" value="No"/>
-    <property name="Map:Combinatorial Logic Optimization" value="false"/>
-    <property name="Map:Global Optimization" value="Speed"/>
-    <property name="Map:Equivalent Register Removal" value="false"/>
+    <property name="Synthesize - XST:LUT Combining" value="Area"/>
+    <property name="Map:Combinatorial Logic Optimization" value="true"/>
+    <property name="Map:Global Optimization" value="Power"/>
+    <property name="Map:Equivalent Register Removal" value="true"/>
     <property name="Map:Allow Logic Optimization Across Hierarchy" value="true"/>
-    <property name="Map:LUT Combining" value="Off"/>
-    <property name="Map:Power Reduction" value="Off"/>
-    <property name="Place &amp; Route:Power Reduction" value="false"/>
+    <property name="Map:LUT Combining" value="Area"/>
+    <property name="Map:Power Reduction" value="Extra Effort"/>
+    <property name="Place &amp; Route:Power Reduction" value="true"/>
   </Properties>
 
 </DesignStrategy>

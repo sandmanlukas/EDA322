@@ -26,24 +26,24 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
-Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 5.3 ns HIGH 50%;
+Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 12092 paths analyzed, 1055 endpoints analyzed, 1 failing endpoint
- 1 timing error detected. (1 setup error, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.313ns.
+ 13209 paths analyzed, 847 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.466ns.
 --------------------------------------------------------------------------------
 
-Paths for end point freg/res_0 (SLICE_X25Y58.A3), 490 paths
+Paths for end point acc_register/res_7_1 (OLOGIC_X18Y15.D1), 173 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.013ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_9_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.262ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.252 - 0.268)
+Slack (setup path):     1.534ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_9 (FF)
+  Destination:          acc_register/res_7_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.854ns (Levels of Logic = 8)
+  Clock Path Skew:      0.423ns (0.698 - 0.275)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -52,44 +52,52 @@ Slack (setup path):     -0.013ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_9_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_9 to acc_register/res_7_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y56.AQ      Tcko                  0.447   fe_de_register/res<3>
-                                                       fe_de_register/res_9_1
-    SLICE_X28Y56.C3      net (fanout=11)       0.963   fe_de_register/res_9_1
-    SLICE_X28Y56.C       Tilo                  0.205   fe_de_register/res<9>
-                                                       lut369_42
-    SLICE_X29Y57.B3      net (fanout=2)        0.595   lut369_42
-    SLICE_X29Y57.B       Tilo                  0.259   fe_de_register/res_8_1
-                                                       lut370_43
-    SLICE_X29Y58.C3      net (fanout=18)       0.511   lut370_43
-    SLICE_X29Y58.C       Tilo                  0.259   fe_register/res<2>
-                                                       lut505_92_SW3
-    SLICE_X25Y57.C6      net (fanout=1)        0.505   N6
-    SLICE_X25Y57.C       Tilo                  0.259   ][679_99
-                                                       lut505_92
-    SLICE_X25Y57.D5      net (fanout=3)        0.222   lut505_92
-    SLICE_X25Y57.D       Tilo                  0.259   ][679_99
-                                                       lut511_98
-    SLICE_X25Y58.A3      net (fanout=2)        0.456   ][679_99
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X28Y7.DQ       Tcko                  0.408   fe_de_register/res<9>
+                                                       fe_de_register/res_9
+    SLICE_X28Y6.B1       net (fanout=17)       0.658   fe_de_register/res<9>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X37Y11.B6      net (fanout=2)        1.199   lut224_38
+    SLICE_X37Y11.B       Tilo                  0.259   acc_register/res<7>
+                                                       ][520_188
+    OLOGIC_X18Y15.D1     net (fanout=1)        0.550   ][520_188
+    OLOGIC_X18Y15.CLK0   Todck                 0.803   acc_register/res_7_1
+                                                       acc_register/res_7_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.262ns (2.010ns logic, 3.252ns route)
-                                                       (38.2% logic, 61.8% route)
+    Total                                      8.854ns (3.283ns logic, 5.571ns route)
+                                                       (37.1% logic, 62.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.004ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_9_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.253ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.252 - 0.268)
+Slack (setup path):     1.560ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_10 (FF)
+  Destination:          acc_register/res_7_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.828ns (Levels of Logic = 8)
+  Clock Path Skew:      0.423ns (0.698 - 0.275)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -98,44 +106,52 @@ Slack (setup path):     -0.004ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_9_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_10 to acc_register/res_7_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y56.AQ      Tcko                  0.447   fe_de_register/res<3>
-                                                       fe_de_register/res_9_1
-    SLICE_X27Y56.B4      net (fanout=11)       0.754   fe_de_register/res_9_1
-    SLICE_X27Y56.B       Tilo                  0.259   acc_register/res_3
-                                                       lut247_1
-    SLICE_X29Y57.B4      net (fanout=7)        0.741   lut247_1
-    SLICE_X29Y57.B       Tilo                  0.259   fe_de_register/res_8_1
-                                                       lut370_43
-    SLICE_X29Y58.C3      net (fanout=18)       0.511   lut370_43
-    SLICE_X29Y58.C       Tilo                  0.259   fe_register/res<2>
-                                                       lut505_92_SW3
-    SLICE_X25Y57.C6      net (fanout=1)        0.505   N6
-    SLICE_X25Y57.C       Tilo                  0.259   ][679_99
-                                                       lut505_92
-    SLICE_X25Y57.D5      net (fanout=3)        0.222   lut505_92
-    SLICE_X25Y57.D       Tilo                  0.259   ][679_99
-                                                       lut511_98
-    SLICE_X25Y58.A3      net (fanout=2)        0.456   ][679_99
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X29Y7.AQ       Tcko                  0.391   fe_de_register/res<11>
+                                                       fe_de_register/res_10
+    SLICE_X28Y6.B2       net (fanout=14)       0.649   fe_de_register/res<10>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X37Y11.B6      net (fanout=2)        1.199   lut224_38
+    SLICE_X37Y11.B       Tilo                  0.259   acc_register/res<7>
+                                                       ][520_188
+    OLOGIC_X18Y15.D1     net (fanout=1)        0.550   ][520_188
+    OLOGIC_X18Y15.CLK0   Todck                 0.803   acc_register/res_7_1
+                                                       acc_register/res_7_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.253ns (2.064ns logic, 3.189ns route)
-                                                       (39.3% logic, 60.7% route)
+    Total                                      8.828ns (3.266ns logic, 5.562ns route)
+                                                       (37.0% logic, 63.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.044ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_8_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.196ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.025ns (0.252 - 0.277)
+Slack (setup path):     1.651ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_8 (FF)
+  Destination:          acc_register/res_7_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.742ns (Levels of Logic = 8)
+  Clock Path Skew:      0.428ns (0.698 - 0.270)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -144,47 +160,55 @@ Slack (setup path):     0.044ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_8_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_8 to acc_register/res_7_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X29Y57.CQ      Tcko                  0.391   fe_de_register/res_8_1
-                                                       fe_de_register/res_8_1
-    SLICE_X27Y56.B3      net (fanout=11)       0.753   fe_de_register/res_8_1
-    SLICE_X27Y56.B       Tilo                  0.259   acc_register/res_3
-                                                       lut247_1
-    SLICE_X29Y57.B4      net (fanout=7)        0.741   lut247_1
-    SLICE_X29Y57.B       Tilo                  0.259   fe_de_register/res_8_1
-                                                       lut370_43
-    SLICE_X29Y58.C3      net (fanout=18)       0.511   lut370_43
-    SLICE_X29Y58.C       Tilo                  0.259   fe_register/res<2>
-                                                       lut505_92_SW3
-    SLICE_X25Y57.C6      net (fanout=1)        0.505   N6
-    SLICE_X25Y57.C       Tilo                  0.259   ][679_99
-                                                       lut505_92
-    SLICE_X25Y57.D5      net (fanout=3)        0.222   lut505_92
-    SLICE_X25Y57.D       Tilo                  0.259   ][679_99
-                                                       lut511_98
-    SLICE_X25Y58.A3      net (fanout=2)        0.456   ][679_99
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X26Y6.BQ       Tcko                  0.447   fe_de_register/res<8>
+                                                       fe_de_register/res_8
+    SLICE_X28Y6.B4       net (fanout=15)       0.507   fe_de_register/res<8>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X37Y11.B6      net (fanout=2)        1.199   lut224_38
+    SLICE_X37Y11.B       Tilo                  0.259   acc_register/res<7>
+                                                       ][520_188
+    OLOGIC_X18Y15.D1     net (fanout=1)        0.550   ][520_188
+    OLOGIC_X18Y15.CLK0   Todck                 0.803   acc_register/res_7_1
+                                                       acc_register/res_7_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.196ns (2.008ns logic, 3.188ns route)
-                                                       (38.6% logic, 61.4% route)
+    Total                                      8.742ns (3.322ns logic, 5.420ns route)
+                                                       (38.0% logic, 62.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point freg/res_0 (SLICE_X25Y58.A1), 321 paths
+Paths for end point freg/res_0_1 (OLOGIC_X14Y3.D1), 787 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.038ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_11_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.208ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.019ns (0.252 - 0.271)
+Slack (setup path):     1.679ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_9 (FF)
+  Destination:          freg/res_0_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.701ns (Levels of Logic = 9)
+  Clock Path Skew:      0.415ns (0.690 - 0.275)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -193,44 +217,55 @@ Slack (setup path):     0.038ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_11_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_9 to freg/res_0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y57.AQ      Tcko                  0.447   fe_de_register/res_11_1
-                                                       fe_de_register/res_11_1
-    SLICE_X27Y56.C3      net (fanout=11)       0.507   fe_de_register/res_11_1
-    SLICE_X27Y56.C       Tilo                  0.259   acc_register/res_3
-                                                       lut388_146
-    SLICE_X26Y56.B4      net (fanout=8)        0.712   lut388_146
-    SLICE_X26Y56.B       Tilo                  0.203   fe_de_register/res<3>
-                                                       lut392_151
-    SLICE_X23Y57.A6      net (fanout=3)        0.464   lut392_151
-    SLICE_X23Y57.A       Tilo                  0.259   fe_de_register/res<0>
-                                                       buss/G1[4].muxes/mux3/Mmux_y12_1
-    SLICE_X22Y58.CX      net (fanout=4)        0.419   buss/G1[4].muxes/mux3/Mmux_y12
-    SLICE_X22Y58.CMUX    Tcxc                  0.164   ][5_126
-                                                       alu/adder/fa3/co1_SW2
-    SLICE_X22Y58.A6      net (fanout=2)        0.628   N61
-    SLICE_X22Y58.A       Tilo                  0.203   ][5_126
-                                                       lut552_103_SW0
-    SLICE_X25Y58.A1      net (fanout=1)        0.621   N11
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X28Y7.DQ       Tcko                  0.408   fe_de_register/res<9>
+                                                       fe_de_register/res_9
+    SLICE_X28Y6.B1       net (fanout=17)       0.658   fe_de_register/res<9>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X14Y3.D1      net (fanout=2)        0.590   lut228_42
+    OLOGIC_X14Y3.CLK0    Todck                 0.803   freg/res_0_1
+                                                       freg/res_0_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.208ns (1.857ns logic, 3.351ns route)
-                                                       (35.7% logic, 64.3% route)
+    Total                                      8.701ns (3.542ns logic, 5.159ns route)
+                                                       (40.7% logic, 59.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.052ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_10_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.190ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.023ns (0.252 - 0.275)
+Slack (setup path):     1.705ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_10 (FF)
+  Destination:          freg/res_0_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.675ns (Levels of Logic = 9)
+  Clock Path Skew:      0.415ns (0.690 - 0.275)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -239,42 +274,55 @@ Slack (setup path):     0.052ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_10_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_10 to freg/res_0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y56.BQ      Tcko                  0.408   fe_de_register/res<9>
-                                                       fe_de_register/res_10_1
-    SLICE_X29Y56.B1      net (fanout=11)       0.689   fe_de_register/res_10_1
-    SLICE_X29Y56.B       Tilo                  0.259   fe_de_register/res<10>
-                                                       lut248_2
-    SLICE_X22Y58.B4      net (fanout=17)       0.999   lut248_2
-    SLICE_X22Y58.B       Tilo                  0.203   ][5_126
-                                                       ][5_126
-    SLICE_X22Y58.D1      net (fanout=4)        0.490   ][5_126
-    SLICE_X22Y58.CMUX    Topdc                 0.368   ][5_126
-                                                       alu/adder/fa3/co1_SW2_F
-                                                       alu/adder/fa3/co1_SW2
-    SLICE_X22Y58.A6      net (fanout=2)        0.628   N61
-    SLICE_X22Y58.A       Tilo                  0.203   ][5_126
-                                                       lut552_103_SW0
-    SLICE_X25Y58.A1      net (fanout=1)        0.621   N11
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X29Y7.AQ       Tcko                  0.391   fe_de_register/res<11>
+                                                       fe_de_register/res_10
+    SLICE_X28Y6.B2       net (fanout=14)       0.649   fe_de_register/res<10>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X14Y3.D1      net (fanout=2)        0.590   lut228_42
+    OLOGIC_X14Y3.CLK0    Todck                 0.803   freg/res_0_1
+                                                       freg/res_0_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.190ns (1.763ns logic, 3.427ns route)
-                                                       (34.0% logic, 66.0% route)
+    Total                                      8.675ns (3.525ns logic, 5.150ns route)
+                                                       (40.6% logic, 59.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.083ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_9_1 (FF)
-  Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.166ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.252 - 0.268)
+Slack (setup path):     1.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_8 (FF)
+  Destination:          freg/res_0_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.589ns (Levels of Logic = 9)
+  Clock Path Skew:      0.420ns (0.690 - 0.270)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -283,47 +331,58 @@ Slack (setup path):     0.083ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_9_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_8 to freg/res_0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y56.AQ      Tcko                  0.447   fe_de_register/res<3>
-                                                       fe_de_register/res_9_1
-    SLICE_X27Y56.C2      net (fanout=11)       0.465   fe_de_register/res_9_1
-    SLICE_X27Y56.C       Tilo                  0.259   acc_register/res_3
-                                                       lut388_146
-    SLICE_X26Y56.B4      net (fanout=8)        0.712   lut388_146
-    SLICE_X26Y56.B       Tilo                  0.203   fe_de_register/res<3>
-                                                       lut392_151
-    SLICE_X23Y57.A6      net (fanout=3)        0.464   lut392_151
-    SLICE_X23Y57.A       Tilo                  0.259   fe_de_register/res<0>
-                                                       buss/G1[4].muxes/mux3/Mmux_y12_1
-    SLICE_X22Y58.CX      net (fanout=4)        0.419   buss/G1[4].muxes/mux3/Mmux_y12
-    SLICE_X22Y58.CMUX    Tcxc                  0.164   ][5_126
-                                                       alu/adder/fa3/co1_SW2
-    SLICE_X22Y58.A6      net (fanout=2)        0.628   N61
-    SLICE_X22Y58.A       Tilo                  0.203   ][5_126
-                                                       lut552_103_SW0
-    SLICE_X25Y58.A1      net (fanout=1)        0.621   N11
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
-                                                       freg/res_0
+    SLICE_X26Y6.BQ       Tcko                  0.447   fe_de_register/res<8>
+                                                       fe_de_register/res_8
+    SLICE_X28Y6.B4       net (fanout=15)       0.507   fe_de_register/res<8>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X14Y3.D1      net (fanout=2)        0.590   lut228_42
+    OLOGIC_X14Y3.CLK0    Todck                 0.803   freg/res_0_1
+                                                       freg/res_0_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.166ns (1.857ns logic, 3.309ns route)
-                                                       (35.9% logic, 64.1% route)
+    Total                                      8.589ns (3.581ns logic, 5.008ns route)
+                                                       (41.7% logic, 58.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point freg/res_0 (SLICE_X25Y58.A4), 442 paths
+Paths for end point freg/res_0 (OLOGIC_X13Y3.D1), 787 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.061ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_9_1 (FF)
+Slack (setup path):     1.807ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_9 (FF)
   Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.188ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.016ns (0.252 - 0.268)
+  Requirement:          10.000ns
+  Data Path Delay:      8.565ns (Levels of Logic = 9)
+  Clock Path Skew:      0.407ns (0.559 - 0.152)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -332,41 +391,55 @@ Slack (setup path):     0.061ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_9_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_9 to freg/res_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y56.AQ      Tcko                  0.447   fe_de_register/res<3>
-                                                       fe_de_register/res_9_1
-    SLICE_X29Y56.D4      net (fanout=11)       0.884   fe_de_register/res_9_1
-    SLICE_X29Y56.D       Tilo                  0.259   fe_de_register/res<10>
-                                                       lut335_22
-    SLICE_X27Y56.A2      net (fanout=1)        0.623   lut335_22
-    SLICE_X27Y56.A       Tilo                  0.259   acc_register/res_3
-                                                       lut338_25
-    SLICE_X25Y56.C5      net (fanout=8)        0.784   ][585_26
-    SLICE_X25Y56.C       Tilo                  0.259   fe_de_register/res<4>
-                                                       lut567_116
-    SLICE_X24Y58.A2      net (fanout=3)        0.772   ][685_117
-    SLICE_X24Y58.A       Tilo                  0.205   lut871_209
-                                                       lut718_164_SW0_SW0_SW1
-    SLICE_X25Y58.A4      net (fanout=1)        0.374   N33
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
+    SLICE_X28Y7.DQ       Tcko                  0.408   fe_de_register/res<9>
+                                                       fe_de_register/res_9
+    SLICE_X28Y6.B1       net (fanout=17)       0.658   fe_de_register/res<9>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X13Y3.D1      net (fanout=2)        0.454   lut228_42
+    OLOGIC_X13Y3.CLK0    Todck                 0.803   freg/res<0>
                                                        freg/res_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.188ns (1.751ns logic, 3.437ns route)
-                                                       (33.8% logic, 66.2% route)
+    Total                                      8.565ns (3.542ns logic, 5.023ns route)
+                                                       (41.4% logic, 58.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.187ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_10_1 (FF)
+Slack (setup path):     1.833ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_10 (FF)
   Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.055ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.023ns (0.252 - 0.275)
+  Requirement:          10.000ns
+  Data Path Delay:      8.539ns (Levels of Logic = 9)
+  Clock Path Skew:      0.407ns (0.559 - 0.152)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -375,41 +448,55 @@ Slack (setup path):     0.187ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_10_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_10 to freg/res_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y56.BQ      Tcko                  0.408   fe_de_register/res<9>
-                                                       fe_de_register/res_10_1
-    SLICE_X29Y56.B1      net (fanout=11)       0.689   fe_de_register/res_10_1
-    SLICE_X29Y56.B       Tilo                  0.259   fe_de_register/res<10>
-                                                       lut248_2
-    SLICE_X25Y56.B6      net (fanout=17)       0.999   lut248_2
-    SLICE_X25Y56.B       Tilo                  0.259   fe_de_register/res<4>
-                                                       lut551_102_SW0
-    SLICE_X25Y56.A5      net (fanout=1)        0.187   N40
-    SLICE_X25Y56.A       Tilo                  0.259   fe_de_register/res<4>
-                                                       lut551_102
-    SLICE_X24Y58.A3      net (fanout=3)        1.094   lut551_102
-    SLICE_X24Y58.A       Tilo                  0.205   lut871_209
-                                                       lut718_164_SW0_SW0_SW1
-    SLICE_X25Y58.A4      net (fanout=1)        0.374   N33
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
+    SLICE_X29Y7.AQ       Tcko                  0.391   fe_de_register/res<11>
+                                                       fe_de_register/res_10
+    SLICE_X28Y6.B2       net (fanout=14)       0.649   fe_de_register/res<10>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X13Y3.D1      net (fanout=2)        0.454   lut228_42
+    OLOGIC_X13Y3.CLK0    Todck                 0.803   freg/res<0>
                                                        freg/res_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.055ns (1.712ns logic, 3.343ns route)
-                                                       (33.9% logic, 66.1% route)
+    Total                                      8.539ns (3.525ns logic, 5.014ns route)
+                                                       (41.3% logic, 58.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.190ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               fe_de_register/res_9_1 (FF)
+Slack (setup path):     1.919ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               fe_de_register/res_8 (FF)
   Destination:          freg/res_0 (FF)
-  Requirement:          5.300ns
-  Data Path Delay:      5.059ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.252 - 0.268)
+  Requirement:          10.000ns
+  Data Path Delay:      8.453ns (Levels of Logic = 9)
+  Clock Path Skew:      0.407ns (0.677 - 0.270)
   Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -418,150 +505,164 @@ Slack (setup path):     0.190ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: fe_de_register/res_9_1 to freg/res_0
+  Maximum Data Path at Slow Process Corner: fe_de_register/res_8 to freg/res_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y56.AQ      Tcko                  0.447   fe_de_register/res<3>
-                                                       fe_de_register/res_9_1
-    SLICE_X29Y56.D4      net (fanout=11)       0.884   fe_de_register/res_9_1
-    SLICE_X29Y56.D       Tilo                  0.259   fe_de_register/res<10>
-                                                       lut335_22
-    SLICE_X27Y56.A2      net (fanout=1)        0.623   lut335_22
-    SLICE_X27Y56.A       Tilo                  0.259   acc_register/res_3
-                                                       lut338_25
-    SLICE_X25Y57.A6      net (fanout=8)        0.341   ][585_26
-    SLICE_X25Y57.A       Tilo                  0.259   ][679_99
-                                                       lut500_87
-    SLICE_X24Y57.D6      net (fanout=8)        0.533   lut500_87
-    SLICE_X24Y57.D       Tilo                  0.205   acc_register/res<2>
-                                                       lut564_114
-    SLICE_X24Y58.A5      net (fanout=4)        0.348   lut564_114
-    SLICE_X24Y58.A       Tilo                  0.205   lut871_209
-                                                       lut718_164_SW0_SW0_SW1
-    SLICE_X25Y58.A4      net (fanout=1)        0.374   N33
-    SLICE_X25Y58.CLK     Tas                   0.322   freg/res<1>
-                                                       lut719_165
+    SLICE_X26Y6.BQ       Tcko                  0.447   fe_de_register/res<8>
+                                                       fe_de_register/res_8
+    SLICE_X28Y6.B4       net (fanout=15)       0.507   fe_de_register/res<8>
+    SLICE_X28Y6.B        Tilo                  0.205   fe_de_register/res<3>
+                                                       lut188_4
+    SLICE_X31Y6.D4       net (fanout=4)        0.497   lut188_4
+    SLICE_X31Y6.D        Tilo                  0.259   lut189_5
+                                                       lut189_5
+    SLICE_X31Y6.C2       net (fanout=1)        1.077   lut189_5
+    SLICE_X31Y6.C        Tilo                  0.259   lut189_5
+                                                       lut190_6
+    SLICE_X29Y6.B2       net (fanout=7)        0.704   lut190_6
+    SLICE_X29Y6.B        Tilo                  0.259   lut194_10
+                                                       lut196_12
+    SLICE_X29Y6.A5       net (fanout=4)        0.208   lut196_12
+    SLICE_X29Y6.A        Tilo                  0.259   lut194_10
+                                                       lut199_15
+    SLICE_X29Y5.B5       net (fanout=3)        0.367   lut199_15
+    SLICE_X29Y5.B        Tilo                  0.259   lut214_28
+                                                       lut204_20
+    SLICE_X29Y5.C4       net (fanout=4)        0.311   lut204_20
+    SLICE_X29Y5.CMUX     Tilo                  0.313   lut214_28
+                                                       lut224_38
+    SLICE_X29Y2.B5       net (fanout=2)        0.555   lut224_38
+    SLICE_X29Y2.B        Tilo                  0.259   ][449_136
+                                                       lut225_39
+    SLICE_X29Y2.A5       net (fanout=2)        0.192   ][449_136
+    SLICE_X29Y2.A        Tilo                  0.259   ][449_136
+                                                       lut228_42
+    OLOGIC_X13Y3.D1      net (fanout=2)        0.454   lut228_42
+    OLOGIC_X13Y3.CLK0    Todck                 0.803   freg/res<0>
                                                        freg/res_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.059ns (1.956ns logic, 3.103ns route)
-                                                       (38.7% logic, 61.3% route)
+    Total                                      8.453ns (3.581ns logic, 4.872ns route)
+                                                       (42.4% logic, 57.6% route)
 
 --------------------------------------------------------------------------------
 
-Hold Paths: TS_CLK = PERIOD TIMEGRP "CLK" 5.3 ns HIGH 50%;
+Hold Paths: TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point instruction_memory/Mram_memory9/B (SLICE_X30Y57.CX), 1 path
+Paths for end point acc_register/res_6 (SLICE_X37Y11.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.347ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               fe_register/res_6 (FF)
-  Destination:          instruction_memory/Mram_memory9/B (RAM)
+Slack (hold path):      0.447ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               acc_register/res_6 (FF)
+  Destination:          acc_register/res_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.346ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.034 - 0.035)
-  Source Clock:         CLK_BUFGP rising at 5.300ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Data Path Delay:      0.447ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: fe_register/res_6 to instruction_memory/Mram_memory9/B
+  Minimum Data Path at Fast Process Corner: acc_register/res_6 to acc_register/res_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y58.BQ      Tcko                  0.198   fe_register/res<7>
-                                                       fe_register/res_6
-    SLICE_X30Y57.CX      net (fanout=23)       0.251   fe_register/res<6>
-    SLICE_X30Y57.CLK     Tah         (-Th)     0.103   InstrMemOut<8>
-                                                       instruction_memory/Mram_memory9/B
+    SLICE_X37Y11.AQ      Tcko                  0.198   acc_register/res<7>
+                                                       acc_register/res_6
+    SLICE_X37Y11.A6      net (fanout=7)        0.034   acc_register/res<6>
+    SLICE_X37Y11.CLK     Tah         (-Th)    -0.215   acc_register/res<7>
+                                                       ][523_191
+                                                       acc_register/res_6
     -------------------------------------------------  ---------------------------
-    Total                                      0.346ns (0.095ns logic, 0.251ns route)
-                                                       (27.5% logic, 72.5% route)
+    Total                                      0.447ns (0.413ns logic, 0.034ns route)
+                                                       (92.4% logic, 7.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point instruction_memory/Mram_memory9/D (SLICE_X30Y57.CX), 1 path
+Paths for end point fe_register/res_3 (SLICE_X15Y2.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.347ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               fe_register/res_6 (FF)
-  Destination:          instruction_memory/Mram_memory9/D (RAM)
+Slack (hold path):      0.451ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               fe_register/res_3 (FF)
+  Destination:          fe_register/res_3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.346ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.034 - 0.035)
-  Source Clock:         CLK_BUFGP rising at 5.300ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Data Path Delay:      0.451ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: fe_register/res_6 to instruction_memory/Mram_memory9/D
+  Minimum Data Path at Fast Process Corner: fe_register/res_3 to fe_register/res_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y58.BQ      Tcko                  0.198   fe_register/res<7>
-                                                       fe_register/res_6
-    SLICE_X30Y57.CX      net (fanout=23)       0.251   fe_register/res<6>
-    SLICE_X30Y57.CLK     Tah         (-Th)     0.103   InstrMemOut<8>
-                                                       instruction_memory/Mram_memory9/D
+    SLICE_X15Y2.DQ       Tcko                  0.198   fe_register/res<3>
+                                                       fe_register/res_3
+    SLICE_X15Y2.D6       net (fanout=42)       0.038   fe_register/res<3>
+    SLICE_X15Y2.CLK      Tah         (-Th)    -0.215   fe_register/res<3>
+                                                       lut520_164
+                                                       fe_register/res_3
     -------------------------------------------------  ---------------------------
-    Total                                      0.346ns (0.095ns logic, 0.251ns route)
-                                                       (27.5% logic, 72.5% route)
+    Total                                      0.451ns (0.413ns logic, 0.038ns route)
+                                                       (91.6% logic, 8.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point instruction_memory/Mram_memory9/A (SLICE_X30Y57.D6), 1 path
+Paths for end point acc_register/res_5 (SLICE_X34Y12.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.396ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               fe_register/res_5 (FF)
-  Destination:          instruction_memory/Mram_memory9/A (RAM)
+Slack (hold path):      0.452ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               acc_register/res_5 (FF)
+  Destination:          acc_register/res_5 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.395ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.034 - 0.035)
-  Source Clock:         CLK_BUFGP rising at 5.300ns
-  Destination Clock:    CLK_BUFGP rising at 5.300ns
+  Data Path Delay:      0.452ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: fe_register/res_5 to instruction_memory/Mram_memory9/A
+  Minimum Data Path at Fast Process Corner: acc_register/res_5 to acc_register/res_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y58.AQ      Tcko                  0.198   fe_register/res<7>
-                                                       fe_register/res_5
-    SLICE_X30Y57.D6      net (fanout=44)       0.186   fe_register/res<5>
-    SLICE_X30Y57.CLK     Tah         (-Th)    -0.011   InstrMemOut<8>
-                                                       instruction_memory/Mram_memory9/A
+    SLICE_X34Y12.DQ      Tcko                  0.234   acc_register/res<5>
+                                                       acc_register/res_5
+    SLICE_X34Y12.D6      net (fanout=6)        0.021   acc_register/res<5>
+    SLICE_X34Y12.CLK     Tah         (-Th)    -0.197   acc_register/res<5>
+                                                       ][526_194
+                                                       acc_register/res_5
     -------------------------------------------------  ---------------------------
-    Total                                      0.395ns (0.209ns logic, 0.186ns route)
-                                                       (52.9% logic, 47.1% route)
+    Total                                      0.452ns (0.431ns logic, 0.021ns route)
+                                                       (95.4% logic, 4.6% route)
 
 --------------------------------------------------------------------------------
 
-Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 5.3 ns HIGH 50%;
+Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
-Slack: 3.570ns (period - min period limit)
-  Period: 5.300ns
+Slack: 8.270ns (period - min period limit)
+  Period: 10.000ns
   Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
   Physical resource: CLK_BUFGP/BUFG/I0
   Logical resource: CLK_BUFGP/BUFG/I0
   Location pin: BUFGMUX_X3Y13.I0
   Clock network: CLK_BUFGP/IBUFG
 --------------------------------------------------------------------------------
-Slack: 3.661ns (period - min period limit)
-  Period: 5.300ns
+Slack: 8.361ns (period - min period limit)
+  Period: 10.000ns
   Min period limit: 1.639ns (610.128MHz) (Tockper)
-  Physical resource: fe_de_register/res_0_1/CLK0
-  Logical resource: fe_de_register/res_0_1/CK0
-  Location pin: OLOGIC_X11Y60.CLK0
+  Physical resource: de_ex_register/res_7_1/CLK0
+  Logical resource: de_ex_register/res_7_1/CK0
+  Location pin: OLOGIC_X18Y7.CLK0
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
-Slack: 3.661ns (period - min period limit)
-  Period: 5.300ns
+Slack: 8.361ns (period - min period limit)
+  Period: 10.000ns
   Min period limit: 1.639ns (610.128MHz) (Tockper)
-  Physical resource: fe_de_register/res_1_1/CLK0
-  Logical resource: fe_de_register/res_1_1/CK0
-  Location pin: OLOGIC_X12Y63.CLK0
+  Physical resource: fe_de_register/res_3_1/CLK0
+  Logical resource: fe_de_register/res_3_1/CK0
+  Location pin: OLOGIC_X8Y1.CLK0
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
 
-1 constraint not met.
+All constraints were met.
 
 
 Data Sheet report:
@@ -573,32 +674,32 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.313|         |         |         |
+CLK            |    8.466|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 1  Score: 13  (Setup/Max: 13, Hold: 0)
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 12092 paths, 0 nets, and 1344 connections
+Constraints cover 13209 paths, 0 nets, and 1054 connections
 
 Design statistics:
-   Minimum period:   5.313ns{1}   (Maximum frequency: 188.218MHz)
+   Minimum period:   8.466ns{1}   (Maximum frequency: 118.120MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Feb 21 16:06:28 2017 
+Analysis completed Tue Feb 28 16:01:45 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 221 MB
+Peak Memory Usage: 220 MB
 
 
 
