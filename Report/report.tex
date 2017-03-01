@@ -217,64 +217,30 @@ We began the verifictation by observing the PC value. Since it should just go fr
 \newpage
 \subsection{Performance, Area and Power Analysis}
 
-We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each version they all had the process properties in table \ref{tab:common} in the appendix in common.
+We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each version they all had the process properties in table \ref{tab:common} in the appendix in common. We evaluated the designs by checking the clock period in the static timing report, the number of slices used in the map report and the power usage by using the XPower Analyzer tool. Our general strategy was to iteratively change the process properties, evaluate the specific metric, and check for improvements. 
 
-Some of the results were the same for all versions.
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|l|l|} \hline
-  Most power hungry module & Processor entity \\ \hline
-  Most area-costly module & Processor entity \\ \hline
-  Leakage power & 0.022 W \\ \hline
-\end{tabular}
-\end{table}
+For each optimization we did there's a table in the appendix showing the data below. Properties and results that were the same in all cases are also found in the appendix. 
+\begin{itemize}
+  \item Process properties.
+  \item Results.
+  \item Modules ranked by power dissipation.
+\end{itemize}
 
 \textbf{Performance-optimized} \\
-When optimizing for performance our goal was to get as high clock frequency by any mean at our disposal. Our general strategy when trying to accomplish this was to allow the tool to use all the power and area that it needed. We also used a one-hot representation in our FSM encoding to get as simple logic as possible and hence a shorter critical path. See table \ref{tab:performance} in the appendix for all details. We obtained the results in the table below.
-
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|} \hline
-  \textbf{Metric} & \textbf{Result} \\ \hline
-  Performance & clockperiod: 5.313 ns, critical path: FE/DE register to FReg. \\
-  Area & 275 slices, 63 slice registers and 212 LUT slices \\
-  Power & Total: 0.00481 W, dynamic power: 0.216 W \\ \hline
-\end{tabular}}
+When optimizing for performance our goal was to get as high clock frequency by any mean at our disposal. Our general strategy when trying to accomplish this was to allow the tool to use all the power and area that it needed. We also used a one-hot representation in our FSM encoding to get as simple logic as possible and hence a shorter critical path. See table \ref{tab:performance} in the appendix for all details. We obtained the results showed in table \ref{tab:perf_res}.
 
 To achieve the above results we used the timing constraint 5.3 ns. We began with 7 ns as the timing constraint and gradually lowered it. Even if we violated it, we continued to lower and it gave good results. Our current timing constraint is violated but it still produced the best result.
 
 \textbf{Area-optimized}\\
-When optimizing for area our goal was to use as few slices as possible. We accomplished this by having loose timing constraints and settings that would result in few gates. See table \ref{tab:area} in the appendix for all details. We obtained the results in the table below.
-
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|} \hline
-  \textbf{Metric} & \textbf{Result} \\ \hline
-  Performance & clockperiod: 8.383 ns, critical path: FE/DE register to DE/EX register. \\
-  Area & 189 slices, 39 slice registers and 150 LUT slices \\
-  Power & Total: 0.00189 W, dynamic power: 0.160 W \\ \hline
-\end{tabular}}
+When optimizing for area our goal was to use as few slices as possible. We accomplished this by having loose timing constraints and settings that would result in few gates. See table \ref{tab:area} in the appendix for all details. We obtained the results showed in table \ref{tab:area_res}.
 
 \textbf{Power-optimized}\\
-When optimizing for power we generally used the same settings as for area. We thought that a smaller circuit would require less power (fewer LUTs to power, and shorter wires which reduces capacitance). For all details see table \ref{tab:power} in the appendix. We obtained the results in the table below.
-
-\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
-  \textbf{Metric} & \textbf{Result} \\ \hline
-  Performance & clockperiod: 8.466 ns, critical path: FE/DE register to ACC register. \\
-  Area & 179 slices, 39 slice registers and 140 LUT slices \\
-  Power & Total: 0.00154 W, dynamic power: 0.159 W \\ \hline
-\end{tabular}}
+When optimizing for power we generally used the same settings as for area. We thought that a smaller circuit would require less power (fewer LUTs to power, and shorter wires which reduces capacitance). For all details see table \ref{tab:power} in the appendix. We obtained the results showed in table \ref{tab:power_res}.
 
 We believe the reason we got a smaller area when we optimized for power is that the tool realises it can save power by reducing area in some parts of the design. 
 
 \textbf{Efficiency-optimized}\\
-To create a design which was more efficient overall\footnote{According to the formula given in the lab PM.}, we lowered the timing constraint for the power optimized design from 10 ns (as it had been in both the area and power optimized versions) to 9 ns. This improved all three metrics. However, lowering it to 8.5 ns made all three metrics worse so we stopped here. We did not change any process properties since we believed the current settings were good for both power and area. Any change to improve performance would be very slight, and worsen the two other metrics significantly. We obtained the resukts in the table below.
-
-\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
-  \textbf{Metric} & \textbf{Result} \\ \hline
-  Performance & clockperiod: 8.003 ns, critical path: FE/DE register to ACC register. \\
-  Area & 179 slices, 39 slice registers and 140 LUT slices \\
-  Power & Total: 0.00153 W, dynamic power: 0.160 W \\ \hline
-\end{tabular}}
+To create a design which was more efficient overall\footnote{According to the formula given in the lab PM.}, we lowered the timing constraint for the power optimized design from 10 ns (as it had been in both the area and power optimized versions) to 9 ns. This improved all three metrics. However, lowering it to 8.5 ns made all three metrics worse so we stopped here. We did not change any process properties since we believed the current settings were good for both power and area. Any change to improve performance would be very slight, and worsen the two other metrics significantly. We obtained the results showed in table \ref{tab:eff_res}.
 
 It is interesting to note that the efficiency-optimized version is better than or same as the power-optimized in all three metrics. The performance improvement was expected since we set a tighter constraint. The total on-chip power is only 0.01 mW lower which is within the margin of error. However, the dynamic power is actually 0.001 W higher, so it appears it consumes more power after all.
 
@@ -403,6 +369,64 @@ We realize that if the goal was to design an ASIC much more work would be needed
 \end{tabular}}
 \caption{Design goals for the power-optimized version.}
 \label{tab:power}
+\end{table}
+
+\subsection{Results}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  Most power hungry module & Processor entity \\ \hline
+  Most area-costly module & Processor entity \\ \hline
+  Leakage power & 0.022 W \\ \hline
+\end{tabular}
+\caption{Results which were the same in all three cases.}
+\end{table}
+
+\begin{table}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 5.313 ns, critical path: FE/DE register to FReg. \\
+  Area & 275 slices, 63 slice registers and 212 LUT slices \\
+  Power & Total: 0.00481 W, dynamic power: 0.216 W \\ \hline
+\end{tabular}}
+\caption{Results obtained when optimizing for performance.}
+\label{tab:perf_res}
+\end{table}
+
+\begin{table}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.383 ns, critical path: FE/DE register to DE/EX register. \\
+  Area & 189 slices, 39 slice registers and 150 LUT slices \\
+  Power & Total: 0.00189 W, dynamic power: 0.160 W \\ \hline
+\end{tabular}}
+\caption{Results obtained when optimizing for area.}
+\label{tab:area_res}
+\end{table}
+
+\begin{table}
+\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.466 ns, critical path: FE/DE register to ACC register. \\
+  Area & 179 slices, 39 slice registers and 140 LUT slices \\
+  Power & Total: 0.00154 W, dynamic power: 0.159 W \\ \hline
+\end{tabular}}
+\caption{Results obtained when optimizing for power.}
+\label{tab:power_res}
+\end{table}
+
+\begin{table}
+\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.003 ns, critical path: FE/DE register to ACC register. \\
+  Area & 179 slices, 39 slice registers and 140 LUT slices \\
+  Power & Total: 0.00153 W, dynamic power: 0.160 W \\ \hline
+\end{tabular}}
+\caption{Results obtained when optimizing for efficiency.}
+\label{tab:eff_res}
 \end{table}
 
 \newpage

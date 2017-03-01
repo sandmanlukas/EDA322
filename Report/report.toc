@@ -5,7 +5,9 @@
 \contentsline {subsection}{\numberline {2.3}Controller}{6}
 \contentsline {subsection}{\numberline {2.4}Processor's Testbench}{8}
 \contentsline {subsection}{\numberline {2.5}ChAcc on Nexys 3 board}{9}
-\contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis \emph {(Optional)}}{11}
+\contentsline {subsection}{\numberline {2.6}Performance, Area and Power Analysis}{11}
 \contentsline {section}{\numberline {3}Analysis}{13}
 \contentsline {section}{\numberline {A}Appendix}{14}
-\contentsline {subsection}{\numberline {A.1}Deisgn goals for the three different designs}{14}
+\contentsline {subsection}{\numberline {A.1}Process properties for the three different versions}{14}
+\contentsline {subsection}{\numberline {A.2}Results}{14}
+\contentsline {subsection}{\numberline {A.3}Modules ranked by power dissipation}{15}
