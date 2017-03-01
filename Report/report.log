@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  1 MAR 2017 08:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  1 MAR 2017 09:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,32 +496,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
  [1
 
 ]
 <fulladder.png, id=19, 552.0625pt x 351.3125pt>
 File: fulladder.png Graphic file (type png)
  <use fulladder.png>
-Package pdftex.def Info: fulladder.png used on input line 64.
+Package pdftex.def Info: fulladder.png used on input line 63.
 (pdftex.def)             Requested size: 180.0pt x 114.54507pt.
 
 <fulladderfromhalfadder.jpg, id=21, 813.0375pt x 349.305pt>
 File: fulladderfromhalfadder.jpg Graphic file (type jpg)
 
 <use fulladderfromhalfadder.jpg>
-Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 73.
+Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 72.
 (pdftex.def)             Requested size: 180.0pt x 77.33235pt.
  <rca.jpg, id=22, 804.75656pt x 234.8775pt>
 File: rca.jpg Graphic file (type jpg)
 
 <use rca.jpg>
-Package pdftex.def Info: rca.jpg used on input line 82.
+Package pdftex.def Info: rca.jpg used on input line 81.
 (pdftex.def)             Requested size: 323.9978pt x 94.56218pt.
 
 
@@ -532,46 +532,43 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: subtractionlogic.jpg Graphic file (type jpg)
 
 <use subtractionlogic.jpg>
-Package pdftex.def Info: subtractionlogic.jpg used on input line 95.
+Package pdftex.def Info: subtractionlogic.jpg used on input line 94.
 (pdftex.def)             Requested size: 323.9978pt x 83.44514pt.
  [3 <./rca.jpg> <./subtractionlogic.jpg>]
 <inst_mem_2.PNG, id=32, 833.36343pt x 66.2475pt>
 File: inst_mem_2.PNG Graphic file (type png)
  <use inst_mem_2.PNG>
-Package pdftex.def Info: inst_mem_2.PNG used on input line 114.
+Package pdftex.def Info: inst_mem_2.PNG used on input line 113.
 (pdftex.def)             Requested size: 360.0pt x 28.61829pt.
  [4 <./inst_mem_2.PNG>] <datapath.png, id=38, 703.12688pt x 436.63126pt>
 File: datapath.png Graphic file (type png)
 
 <use datapath.png>
-Package pdftex.def Info: datapath.png used on input line 138.
+Package pdftex.def Info: datapath.png used on input line 137.
 (pdftex.def)             Requested size: 360.0pt x 223.55177pt.
  [5 <./datapath.png>]
 <states.jpg, id=45, 3694.80376pt x 2972.10374pt>
 File: states.jpg Graphic file (type jpg)
  <use states.jpg>
-Package pdftex.def Info: states.jpg used on input line 152.
+Package pdftex.def Info: states.jpg used on input line 151.
 (pdftex.def)             Requested size: 251.9989pt x 202.6718pt.
  [6 <./states.jpg>] <controller_waves.JPG, id=49, 653.44125pt x 235.63031pt>
 File: controller_waves.JPG Graphic file (type jpg)
 
 <use controller_waves.JPG>
-Package pdftex.def Info: controller_waves.JPG used on input line 170.
+Package pdftex.def Info: controller_waves.JPG used on input line 169.
 (pdftex.def)             Requested size: 270.0pt x 97.36049pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
 
  []
 
 [7 <./controller_waves.JPG>] [8] [9] [10] [11]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 243.
+(Font)              <9> on input line 242.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 243.
+(Font)              <5> on input line 242.
  [12] [13]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -588,7 +585,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15] [16] [17] (./report.aux)
+[15]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16] [17] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -596,7 +600,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2020 strings out of 493013
  26674 string characters out of 6135682
- 108403 words of memory out of 5000000
+ 105403 words of memory out of 5000000
  5532 multiletter control sequences out of 15000+600000
  11062 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -613,7 +617,7 @@ sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (19 pages, 2996755 bytes).
+Output written on report.pdf (19 pages, 2999272 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream

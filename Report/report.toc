@@ -9,5 +9,5 @@
 \contentsline {section}{\numberline {3}Analysis}{13}
 \contentsline {section}{\numberline {A}Appendix}{14}
 \contentsline {subsection}{\numberline {A.1}Process properties for the three different versions}{14}
-\contentsline {subsection}{\numberline {A.2}Results}{14}
-\contentsline {subsection}{\numberline {A.3}Modules ranked by power dissipation}{15}
+\contentsline {subsection}{\numberline {A.2}Results}{15}
+\contentsline {subsection}{\numberline {A.3}Modules ranked by power dissipation}{16}
