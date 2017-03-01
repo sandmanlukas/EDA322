@@ -200,8 +200,7 @@ We encountered three problems in particular:
 
 When we simulated our processor all of our tests were completed successfully. We didn't get any indications that we should make any of the changes mentioned in bullets 1 and 2. It was when we synthesized our design that we got warnings about the sensitivity list and not exhausting all possibilities. Since it's hardware we're dealing with we have to make sure that the VHDL we write is possible to synthesize into well functioning hardware. If the synthesis tool ask us to make certain changes it's a good idea to follow its advice. 
 
-\textbf{Verifying the correctness}\\
-
+\textbf{Verifying the correctness}
 We began the verifictation by observing the PC value. Since it should just go from 0 to 6 it would be easy to detect an error and follow the progress. But instead in jumped between 0 and 6 directly, and sometimes to 1 and 2, indicating that something was wrong. This lead us to the conclusions above. After fixing it, we observed PC again and this time it went from 0 all the way to 6 and the started over again from 0, as we expected. Next we observed the opcode. The opcode was also easy to follow since we could just compare it to the \textit{inst\_mem.mif} file. The opcode sequence was correct as well. Finally we observed the \textit{Display} sequence. It correctly showed the Fibonacci sequence. Table 1 shows the sequence for all three seven segment displays. This was the same sequence we saw in Modelsim.
 
 \begin{table}[h!]
@@ -216,10 +215,83 @@ We began the verifictation by observing the PC value. Since it should just go fr
 \end{table}
 
 \newpage
-\subsection{Performance, Area and Power Analysis \emph{(Optional)}}
-(max: 2 pages)
-\\\\
-To be announced in the Lab7PM.
+\subsection{Performance, Area and Power Analysis}
+
+We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each version they all had the process properties in table \ref{tab:common} in the appendix in common.
+
+Some of the results were the same for all versions.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  Most power hungry module & Processor entity \\ \hline
+  Most area-costly module & Processor entity \\ \hline
+  Leakage power & 0.022 W \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{Performance-optimized} \\
+When optimizing for performance our goal was to get as high clock frequency by any mean at our disposal. Our general strategy when trying to accomplish this was to allow the tool to use all the power and area that it needed. We also used a one-hot representation in our FSM encoding to get as simple logic as possible and hence a shorter critical path. See table \ref{tab:performance} in the appendix for all details. We obtained the results in the table below.
+
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 5.313 ns, critical path: FE/DE register to FReg. \\
+  Area & 275 slices, 63 slice registers and 212 LUT slices \\
+  Power & Total: 0.00481 W, dynamic power: 0.216 W \\ \hline
+\end{tabular}}
+
+To achieve the above results we used the timing constraint 5.3 ns. We began with 7 ns as the timing constraint and gradually lowered it. Even if we violated it, we continued to lower and it gave good results. Our current timing constraint is violated but it still produced the best result.
+
+\textbf{Area-optimized}\\
+When optimizing for area our goal was to use as few slices as possible. We accomplished this by having loose timing constraints and settings that would result in few gates. See table \ref{tab:area} in the appendix for all details. We obtained the results in the table below.
+
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.383 ns, critical path: FE/DE register to DE/EX register. \\
+  Area & 189 slices, 39 slice registers and 150 LUT slices \\
+  Power & Total: 0.00189 W, dynamic power: 0.160 W \\ \hline
+\end{tabular}}
+
+\textbf{Power-optimized}\\
+When optimizing for power we generally used the same settings as for area. We thought that a smaller circuit would require less power (fewer LUTs to power, and shorter wires which reduces capacitance). For all details see table \ref{tab:power} in the appendix. We obtained the results in the table below.
+
+\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.466 ns, critical path: FE/DE register to ACC register. \\
+  Area & 179 slices, 39 slice registers and 140 LUT slices \\
+  Power & Total: 0.00154 W, dynamic power: 0.159 W \\ \hline
+\end{tabular}}
+
+We believe the reason we got a smaller area when we optimized for power is that the tool realises it can save power by reducing area in some parts of the design. 
+
+\textbf{Efficiency-optimized}\\
+To create a design which was more efficient overall\footnote{According to the formula given in the lab PM.}, we lowered the timing constraint for the power optimized design from 10 ns (as it had been in both the area and power optimized versions) to 9 ns. This improved all three metrics. However, lowering it to 8.5 ns made all three metrics worse so we stopped here. We did not change any process properties since we believed the current settings were good for both power and area. Any change to improve performance would be very slight, and worsen the two other metrics significantly. We obtained the resukts in the table below.
+
+\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|} \hline
+  \textbf{Metric} & \textbf{Result} \\ \hline
+  Performance & clockperiod: 8.003 ns, critical path: FE/DE register to ACC register. \\
+  Area & 179 slices, 39 slice registers and 140 LUT slices \\
+  Power & Total: 0.00153 W, dynamic power: 0.160 W \\ \hline
+\end{tabular}}
+
+It is interesting to note that the efficiency-optimized version is better than or same as the power-optimized in all three metrics. The performance improvement was expected since we set a tighter constraint. The total on-chip power is only 0.01 mW lower which is within the margin of error. However, the dynamic power is actually 0.001 W higher, so it appears it consumes more power after all.
+
+\textbf{Overview of the results}\\
+We did four versions, each optimized for a certain metric. We set properties we thought would improve the version in the current metric. However, in the end the efficiency-optimized is the best in the metrics area, power and efficiency. The performance-optimized was best in performance though. All details are in the table below.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l||l|l|l|l|} \hline
+  \textbf{Metric} & \textbf{Performace} & \textbf{Area} & \textbf{Power} & \textbf{Overall efficiency}  \\ \hline
+  Performance & 188.218 & 275 & 0.00416 & 164.52 \\
+  Area & 119.29 & 189 &0.00184 & 343.02 \\
+  Power & 118.119 & 179 & 0.00146 & 451.97 \\
+  Efficiency & 124.95 & 179 & 0.00143 & 488.155\\ \hline
+  \end{tabular}
+  \caption{Overview of the result in the four metrics for the four designs. Each row is a design optimized for a certain matrics. The units are MHz, number of slices and Watts.}
+\end{table}
 
 \newpage
 \section{Analysis}
@@ -241,9 +313,141 @@ We realize that if the goal was to design an ASIC much more work would be needed
 \begin{appendix}
 
 \section{Appendix}
-(max: 4 pages)
-\\\\
-In the appendix, you can include extra figures or tables that don't fit in the main body of the lab report. 
+
+\subsection{Process properties for the three different versions}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|} \hline
+  \textbf{Process property} & \textbf{Setting} & \textbf{Comment} \\ \hline
+  Optimization effort & High & We wanted the tool to optimize\\
+  & & our design as much as possible. \\ \hline
+  Keep hierarchy & False & Allows the tool to flatten the design in \\
+  & & order to optimize it. \\ \hline
+  Allow logic optimization & True & We want to allow the tool to optimize \\
+  across hierarchy & & our design the way it wants to. \\ \hline
+\end{tabular}}
+\caption{Design goals common for all versions.}
+\label{tab:common}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|} \hline
+  \textbf{Process property} & \textbf{Setting} & \textbf{Comment} \\ \hline
+  Optimization goal & Speed & Self-explanatory \\ \hline
+  Power reduction & Method 1 & We sacrifice power for performance \\ \hline
+  FSM encoding & One-hot & Simpler logic means a shorter critical path. We \\ & & sacrifice area for speed by using more flip-flops. \\  & & For one-hot the state is already decoded from the \\
+& &  flip-flops so no extra logic for that. \\ \hline
+  FSM style & LUT & We tried to set this both to LUT and BRAM \\ & & but the result was the same. \\ \hline
+  LUT combining & Off & We don't want the tool to combine LUTs in order \\ & & to save area since this could reduce the speed. \\ \hline
+  Combinatorial logic & Off & We used the default value,\\  
+  optimization & &  in hindsight we \\ & & probably should've tried changing it.\\ \hline
+  Global optimization & Speed & Self-explanatory. \\ \hline
+  Equivalent register & Off & If there are registers used for the same task it \\
+  removal & & might take more space but that's ok if the result \\ & & is higher speed. \\ \hline
+\end{tabular}
+}
+\caption{Design goals for the performance-optimized version.}
+\label{tab:performance}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|} \hline
+  \textbf{Process property} & \textbf{Setting} & \textbf{Comment} \\ \hline
+  Optimization goal & Area & Self-explanatory \\ \hline
+  Power reduction & Method 1 & We let the chip consume more 
+  power \\
+  & & if it can reduce the area. \\ \hline
+  FSM encoding & Gray & Gray encoding usually has simpler \\
+  & & next state logic than binary, which \\ & & reduces area. \\ \hline
+  FSM style & LUT & We tried to set this both to LUT \\
+  & & and BRAM but the result was the same. \\ \hline
+  LUT combining & Area & Less area needed if LUTs are combined.\\ \hline
+  Combinatorial logic optimization & On & Used to reduce the area used by \\
+  & & combinatorial logic.\\ \hline
+  Global optimization & Area & Self-explanatory. \\ \hline
+  Equivalent register removal & On & Remove registers with the same task. \\ \hline
+\end{tabular}
+}
+\caption{Design goals for the area-optimized version.}
+\label{tab:area}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|} \hline
+  \textbf{Process property} & \textbf{Setting} & \textbf{Comment} \\ \hline
+  Optimization goal & Area & We could only pick between speed and \\
+  & & area. Speed definitly consumes more \\
+  & & power while area probably reduces power \\
+  & & since the circuit will be smaller. \\ \hline
+  Power reduction & Method 2 & Method 2 reduces power at the cost \\
+  & & of speed and area. \\ \hline
+  FSM encoding & Gray & If the states go in sequence only one bit \\ & & will flip each time for gray-encoding. \\ & & This is what matters since it is the bit-flips \\ & & that consume the most power. \\ \hline
+  FSM style & LUT & We tried to set this both to LUT and \\
+  & & BRAM but the result was the same. \\ \hline
+  LUT combining & Area & Less area (and hopefully power) needed \\
+  & & if LUTs are combined. \\ \hline
+  Combinatorial logic & On & Used to reduce the area (and hopefully \\
+  optimization & & power) used by combinatorial logic.\\ \hline
+  Global optimization & Power & Self-explanatory. \\ \hline
+  Equivalent register & On & Remove registers with the same task. \\
+  removal & & \\  \hline
+  Power reduction (Map) & Extra Effort & Self-explanatory \\ \hline 
+\end{tabular}}
+\caption{Design goals for the power-optimized version.}
+\label{tab:power}
+\end{table}
+
+\newpage
+\subsection{Modules ranked by power dissipation}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  \textbf{Module} & \textbf{Power dissipation}\\ \hline
+  ALU & 0.000011 \\
+  FE/DE register & 0.00011 W \\
+  Controller & 0.0001 W \\
+  Bus & 0.00005 W \\
+  Data memory & 0.00003 W \\
+  Instruction memory & 0.00001 \\ \hline
+\end{tabular}
+\caption{The processor's modules ranked by power dissipation when optimizing for performance. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_perf}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  \textbf{Module} & \textbf{Power dissipation}\\ \hline
+  ALU & 0.00015 W \\
+  Controller & 0.00013 W \\
+  Data memory & 0.00002 W \\ 
+  Instruction memory & 0.00001 W \\
+  ACC register & 0.00001 W \\ \hline
+\end{tabular}
+\caption{The processor's modules ranked by power dissipation when optimizing for area. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_area}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|} \hline
+  \textbf{Module} & \textbf{Power dissipation}\\ \hline
+  Controller & 0.00008 W \\
+  Data memory & 0.00002 W \\ 
+  Instruction memory & 0.00001 W \\ \hline
+\end{tabular}
+\caption{The processor's modules ranked by power dissipation when optimizing for power. Does not include modules with 0 W power dissipation.}
+\label{tab:power_rank_pow}
+\end{table}
 
 \end{appendix}
 

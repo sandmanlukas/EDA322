@@ -20,9 +20,10 @@ Running Vector-less Activity Propagation
 ........
 Finished Running Vector-less Activity Propagation
 Finished Running Vector-less Activity Propagation 0 secs 
-Matched 37% (153/417) of design nets
-Matched 36% (150/415) of simulation nets
+Matched 37% (153/416) of design nets
+Matched 36% (150/414) of simulation nets
 
 Design 'Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.ncd' and constraints 'Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.pcf' opened
 successfully
 
+Power report saved as Z:/NyaMappen/EDA322/Lab 7/Lab7/EDA322_processor.pwr.

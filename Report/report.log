@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  14 FEB 2017 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.20)  28 FEB 2017 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,113 +496,104 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+ [1
 
- []
-
-[1
-
-] <fulladder.png, id=19, 552.0625pt x 351.3125pt>
+]
+<fulladder.png, id=20, 552.0625pt x 351.3125pt>
 File: fulladder.png Graphic file (type png)
  <use fulladder.png>
-Package pdftex.def Info: fulladder.png used on input line 47.
+Package pdftex.def Info: fulladder.png used on input line 64.
 (pdftex.def)             Requested size: 180.0pt x 114.54507pt.
 
-<fulladderfromhalfadder.jpg, id=21, 813.0375pt x 349.305pt>
+<fulladderfromhalfadder.jpg, id=22, 813.0375pt x 349.305pt>
 File: fulladderfromhalfadder.jpg Graphic file (type jpg)
 
 <use fulladderfromhalfadder.jpg>
-Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 56.
+Package pdftex.def Info: fulladderfromhalfadder.jpg used on input line 73.
 (pdftex.def)             Requested size: 180.0pt x 77.33235pt.
- <rca.jpg, id=22, 804.75656pt x 234.8775pt>
+ <rca.jpg, id=23, 804.75656pt x 234.8775pt>
 File: rca.jpg Graphic file (type jpg)
 
 <use rca.jpg>
-Package pdftex.def Info: rca.jpg used on input line 65.
+Package pdftex.def Info: rca.jpg used on input line 82.
 (pdftex.def)             Requested size: 323.9978pt x 94.56218pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./fulladder.png> <./fulladderfromhalfadder.jpg>]
-<subtractionlogic.jpg, id=27, 1470.24281pt x 378.66469pt>
+<subtractionlogic.jpg, id=28, 1470.24281pt x 378.66469pt>
 File: subtractionlogic.jpg Graphic file (type jpg)
 
 <use subtractionlogic.jpg>
-Package pdftex.def Info: subtractionlogic.jpg used on input line 78.
+Package pdftex.def Info: subtractionlogic.jpg used on input line 95.
 (pdftex.def)             Requested size: 323.9978pt x 83.44514pt.
  [3 <./rca.jpg> <./subtractionlogic.jpg>]
-<inst_mem_2.PNG, id=32, 833.36343pt x 66.2475pt>
+<inst_mem_2.PNG, id=33, 833.36343pt x 66.2475pt>
 File: inst_mem_2.PNG Graphic file (type png)
  <use inst_mem_2.PNG>
-Package pdftex.def Info: inst_mem_2.PNG used on input line 97.
+Package pdftex.def Info: inst_mem_2.PNG used on input line 114.
 (pdftex.def)             Requested size: 360.0pt x 28.61829pt.
- [4 <./inst_mem_2.PNG>] <datapath.png, id=38, 703.12688pt x 436.63126pt>
+ [4 <./inst_mem_2.PNG>] <datapath.png, id=39, 703.12688pt x 436.63126pt>
 File: datapath.png Graphic file (type png)
 
 <use datapath.png>
-Package pdftex.def Info: datapath.png used on input line 121.
+Package pdftex.def Info: datapath.png used on input line 138.
 (pdftex.def)             Requested size: 360.0pt x 223.55177pt.
  [5 <./datapath.png>]
-<states.jpg, id=44, 3694.80376pt x 2972.10374pt>
+<states.jpg, id=45, 3694.80376pt x 2972.10374pt>
 File: states.jpg Graphic file (type jpg)
  <use states.jpg>
-Package pdftex.def Info: states.jpg used on input line 135.
+Package pdftex.def Info: states.jpg used on input line 152.
 (pdftex.def)             Requested size: 251.9989pt x 202.6718pt.
- [6 <./states.jpg>] <controller_waves.JPG, id=48, 653.44125pt x 235.63031pt>
+ [6 <./states.jpg>] <controller_waves.JPG, id=49, 653.44125pt x 235.63031pt>
 File: controller_waves.JPG Graphic file (type jpg)
 
 <use controller_waves.JPG>
-Package pdftex.def Info: controller_waves.JPG used on input line 153.
+Package pdftex.def Info: controller_waves.JPG used on input line 170.
 (pdftex.def)             Requested size: 270.0pt x 97.36049pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--168
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--168
+[7 <./controller_waves.JPG>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-[7 <./controller_waves.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+[9] [10] [11] [12] [13]
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
-
-[10] (./report.aux)
+[14] [15] [16] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1984 strings out of 493013
- 26131 string characters out of 6135682
- 89288 words of memory out of 5000000
- 5501 multiletter control sequences out of 15000+600000
+ 2009 strings out of 493013
+ 26547 string characters out of 6135682
+ 103353 words of memory out of 5000000
+ 5523 multiletter control sequences out of 15000+600000
  10509 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,752b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,43p,846b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -611,12 +602,13 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti12.pfb>
-Output written on report.pdf (12 pages, 2947154 bytes).
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb>
+Output written on report.pdf (18 pages, 2976955 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
