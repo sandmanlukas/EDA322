@@ -14,7 +14,7 @@
 %-----------------------------------------------------------
 \begin{titlepage}
 
-\title{\Huge{Lab report} \\[0.1cm] \Large{Digital Design (EDA322)} \\ [0.4cm] \Large{ \emph{Writing Guidelines}} \\[0.4cm]}
+\title{\Huge{Lab report} \\[0.1cm] \Large{Digital Design (EDA322)} \\[0.4cm]}
 \author{\large{\emph{Group TUE\_PM\_8}} \\[0.2cm] Niklas Gustafsson \\[0.05cm] Oskar Lundström \\[0.1cm]}
 \maketitle
 \thispagestyle{empty}
@@ -35,19 +35,19 @@ The purpose of this report is to describe the steps of building the ChAcc proces
 
 In lab 2 we created an RCA and a CLA from full-adders. We then used this in combination with extra logic to create an ALU that can perform some basic operations such as addition, bitwise AND-ing and equality-testing.
 
-In lab 3 we implemented register and a memory with generic sizes. We also designed a bus using multiplexers instead of tri-state buffers. These components were then combined to create the datapath of the processor.
+In lab 3 we implemented a register and a memory with generic sizes. We also designed a bus using multiplexers instead of tri-state buffers. These components were then combined to create the datapath of the processor.
 
-In lab 4 we engineered the controller of the processor.We started out with a state diagram describing our controller as a mealy FSM and then realized it in VHDL with three processes. The datapath now had a functioning controller so we now tested it with a provided testbench.
+In lab 4 we engineered the controller of the processor. We started out with a state diagram describing our controller as a Mealy FSM and then realized it in VHDL with three processes. The datapath now had a functioning controller and we tested it with a provided testbench.
 
-In lab 5 we designed a testbench for the processor. We were provided with a program and expected outputs of some control signals. The testbench loads the program, executes it and compares the output with the expected values.
+In lab 5 we designed a testbench for the processor. We were provided with a program and the expected outputs of some control signals. The testbench loads the program, executes it and compares the output with the expected values.
 
-In lab 6 we synthesized our design of the processor. We encountered warnings from the synthesis tool which we had previously not seen. These errors were corrected and then we generated a bitsream which we loaded to the FPGA. We also made sure the program worked as expected.
+In lab 6 we synthesized our design of the processor. We encountered warnings from the synthesis tool which we had previously not seen. We corrected these errors and generated a bitsream which we loaded to the FPGA. We also made sure the program worked as expected.
 
-In lab 7 we optimizeed our design after area, power, performance and efficiency and compared tradeoffs. We did this by using different optimization strategies.
+In lab 7 we optimized our design after performance, area, power and efficiency and compared tradeoffs. We did this by using different optimization strategies.
 
 Our main conclusions after completing all of the labs are that:
 \begin{itemize}
-	\item You need to follow the specifications for control signals exactly, otherwise the instructions will either do nothing or do something completely wrong. 
+	\item You need to follow the specifications for control signals exactly, otherwise the instructions will either do nothing or do something completely unintended. 
 	\item Unlike when programming, there are more non-obvious things to take care of when describing hardware.
 	\item When optimizing for performance the cost of increasing the clock frequency grows exponentially. Increasing the frequency by a few MHz is very costly in terms of power and area used. 
 \end{itemize}
@@ -56,7 +56,7 @@ Our main conclusions after completing all of the labs are that:
 \section{Method}
 \subsection{Arithmetic and Logic Unit (ALU)}
 
-When we built our ALU we began by constructing the most basic component, the full-adder. We started by minimizing the boolean expression for the sum and the carry out signals using a Karnaugh diagram. We came to the conclusion that a full-adder should be built like described in the picture below.
+When we built our ALU we began by constructing the most basic component, the full-adder. We started by minimizing the boolean expression for the sum and the carry out signals using a Karnaugh diagram. We came to the conclusion that a full-adder should be built in the way described in the picture below.
 
 \begin{figure}[h!]
   \centering
@@ -65,7 +65,7 @@ When we built our ALU we began by constructing the most basic component, the ful
   \label{fig:etikett}
 \end{figure}
 
-You can also build a full-adder using two half-adders and some extra logic. We came to this conclusion by connecting the resulting signal of the first half-adder to the second one along with the carry in signal. After this we just added the extra logic that was needed, which was an OR gate.
+You can also build a full-adder using two half-adders and some extra logic. We came to this conclusion by connecting the resulting signal of the first half-adder to the second one along with the carry in signal. After this we added the extra logic that was needed, which was an OR gate.
 
 \begin{figure}[h!]
   \centering
@@ -83,7 +83,7 @@ We created an 8-bit ripple carry adder (RCA) by connecting eight full-adders tog
   \label{fig:etikett}
 \end{figure}
 
-The ALU includes a comparator unit which is used to check whether the operands are equal or not. You can implement it by using the structural or dataflow style of VHDL. We decided to do the dataflow implementation because we thought it would be easier and that it would result in a more clean code. In order to check whether the operands are not equal we performed a bitwise XOR on the operands and OR:ed the results. This was used as the resulting NEQ signal. The EQ signal was simply an inversion of the NEQ signal. 
+The ALU includes a comparator unit which is used to check whether the operands are equal or not. You can implement it by using the structural or dataflow style of VHDL. We decided to do the dataflow implementation because we thought it would be easier and that it would result in a cleaner code. In order to check whether the operands are not equal we performed a bitwise XOR on the operands and OR:ed the results. This was used as the resulting NEQ signal. The EQ signal was simply an inversion of the NEQ signal. 
 
 If we were to do this in structural VHDL we would have to create a component which cheked if two certain bits were not equal. We would then have to create eight such components. The input as a whole is equal if all 8 bits are equal, otherwise not.
 
@@ -103,7 +103,7 @@ We also learnt why the critical path for an n-bit RCA is $2n+1$ gates. For every
 \newpage
 \subsection{Top-level Design}
 \textbf{Registers}\\
-We made a generic implementation of a register by letting a variable hold an integer representing the number of bits the register is able to hold. The vectors for in- and output to the register are adjusted after this variable. We implemented our register using behavioral VHDL,i.e using a process statement, since that seemed to result in the simplest and cleanest code. Another reason for using a process statement is that we know that assigning signals values in a process statement result in flip-flops when the code is synthesized.
+We made a generic implementation of a register by letting a variable hold an integer representing the number of bits the register is able to hold. The vectors for in- and output to the register are adjusted after this variable. We implemented our register using behavioral VHDL, i.e using a process statement, since that seemed to result in the simplest and cleanest code. Another reason for using a process statement is that we know that assigning signals values in a process statement result in flip-flops when the code is synthesized.
 
 \textbf{Memory}\\
 We also made our implementation of the memory generic. We have two integer variables, one describing the number of address bits ($addr\_width$) and one describing the number of bits each memory location can hold ($data\_width$). The number of bits in the input signals for address and data are adjusted after these variables. The memory itself is an array of a type which we specified. The number of entries in this type of array is $2^{addr\_width}$ and the size of each entry is $data\_width$. The read operation is asynchronous and the write operation is synchronous.
@@ -118,19 +118,19 @@ We also made our implementation of the memory generic. We have two integer varia
 In figure \ref{fig:memory} interesting things happen at the red numbers.
 
 \begin{enumerate}
-	\item The read is asynchronous, so the output is changed directly after the address is changed.
-	\item The write is synchronous, so the write does not happen until the positive edge.
+	\item The read is asynchronous, the output is changed directly after the address is changed.
+	\item The write is synchronous, the write does not happen until the positive edge.
 	\item When the input is changed, no write happens at the negative edge.
-	\item If we changed the address to something else, and then change back, the value previously written is still saved.
+	\item If we changed the address to something else, and then change back, the value previously written is still there.
 \end{enumerate}
 
 \textbf{Bus}\\
 The bus was implemented with a mux. The 4 indata signals each had 8 bits. Bit 0 from each goes to a 4 to 1 mux, bit 1 from each to another mux and so on, i.e. the signals were muxed bitwise. The muxes are inferred by the tools since we used a \textit{WITH SELECT} statement. The mux select signal was created from a one-hot representation of the 4 control signals. Based on which bit was set, the corresponding mux select signal was created. If more than 1 bit are set, the bus error signal is set.
 
-We used a multiplexer for the bus since if 2 or more control signals are set, the bus will not take an undefined value, as opossed to a tri-state version. If 0 or more than 1 control signals are set, we put 0's on the bus since we will not read from it anyway if that is the case.
+We used a multiplexer for the bus since if 2 or more control signals are set, the bus will not take an undefined value, as opposed to a tri-state version. If 0 or more than 1 control signals are set, we put 0's on the bus since we will not read from it anyway in that case.
 
 \textbf{Datapath}\\
-The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them according to the figure. Some components, such as the registers, have different datawidths in different places. But since they were generic it was easy to have multiple versions.
+The last step was to connect all components of the datapath as described by figure \ref{fig:datapath}. In the datapath entity we had signals with the same names as on that figure (made it easier to code if the names were the same). We then instatiated all components and connected them according to the figure. Some components, such as the registers, have different datawidths in different places. Since they were generic it was easy to have multiple versions.
 
 \begin{figure}[h!]
   \centering
@@ -158,16 +158,16 @@ When we first ran the testbench we noticed a problem. The contents of the data m
 
 \begin{enumerate}
   \item We found that our EQ and NEQ signals to the controller weren't assigned at all. We fixed this but the problem remained.
-  \item We continued to troubleshoot the controller by examining the waveform diagram of the controller and datapath when running the testbench. While doing this we noticed that after about 500ns the opcodes didn't match the instructions that should be executed. It turned out that the \textit{dmRd} signal didn't have the correct value when the AND instruction was executed. In the processors specification document this signal was a "don't care" for this opcode when it really should've been set to 1, so we changed it. A few days after writing the code we checked the processors specification document and noticed that this had been changed there as well. We assume that this simply was a mistake. 
+  \item We continued to troubleshoot the controller by examining the waveform diagram of the controller and datapath when running the testbench. While doing this we noticed that after about 500 ns the opcodes didn't match the instructions that should be executed. It turned out that the \textit{dmRd} signal didn't have the correct value when the AND instruction was executed. In the processors specification document this signal was a "don't care" for this opcode when it really should've been set to 1, so we changed it. A few days after writing the code we checked the processors specification document and noticed that this had been changed there as well. We assume that this simply was a mistake. 
   \item The instruction for the jump statement was placed at memory location 256 (index starts from 0). This meant that when we jumped to memory location 255 a \textit{NOOP} instruction was executed, the PC overflowed and then the program started from the beginning. We corrected this by moving the contents of memory location 256 to memory location 255. After this the testbench ran successfully.  
 \end{enumerate}
 
-In figure \ref{fig:waves_instr} we see the waveform diagram of instructions 1 to 3 in the test program being executed. If you compare the diagram with the processors specification document it's clear that the signals have the correct value at the correct time. You can also see that it's first after the fetch stage is completed that the opcode changes. This is because the fetch stage has to be completed before the opcode can be sent from the FE/DE register to the controller. 
+In figure \ref{fig:waves_instr} we see the waveform diagram of instructions 1 to 3 in the test program being executed. If you compare the diagram with the processor's specification document it's clear that the signals have the correct value at the correct time. You can also see that it's first after the fetch stage is completed that the opcode changes. This is because the fetch stage has to be completed before the opcode can be sent from the FE/DE register to the controller. 
 
  \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.75\linewidth]{controller_waves.JPG}
-  \caption{The waveform diagram for executing instructions 1 to 3 in the test program.}
+  \includegraphics[width=0.72\linewidth]{controller_waves.JPG}
+  \caption{The waveform diagram for executing instructions 1 to 3 in the test program. We selected these instructions since they use most of the datapath and control signals.}
   \label{fig:waves_instr}
 \end{figure}
 
@@ -182,7 +182,7 @@ When designing the testbench we initially thought that there were huge issues wi
 \textbf{How the testbench works}
 \begin{itemize}
   \item \underline{Generating input.} The input to the processor are the control signlas (\textit{externalIn, clk, master\_load\_enable} and \textit{aresetn}) and the instruction and data memory files. The control signals are assigned values, some periodically,  in the architecture of the testbench. The memory content is read when the memory entities are instantiated. Based on the memory content different output is expected, hence we consider those files an input from the testbench.
-  \item \underline{Reading expected outputs.} The expected output values are read from text files into five different arrays, one for each output signals to check. The reading is done inside a process in the testbench architecture. For each file, while it has not reached the end, read the current line. That line is parsed as an 8-bit vector and is stored in the array at the current index. The index is incremented and the same procedure is repeated.
+  \item \underline{Reading expected outputs.} The expected output values are read from text files into five different arrays, one for each output signal to check. The reading is done inside a process in the testbench architecture. For each file, while it has not reached the end, we read the current line. That line is parsed as an 8-bit vector and is stored in the array at the current index. The index is incremented and the procedure is repeated.
   \item \underline{Comparing outputs and expected outputs.} The output signals of interest have one process each, sensitive to the signal. When that signal changes the process is triggered and its value is compared to its expected value in the array by using asserts. If they are equal, the index for that array is incremented. Otherwise the testbench stops and reports the error. The output signals that are checked are \textit{DataMemOut, flag2seg, pc2seg, acc2seg} and \textit{disp2seg}.
 \end{itemize}
 
@@ -192,15 +192,15 @@ When designing the testbench we initially thought that there were huge issues wi
 \textbf{Synthesis vs simulation}\\
 We encountered three problems in particular:
 \begin{itemize}
-  \item In the process that assigned the next state we did not have \textit{else} clauses and \textit{when others} statement. We thought we didn't need this since we had exhautsed all possibilites already. When synthesizing, latches were created because we did not have these statements and hence we added them.
-  \item When synthesizing we got warnings that we did not have all signals used in the process in the sensitivity list. This warning did not occur when simulating so it did not affect the correctness when just simulating. This will not change the behaviour of the program logically but we added it to avoid glitches.
+  \item In the process that assigned the next state we did not have \textit{else} clauses and \textit{when others} statements. We thought we didn't need this since we had exhautsed all possibilites. When synthesizing, latches were created because we did not have these statements and hence we added them.
+  \item When synthesizing we got warnings saying that we didn't have all signals used in the process in the sensitivity list. This warning did not occur when simulating so it did not affect the correctness during simulation. This will not change the behaviour of the program logically but we added it to avoid glitches.
   \item When we ran the program on the FPGA we observed the PC values and opcode values. They did not match the program. It appeared that the values jumped more than one step each cycle. The lab assistant suggested that we should make sure that the load control signals were set only if \textit{master\_load\_enable} was set. This fixed the problem. If, for instance, \textit{pcLd} does not depend on \textit{master\_load\_enable} PC will be incremented at the pace of the main clock. But the stage would not change if \textit{master\_load\_enable} was 0. This is of course unwanted beaviour. If the stage would change independently of \textit{master\_load\_enable} the hardware would function correctly, but we would not be able to toggle the progress manually and observe changes ourselves.
 \end{itemize}
 
 When we simulated our processor all of our tests were completed successfully. We didn't get any indications that we should make any of the changes mentioned in bullets 1 and 2. It was when we synthesized our design that we got warnings about the sensitivity list and not exhausting all possibilities. Since it's hardware we're dealing with we have to make sure that the VHDL we write is possible to synthesize into well functioning hardware. If the synthesis tool ask us to make certain changes it's a good idea to follow its advice. 
 
 \textbf{Verifying the correctness} \\
-We began the verifictation by observing the PC value. Since it should just go from 0 to 6 it would be easy to detect an error and follow the progress. But instead in jumped between 0 and 6 directly, and sometimes to 1 and 2, indicating that something was wrong. This lead us to the conclusions above. After fixing it, we observed PC again and this time it went from 0 all the way to 6 and the started over again from 0, as we expected. Next we observed the opcode. The opcode was also easy to follow since we could just compare it to the \textit{inst\_mem.mif} file. The opcode sequence was correct as well. Finally we observed the \textit{Display} sequence. It correctly showed the Fibonacci sequence. Table 1 shows the sequence for all three seven segment displays. This was the same sequence we saw in Modelsim.
+We began the verifictation by observing the PC value. Since it should go from 0 to 6 it should be easy to detect an error and follow the progress. When observing it we saw that it jumped between 0 and 6 directly, and sometimes to 1 and 2, indicating that something was wrong. This lead us to the conclusions above. After fixing it, we observed PC again and this time it went from 0 all the way to 6 and then started over again from 0, as we expected. Next we observed the opcode. The opcode was also easy to follow since we could compare it to the \textit{inst\_mem.mif} file. The opcode sequence was correct as well. Finally we observed the \textit{Display} sequence. It correctly showed the Fibonacci sequence. Table 1 shows the sequence for all three seven-segment displays. This was the same sequence we saw in Modelsim.
 
 \begin{table}[h!]
 \centering
@@ -210,15 +210,15 @@ We began the verifictation by observing the PC value. Since it should just go fr
   display & 0, 2, 3, 5, 8, D, 15, 22, 37, 59, 90\\ \hline
 \end{tabular}
 \label{tab:sequences}
-\caption{These are the sequences of the seven segment displays on the FPGA. The values are hexdecimal.}
+\caption{These are the sequences of the seven segment displays on the FPGA. The values are hexadecimal.}
 \end{table}
 
 \newpage
 \subsection{Performance, Area and Power Analysis}
 
-We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each version they all had the process properties in table \ref{tab:common} in the appendix in common. We evaluated the designs by checking the clock period in the static timing report, the number of slices used in the map report and the power usage by using the XPower Analyzer tool. Our general strategy was to iteratively change the process properties, evaluate the specific metric, and check for improvements. 
+We started out by creating a Xilinx project and added all the necessary VHDL files. We specified certain deisgn goals for each metric that we wanted to optimize our design for. Although we created custom strategies for each version they all had the process properties in table \ref{tab:common} and the results in table \ref{common_res} in the appendix in common. We evaluated the designs by checking the clock period in the static timing report, the number of slices used in the map report and the power usage by using the XPower Analyzer tool. Our general strategy was to iteratively change the process properties, evaluate the specific metric, and check for improvements. 
 
-For each optimization we did there's a table in the appendix showing the data below. Properties and results that were the same in all cases are also found in the appendix. 
+For each optimization we did there's a table in the appendix showing the data below. 
 \begin{itemize}
   \item Process properties.
   \item Results.
@@ -239,9 +239,9 @@ When optimizing for power we generally used the same settings as for area. We th
 From the results table we can see that the power-optimized version uses fewer slices than the area-optimized version. We believe the reason we got a smaller area when we optimized for power is that the tool realises it can save power by reducing area in some parts of the design. 
 
 \textbf{Efficiency-optimized}\\
-To create a design which was more efficient overall\footnote{According to the formula given in the lab PM.}, we lowered the timing constraint for the power optimized design from 10 ns (as it had been in both the area and power optimized versions) to 9 ns. This improved all three metrics. However, lowering it to 8.5 ns made all three metrics worse so we stopped here. We did not change any process properties since we believed the current settings were good for both power and area. Any change to improve performance would be very slight, and worsen the two other metrics significantly. We obtained the results showed in table \ref{tab:eff_res} in the appendix.
+To create a design which was more efficient overall\footnote{According to the formula given in the lab PM.}, we lowered the timing constraint for the power optimized design from 10 ns (as it had been in both the area and power optimized versions) to 9 ns. This improved all three metrics. However, lowering it to 8.5 ns made all three metrics worse so we stopped there. We did not change any process properties since we believed the current settings were good for both power and area. Any change to improve performance would be very slight, and worsen the two other metrics significantly. We obtained the results showed in table \ref{tab:eff_res} in the appendix.
 
-It is interesting to note that the efficiency-optimized version is better than or same as the power-optimized in all three metrics. The performance improvement was expected since we set a tighter constraint. The total on-chip power is only 0.01 mW lower which is within the margin of error. However, the dynamic power is actually 0.001 W higher, so it appears it consumes more power after all.
+It is interesting to note that the efficiency-optimized version is better than, or equally good, as the power-optimized in all three metrics. The performance improvement was expected since we set a tighter constraint. The total on-chip power is only 0.01 mW lower which is within the margin of error. However, the dynamic power is actually 0.001 W higher, so it appears it consumes more power after all.
 
 \textbf{Overview of the results}\\
 We did four versions, each optimized for a certain metric. We set properties we thought would improve the version in the current metric. However, in the end the efficiency-optimized is the best in the metrics area, power and efficiency. The performance-optimized was best in performance though. All details are in the table below.
@@ -255,7 +255,7 @@ We did four versions, each optimized for a certain metric. We set properties we 
   Power & 118.119 & 179 & 0.00154 & 428.50 \\
   Efficiency & 124.950 & 179 & 0.00153 & 456.24\\ \hline
   \end{tabular}
-  \caption{Overview of the result in the four metrics for the four designs. Each row is a design optimized for a certain matrics. The units are MHz, number of slices and watts.}
+  \caption{Overview of the result in the four metrics for the four designs. Each row is a design optimized for a certain metric. The units are MHz, number of slices and watts.}
 \end{table}
 
 \newpage
@@ -267,7 +267,7 @@ We've made two projects for each of our labs, one using an ALU based on an RCA a
  
 When testing our controller in lab 4 we had some issues. In order to solve this we needed to use waveforms to check what instructions were being executed as well as if the correct state and control signals were set. By examining the waveforms we were able to track the error to a certain control signal which wasn't set when it should've been. This gave us valuable experience in how to use simulations and waveforms to debug errors.
 
-It was a good learning experience to design the controller as an FSM. Previously we had only designed smaller circuits for the purpose of learning how to do it, and not for use in practice. Designing an FSM for use in practice gave use a better understanding of the characteristics of a mealy FSM compared to a moore FSM (number of states and timing).
+It was a good learning experience to design the controller as an FSM. Previously we had only designed smaller circuits for the purpose of learning how to do it, and not for use in practice. Designing an FSM for use in practice gave use a better understanding of the characteristics of a Mealy FSM compared to a Moore FSM (number of states and timing).
 
 The hardware and the testbench have been described in VHDL. We have gained experience in this and also seen the difference between programming and describing hardware in code. Throughout this lab series we have kept in mind to write the VHDL in such a way that no unwnated  hardware (e.g. latches) is synthesized. This was new to us compared to programming, where you can write more freely.
 
@@ -326,7 +326,7 @@ We realize that if the goal was to design an ASIC much more work would be needed
   \textbf{Process property} & \textbf{Setting} & \textbf{Comment} \\ \hline
   Optimization goal & Area & Self-explanatory. \\ \hline
   Power reduction & Method 1 & We let the chip consume more 
-  power. \\
+  power \\
   & & if it can reduce the area. \\ \hline
   FSM encoding & Gray & Gray encoding usually has simpler \\
   & & next state logic than binary, which \\ & & reduces area. \\ \hline
@@ -381,6 +381,7 @@ We realize that if the goal was to design an ASIC much more work would be needed
   Leakage power & 0.022 W \\ \hline
 \end{tabular}
 \caption{Results which were the same in all three cases.}
+\label{common_res}
 \end{table}
 
 \begin{table}
